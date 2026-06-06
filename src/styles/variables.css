@@ -4,42 +4,47 @@
    ========================================================================== */
 
 :root {
-  /* --- Cores: fundos --- */
-  --color-bg-primary: #0a0a0a;
-  --color-bg-secondary: #111111;
-  --color-bg-tertiary: #1a1a1a;
-  --color-bg-card: #141414;
+  /* --- Cores: fundos ---
+     Extraídos do CSS real do site (Elementor kit). Fundo quase preto #020101. */
+  --color-bg-primary: #020101;
+  --color-bg-secondary: #0a0d14;
+  --color-bg-tertiary: #11151f;
+  --color-bg-card: #0c1018;
 
-  /* --- Cores: marca --- */
-  --color-brand-green: #b8e63c;
-  --color-brand-green-dark: #9cc832;
-  --color-brand-green-light: #d4f07a;
+  /* --- Cores: marca (azul #467FF7 do site original) --- */
+  --color-brand: #467ff7;
+  --color-brand-dark: #278ff0;
+  --color-brand-light: #6f9ffa;
+  --color-navy: #182340;
 
   /* --- Cores: texto --- */
   --color-text-primary: #ffffff;
-  --color-text-secondary: #b3b3b3;
-  --color-text-muted: #777777;
-  --color-text-on-green: #0a0a0a;
+  --color-text-secondary: #b6bcc8;
+  --color-text-muted: #71767f;
+  --color-text-on-brand: #ffffff;
 
   /* --- Cores: suporte --- */
-  --color-border: #2a2a2a;
-  --color-border-hover: #3a3a3a;
-  --color-divider: #1f1f1f;
-  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-border: #1e2530;
+  --color-border-hover: #2c3645;
+  --color-divider: #161b24;
+  --color-overlay: rgba(0, 0, 0, 0.75);
   --color-overlay-light: rgba(0, 0, 0, 0.4);
 
-  --color-star-yellow: #f5c518;
+  --color-star-yellow: #fec42d;
   --color-error: #ff4444;
-  --color-success: #b8e63c;
+  --color-success: #467ff7;
 
   /* --- Gradientes --- */
   --gradient-hero: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.85) 100%);
-  --gradient-card-hover: linear-gradient(180deg, transparent 0%, rgba(184, 230, 60, 0.05) 100%);
+  --gradient-card-hover: linear-gradient(180deg, transparent 0%, rgba(70, 127, 247, 0.05) 100%);
   --gradient-section-fade: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
 
-  /* --- Tipografia: famílias --- */
+  /* --- Tipografia: famílias ---
+     Site original: Poppins (headings), Sofia Pro (body), Rajdhani (display).
+     Sofia Pro é paga — usamos Sofia Sans (Google) como substituta fiel. */
   --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-body: 'Sofia Sans', 'Helvetica Neue', sans-serif;
+  --font-display: 'Rajdhani', 'Poppins', sans-serif;
 
   /* --- Tipografia: escala --- */
   --text-display: clamp(2.5rem, 5vw, 4.5rem);
@@ -92,7 +97,7 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(184, 230, 60, 0.15);
+  --shadow-glow: 0 0 20px rgba(70, 127, 247, 0.15);
 
   /* --- Easing --- */
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
@@ -102,8 +107,10 @@
 
   /* --- Layout --- */
   --header-height: 80px;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-pill: 999px;
+  /* Site original usa cantos retos (border-radius 0) em botões/cards,
+     com pílulas (100px) em elementos pontuais. */
+  --radius-sm: 0px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 100px;
 }

@@ -9,7 +9,7 @@ export default function Hero() {
         <h1 className="hero__title anim-fade-up" style={{ animationDelay: '0ms' }}>
           Optimal Training.
           <br />
-          <span className="text-green">Sustainable Results.</span>
+          <span className="text-accent">Sustainable Results.</span>
         </h1>
         <p className="hero__text anim-fade-up" style={{ animationDelay: '150ms' }}>
           Formula Fitness takes an innovative, client-first approach to health and wellness.

@@ -37,9 +37,9 @@
     background 0.25s var(--ease-standard);
 }
 .footer__social a:hover {
-  color: var(--color-text-on-green);
-  background: var(--color-brand-green);
-  border-color: var(--color-brand-green);
+  color: var(--color-text-on-brand);
+  background: var(--color-brand);
+  border-color: var(--color-brand);
 }
 
 .footer__heading {
@@ -62,7 +62,7 @@
   transition: color 0.25s var(--ease-standard);
 }
 .footer__col a:hover {
-  color: var(--color-brand-green);
+  color: var(--color-brand);
 }
 
 .footer__soon {
@@ -104,7 +104,7 @@
   transition: color 0.25s var(--ease-standard);
 }
 .footer__legal a:hover {
-  color: var(--color-brand-green);
+  color: var(--color-brand);
 }
 
 @media (min-width: 600px) {

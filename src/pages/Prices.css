@@ -16,15 +16,15 @@
   transform: translateY(-4px);
 }
 .price-card--featured {
-  border-color: var(--color-brand-green);
+  border-color: var(--color-brand);
   box-shadow: var(--shadow-glow);
 }
 .price-card__tag {
   position: absolute;
   top: -12px;
   left: var(--space-xl);
-  background: var(--color-brand-green);
-  color: var(--color-text-on-green);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
   font-size: var(--text-overline);
   letter-spacing: var(--text-overline-ls);
   text-transform: uppercase;
@@ -54,7 +54,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--color-brand-green);
+  color: var(--color-brand);
   font-weight: 700;
 }
 .price-card__cta {

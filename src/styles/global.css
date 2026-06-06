@@ -116,7 +116,7 @@ h6 {
   letter-spacing: var(--text-overline-ls);
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--color-brand-green);
+  color: var(--color-brand);
   margin-bottom: var(--space-md);
 }
 
@@ -133,8 +133,8 @@ h6 {
   max-width: 60ch;
 }
 
-.text-green {
-  color: var(--color-brand-green);
+.text-accent {
+  color: var(--color-brand);
 }
 
 /* ==========================================================================
@@ -160,14 +160,14 @@ h6 {
 }
 
 .btn-primary {
-  background: var(--color-brand-green);
-  color: var(--color-text-on-green);
-  border: 2px solid var(--color-brand-green);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
+  border: 2px solid var(--color-brand);
   padding: 0.875rem 2rem;
 }
 .btn-primary:hover {
-  background: var(--color-brand-green-dark);
-  border-color: var(--color-brand-green-dark);
+  background: var(--color-brand-dark);
+  border-color: var(--color-brand-dark);
   transform: translateY(-1px);
 }
 .btn-primary:active {
@@ -176,17 +176,17 @@ h6 {
 
 .btn-outline {
   background: transparent;
-  color: var(--color-brand-green);
-  border: 2px solid var(--color-brand-green);
+  color: var(--color-brand);
+  border: 2px solid var(--color-brand);
   padding: 0.75rem 1.75rem;
 }
 .btn-outline:hover {
-  background: var(--color-brand-green);
-  color: var(--color-text-on-green);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
 }
 
 .btn-link {
-  color: var(--color-brand-green);
+  color: var(--color-brand);
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -202,7 +202,7 @@ h6 {
    ========================================================================== */
 
 :focus-visible {
-  outline: 2px solid var(--color-brand-green);
+  outline: 2px solid var(--color-brand);
   outline-offset: 2px;
 }
 

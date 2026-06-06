@@ -15,7 +15,7 @@
   font-family: var(--font-heading);
   font-size: clamp(4rem, 14vw, 8rem);
   font-weight: 800;
-  color: var(--color-brand-green);
+  color: var(--color-brand);
   line-height: 1;
 }
 .notfound__title {

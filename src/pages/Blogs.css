@@ -19,7 +19,7 @@
 .blog-card__media {
   aspect-ratio: 16 / 9;
   background:
-    radial-gradient(circle at 60% 30%, rgba(184, 230, 60, 0.14), transparent 55%),
+    radial-gradient(circle at 60% 30%, rgba(70, 127, 247, 0.14), transparent 55%),
     linear-gradient(160deg, #1c1c1c, #0c0c0c);
 }
 .blog-card__body {

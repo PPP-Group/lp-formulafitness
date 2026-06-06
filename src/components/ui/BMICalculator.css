@@ -52,8 +52,8 @@
     color 0.25s var(--ease-standard);
 }
 .bmi__toggle button.is-active {
-  background: var(--color-brand-green);
-  color: var(--color-text-on-green);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
 }
 
 .bmi__height {
@@ -89,9 +89,9 @@
   color: var(--color-text-muted);
 }
 .bmi__result-value {
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 4.5rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   color: var(--color-text-primary);
   animation: scaleIn 0.4s var(--ease-bounce);
@@ -108,11 +108,11 @@
 
 .bmi__result.is-low .bmi__result-value,
 .bmi__result.is-low .bmi__result-category {
-  color: #58a6ff;
+  color: #3bc9db;
 }
 .bmi__result.is-healthy .bmi__result-value,
 .bmi__result.is-healthy .bmi__result-category {
-  color: var(--color-brand-green);
+  color: var(--color-brand);
 }
 .bmi__result.is-high .bmi__result-value,
 .bmi__result.is-high .bmi__result-category {

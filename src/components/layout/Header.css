@@ -109,7 +109,7 @@
 }
 .header__dropdown-link:hover {
   background: var(--color-bg-card);
-  color: var(--color-brand-green);
+  color: var(--color-brand);
 }
 
 .header__cta {

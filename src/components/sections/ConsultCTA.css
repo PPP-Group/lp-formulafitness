@@ -1,7 +1,7 @@
 .consult {
   padding: var(--section-padding-y) 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(184, 230, 60, 0.08), transparent 45%),
+    radial-gradient(circle at 15% 20%, rgba(70, 127, 247, 0.08), transparent 45%),
     var(--color-bg-secondary);
   border-top: 1px solid var(--color-border);
 }
@@ -32,7 +32,7 @@
   color: var(--color-text-primary);
 }
 .consult__details a:hover {
-  color: var(--color-brand-green);
+  color: var(--color-brand);
 }
 .consult__label {
   font-size: var(--text-overline);
@@ -75,7 +75,7 @@
 }
 .form-input:focus {
   outline: none;
-  border-color: var(--color-brand-green);
+  border-color: var(--color-brand);
 }
 .form-input::placeholder {
   color: var(--color-text-muted);
@@ -94,7 +94,7 @@ textarea.form-input {
 }
 .consult__success h3 {
   font-size: var(--text-h3);
-  color: var(--color-brand-green);
+  color: var(--color-brand);
 }
 .consult__success p {
   color: var(--color-text-secondary);

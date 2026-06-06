@@ -17,7 +17,7 @@
   align-items: flex-end;
   padding: var(--space-md);
   background:
-    radial-gradient(circle at 50% 30%, rgba(184, 230, 60, 0.14), transparent 55%),
+    radial-gradient(circle at 50% 30%, rgba(70, 127, 247, 0.14), transparent 55%),
     linear-gradient(160deg, #1c1c1c, #0c0c0c);
   font-family: var(--font-heading);
   font-weight: 700;
@@ -48,7 +48,7 @@
   transition: border-color 0.3s var(--ease-standard);
 }
 .results__thumb:hover {
-  border-color: var(--color-brand-green);
+  border-color: var(--color-brand);
 }
 
 .results__more {

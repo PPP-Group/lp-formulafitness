@@ -21,7 +21,7 @@
 
 .accordion-icon {
   flex-shrink: 0;
-  color: var(--color-brand-green);
+  color: var(--color-brand);
   transition: transform 0.3s var(--ease-standard);
 }
 .accordion-item.is-open .accordion-icon {

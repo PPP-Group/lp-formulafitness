@@ -49,8 +49,8 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--color-brand-green);
-  color: var(--color-text-on-green);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
   padding-left: 4px;
   transition: transform 0.3s var(--ease-bounce);
 }

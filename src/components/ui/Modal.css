@@ -34,7 +34,7 @@
   transition: color 0.25s var(--ease-standard);
 }
 .modal__close:hover {
-  color: var(--color-brand-green);
+  color: var(--color-brand);
 }
 
 .modal__video {

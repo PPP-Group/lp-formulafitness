@@ -22,7 +22,7 @@
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: var(--text-h3);
-  color: var(--color-brand-green);
+  color: var(--color-brand);
 }
 .content-page__highlight-text {
   color: var(--color-text-secondary);

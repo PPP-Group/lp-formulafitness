@@ -1,0 +1,28 @@
+.notfound {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--header-height);
+}
+.notfound__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-md);
+}
+.notfound__code {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 14vw, 8rem);
+  font-weight: 800;
+  color: var(--color-brand-green);
+  line-height: 1;
+}
+.notfound__title {
+  font-size: var(--text-h2);
+}
+.notfound__text {
+  color: var(--color-text-secondary);
+  max-width: 40ch;
+  margin-bottom: var(--space-md);
+}

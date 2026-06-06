@@ -1,0 +1,22 @@
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.section-head--center {
+  align-items: center;
+  text-align: center;
+}
+.section-head--center .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-head .section-title {
+  max-width: 22ch;
+}
+.section-head--center .section-title {
+  max-width: 30ch;
+}

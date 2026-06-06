@@ -1,0 +1,108 @@
+.consult {
+  padding: var(--section-padding-y) 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(184, 230, 60, 0.08), transparent 45%),
+    var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.consult__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.consult__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.consult__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+.consult__details li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--color-text-primary);
+}
+.consult__details a:hover {
+  color: var(--color-brand-green);
+}
+.consult__label {
+  font-size: var(--text-overline);
+  letter-spacing: var(--text-overline-ls);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.consult__form-wrap {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.consult__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.consult__form-title {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-xs);
+}
+.consult__submit {
+  margin-top: var(--space-xs);
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.875rem 1rem;
+  color: var(--color-text-primary);
+  font-size: var(--text-body);
+  font-family: var(--font-body);
+  transition: border-color 0.3s var(--ease-standard);
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-brand-green);
+}
+.form-input::placeholder {
+  color: var(--color-text-muted);
+}
+textarea.form-input {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.consult__success {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+}
+.consult__success h3 {
+  font-size: var(--text-h3);
+  color: var(--color-brand-green);
+}
+.consult__success p {
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 900px) {
+  .consult__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+  }
+}

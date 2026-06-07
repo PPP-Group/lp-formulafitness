@@ -15,9 +15,40 @@
 }
 
 .header--solid {
-  background: rgba(10, 10, 10, 0.92);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
   border-bottom-color: var(--color-border);
+}
+
+/* logo escura quando header está sobre fundo branco (scrolled) */
+.header--solid .header__logo img {
+  filter: brightness(0);
+  transition: filter 0.3s var(--ease-standard);
+}
+
+/* links escuros no estado sólido */
+.header--solid .header__link {
+  color: #374151;
+}
+.header--solid .header__item:hover .header__link,
+.header--solid .header__link:focus-visible {
+  color: var(--color-brand);
+}
+
+/* links + logo brancos quando transparente (sobre hero escuro) */
+.header:not(.header--solid) .header__link {
+  color: rgba(255, 255, 255, 0.85);
+}
+.header:not(.header--solid) .header__link:hover,
+.header:not(.header--solid) .header__item:hover .header__link {
+  color: #ffffff;
+}
+.header:not(.header--solid) .header__burger span {
+  background: #ffffff;
+}
+.header:not(.header--solid) .header__logo img {
+  filter: none;
+  transition: filter 0.3s var(--ease-standard);
 }
 
 .header__inner {
@@ -153,7 +184,11 @@
   position: fixed;
   inset: 0;
   top: 0;
-  background: var(--color-bg-primary);
+  /* escopo local: menu mobile sempre escuro */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b6bcc8;
+  --color-border: #1e2530;
+  background: #0c1018;
   padding: calc(var(--header-height) + var(--space-lg)) var(--container-padding-x)
     var(--space-2xl);
   overflow-y: auto;

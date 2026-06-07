@@ -1,4 +1,8 @@
 .hero {
+  /* escopo local: hero sempre escuro */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-primary);
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -11,9 +15,14 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-  background:
-    radial-gradient(circle at 70% 30%, rgba(70, 127, 247, 0.12), transparent 45%),
-    linear-gradient(135deg, #0a0a0a 0%, #141414 55%, #0a0a0a 100%);
+  /* Imagem de fundo — troque --hero-bg-image em variables.css pela URL da foto:
+       --hero-bg-image: url('/images/hero.jpg');
+     O overlay escuro (.hero__overlay) garante legibilidade sobre qualquer foto. */
+  background-image: var(--hero-bg-image);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #0d1218; /* fallback enquanto a foto carrega */
 }
 
 .hero__overlay {

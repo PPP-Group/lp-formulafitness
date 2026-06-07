@@ -1,0 +1,32 @@
+.triumphs__grid {
+  align-items: center;
+}
+
+.triumphs__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+.triumphs__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.triumphs__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.triumphs__cta {
+  align-self: flex-start;
+}
+
+@media (min-width: 768px) {
+  .triumphs__media {
+    order: 1;
+  }
+}

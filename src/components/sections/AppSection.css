@@ -1,0 +1,35 @@
+.app-section__grid {
+  align-items: center;
+}
+
+.app-section__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.app-section__icons {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+}
+.app-section__icons img {
+  height: 56px;
+  width: auto;
+}
+
+.app-section__media {
+  display: flex;
+  justify-content: center;
+  order: -1;
+}
+.app-section__media img {
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .app-section__media {
+    order: 0;
+  }
+}

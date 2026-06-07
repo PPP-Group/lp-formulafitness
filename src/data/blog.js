@@ -1,0 +1,141 @@
+import { upload } from '@utils/constants'
+
+// Posts do blog (listagem /blogs + artigos /blogs/:slug). Conteúdo verbatim do original.
+// content: array de blocos { h } (subtítulo) ou { p } (parágrafo).
+
+export const posts = [
+  {
+    slug: 'revitalize-your-fitness',
+    title: 'Revitalize Your Fitness',
+    date: 'April 17, 2025',
+    author: 'Anthony Tran',
+    image: upload('2026/05/Formula-Fitness-03.2026-15-scaled.jpg'),
+    excerpt:
+      'Feeling stuck in a rut with your workouts? You’re not alone. Whether you’ve hit a plateau or just haven’t felt that same drive lately, sometimes all it takes is a little revitalization to get back on track.',
+    content: [
+      { h: 'Revitalize Your Fitness: Reset Your Routine, Recharge Your Body, Reignite Your Motivation' },
+      { p: 'Feeling stuck in a rut with your workouts? You’re not alone. Whether you’ve hit a plateau or just haven’t felt that same drive lately, sometimes all it takes is a little revitalization to get back on track. At Formula Fitness, we believe every season is an opportunity to reset, realign, and move forward—stronger and more intentional than ever.' },
+      { p: 'Here are three powerful ways to revitalize your fitness routine starting today:' },
+      { h: '1. Reassess Your Current Lifestyle and Fitness Habits' },
+      { p: 'True transformation starts with awareness. At Formula Fitness, every new journey begins with a comprehensive lifestyle evaluation—sleep, stress levels, medications, injuries, activity levels, and more. We pair that insight with hard data from our brand-new InBody 580 scanner, which precisely measures lean muscle mass, body fat, and visceral fat (the fat around your organs). This gives you a clear baseline and lets us track your results to ensure your hard work pays off.' },
+      { h: '2. Tap Into the Power of Myzone Technology' },
+      { p: 'One of the most effective ways to stay motivated and track real progress is through heart rate-based accountability. Our Myzone system takes the guesswork out of training, showing you how hard you’re working and helping you push just enough to see results, without overtraining. Seeing your progress in real-time is a game-changer for beginners and seasoned members.' },
+      { h: '3. Personalize Your Nutrition and Training for Real Results' },
+      { p: 'No more one-size-fits-all programs. Our team tailors nutrition plans based on your cultural background, preferences, and specific needs—whether you’re vegetarian, Asian, Indian, American, or have dietary restrictions. Pair that with personalized workouts and an exercise library in our app, and you’ll have all the tools to succeed inside and outside the gym.' },
+      { h: 'Conclusion: Your Fresh Start Begins Now' },
+      { p: 'Revitalizing your fitness isn’t about starting over—it’s about building on what you’ve learned and moving forward with intention. Reset your routine, recharge your body, and reignite your motivation with a team that’s with you every step of the way.' },
+    ],
+  },
+  {
+    slug: 'why-are-fitness-injuries-so-common',
+    title: 'Why Are Fitness Injuries So Common?',
+    date: 'March 31, 2025',
+    author: 'Anthony Tran',
+    image: upload('2025/03/closeup-athletic-woman-injured-her-foot-workout-gym.jpg'),
+    excerpt:
+      'Getting injured at the gym is more common than most people think. Injuries include strains, aching joints, pulled muscles, or sometimes something more serious. These injuries often weaken motivation.',
+    content: [
+      { p: 'Getting injured at the gym is more common than most people think. Injuries include: strains, aching joints, pulled muscles, or sometimes something more serious. These injuries often weaken motivation and desire to push through challenging barriers.' },
+      { p: 'Here are the top reasons we see at Formula Fitness and how to avoid them:' },
+      { h: 'Poor Form & Posture' },
+      { p: 'Most injuries happen when form is sacrificed to lift heavier weight, or lifting too fast. When your body is in bad posture, it puts your framework into bad alignment, then your body has to compensate in ways that stress the joints and muscles.' },
+      { p: 'Fix it: Learn the right form working with a personal trainer, and focus on sustainable strength. Lifting with intention and purpose helps with the mind-muscle connection to help engage the proper muscles.' },
+      { h: 'Skipping Recovery' },
+      { p: 'Your body grows stronger when it rests—not when it trains. Overtraining leads to burnout, inflammation, and breakdown.' },
+      { p: 'Fix it: Prioritise recovery, mobility work, quality of sleep, and hydration.' },
+      { h: 'Cookie Cutter Workouts' },
+      { p: 'Many workouts on the internet and social media don’t take into account your injury history, body type, age, and fitness level. What works for a 25 year old may not work well with a 50 year old with knee pain.' },
+      { p: 'Fix it: Invest in a personalised program that’s tailored towards your specific body type, goals, and lifestyle.' },
+      { h: 'Injury-Free Training Starts Here' },
+      { p: 'At Formula Fitness we specialise in personal training for adults who want results without the wide array of injuries. Whether you’re dealing with joint pain, past injuries, or just want to train smarter, we’ve got your back—literally. Click the button below and discover how we make fitness safe, sustainable, and effective.' },
+    ],
+  },
+  {
+    slug: 'tackling-the-gym-jitters-your-fitness-journey-awaits',
+    title: 'Feel Comfortable, Not Intimidated at the Gym',
+    date: 'November 24, 2023',
+    author: 'Anthony Tran',
+    image: upload('2026/05/Formula-Fitness-03.2026-108-scaled.jpg'),
+    excerpt:
+      "Ever stepped into a gym and felt like you've landed on another planet? Yep, we know that feeling all too well. We're all about making your fitness journey as chill as your favorite hangout spot.",
+    content: [
+      { p: "Ever stepped into a gym and felt like you've landed on another planet? Yep, we know that feeling all too well. Those rows upon rows of machines, and everyone else seems to be on their A-game – it's enough to make you wanna bolt. We're here to tell ya, at our spot, we’re all about making your fitness journey as chill as your favorite hangout spot." },
+      { h: 'The Gym Can Be Intimidating' },
+      { p: "Let's face it, when life’s already like a circus, and you're juggling work, family, and, oh yeah, that little thing called 'me time', hitting the gym can feel like one more act to balance. And when you do get there, it's all too easy to feel out of place among the fitness fanatics. Plus, trying to eat right when every corner’s got a fast-food joint? That's an uphill battle." },
+      { h: "It's Tough Being the New Kid on the Block" },
+      { p: "Remember that first day at a new school? That’s gym intimidation for ya. It's that same old ‘do I fit in here, am I doing this right?’ kinda vibe. And it doesn’t help when the gym feels like an exclusive club where you gotta be in tip-top shape to even step through the door." },
+      { h: "A Gym Where You're Always on the VIP List" },
+      { p: "But here’s the deal – our gym's different. It’s not about who you are or where you're starting from. Our personal training's got one goal: to meet you right where you're at and help you get to where you wanna go. Whether it's Day 1 or Day 101, our trainers are all about that support life." },
+      { p: "Not up for the solo workout limelight? No sweat. Our semi-private training sessions are like that perfect middle ground. You'll be in a small group, max four people, so you can get the focus you need without feeling all the eyes." },
+      { p: "We’re more than just a gym; we’re a crew, a community. We know that starting out is the real workout, and we're here to make sure you’re feeling awesome every step of the way. No judgment, no crazy expectations. Just good vibes, great people, and a whole lot of cheering for your wins. Ditch the doubts and join the family. Give us a shout today and let's get this fitness journey started!" },
+    ],
+  },
+  {
+    slug: 'one-on-one-vs-small-group-training-which-is-right-for-you',
+    title: 'One-on-One vs small group training. Which is right for you?',
+    date: 'August 18, 2023',
+    author: 'Anthony Tran',
+    image: upload('2026/05/Formula-Fitness-03.2026-44-scaled.jpg'),
+    excerpt:
+      'If you’ve decided to take your health seriously, personal training is a sure-fire way to maximize your results. But which kind of personal training is a better fit for you?',
+    content: [
+      { p: 'If you’ve decided to take your health seriously, personal training is a sure-fire way to maximize your results. Many trainers offer two kinds of personal training: one-on-one private training and small group training. But which is a better fit for you? Choosing the right kind of personal training can increase your fitness progress and commitment to change.' },
+      { h: 'What Is One-on-One Personal Training?' },
+      { p: 'One-on-one training is what most people imagine when considering personal training. Your trainer will individually coach you and craft personalized exercise and nutrition plans towards your goals.' },
+      { h: 'Benefits of One-on-One Training' },
+      { p: 'More attention to detail: you have your trainer’s undivided attention. Your exercise form will be monitored constantly, resulting in better performance and less risk of injury. More personalized experience: your trainer can tailor your fitness program exclusively to your goals and needs. Injuries or body pain: if you have any aches/pains or pre-existing injuries it’s advantageous to train one-on-one as your workout will be customized to address problem areas.' },
+      { h: 'Downsides of One-on-One Training' },
+      { p: 'Cost: one-on-one training is often more expensive than small group training. But what you sacrifice in cost, you gain in increased attention with your trainer. Less motivation: if you’re competitive, the lack of peers to challenge you can become unmotivating.' },
+      { h: 'Is One-on-One Training a Good Fit for Me?' },
+      { p: 'You are a beginner and want time spent on exercises and proper form; you want reassurance that your trainer won’t let you hurt yourself; you want a smaller audience and feel intimidated working out around people; or you’re an experienced athlete with specific goals or competition prep that needs tailored programming.' },
+      { h: 'What Is Small Group Training?' },
+      { p: 'Small group training involves a trainer and a small group of clients. While similar to workout classes, small group training tends to have fewer people and more personalization. The trainer will scan the group and provide feedback to clients as the group exercises.' },
+      { h: 'Benefits of Small Group Training' },
+      { p: 'High-energy atmosphere with more excitement and friendly competition; more motivation through peer accountability (if you skip, your group will know!); team-work exercises that push members to work hard for one another; and you save money since small group training is often cheaper than one-on-one.' },
+      { h: 'Downsides of Small Group Training' },
+      { p: 'Less attention: trainers monitor you every 10 seconds rather than constantly, with less time to educate on form. Less specialized: trainers accommodate a wider audience, so your goals may not be targeted as specifically, and injuries/preexisting conditions get less personalized programming.' },
+      { h: 'Is Small Group Training a Good Fit for Me?' },
+      { p: 'You thrive on team motivation and group energy that pushes you harder; or you want a more social experience—a good small group brings people closer together and makes it much easier to come back and train consistently.' },
+    ],
+  },
+  {
+    slug: 'picking-the-right-personaltrainer',
+    title: 'What is HIIT?',
+    date: 'June 12, 2023',
+    author: 'Anthony Tran',
+    image: upload('2025/02/group-young-sporty-smiling-people-warrior-two-pose-scaled.jpg'),
+    excerpt:
+      'High-Intensity Interval Training, also known as HIIT, is a great way for you to burn an enormous amount of calories in a short amount of time.',
+    content: [
+      { p: 'High-Intensity Interval Training, also known as HIIT, is a great way for you to burn an enormous amount of calories in a short amount of time.' },
+      { p: 'There are several variations to a HIIT workout, therefore, the workout should be customized to your fitness level. The main thing to know with HIIT is that you alternate between a high-intensity interval and a low-intensity interval.' },
+      { p: 'During the high-intensity interval, you want to exert yourself with at least 90% perceived intensity such as an all-out running sprint. During your lower intensity interval, you slow down the pace and exert yourself at a perceived intensity between 0-50% such as standing, walking, or a very slow jog. The duration of high intensity typically is 30 seconds or less, while the duration of low intensity (depending on your fitness level) can be half that time, equal to, or even greater.' },
+      { p: 'A big benefit of HIIT workouts is you don’t need any fitness equipment at all. However, if you have access to cardio equipment it’s a perk to be able to track distance, watts, calories, and the amount of exertion during a sprint bout.' },
+      { p: 'A super interesting fact about HIIT is that not only will you burn a lot of calories during your workout; your body will tap into fat stores up to 36 hours after your workout! This physiological effect is because of something called EPOC, also referred to as the “afterburn”. EPOC is the elevated amount of oxygen your body uses after the workout compared to your pre-workout baseline oxygen consumption.' },
+      { p: 'If you are new to exercise you can do HIIT with a ratio of 1:2 (e.g., 30 seconds high intensity, 60 seconds low). If you are more advanced you can do a 1:1 ratio or even a 2:1 ratio. With my clients, I like to have them do HIIT at the end of the workout: they are warmed up, and they have already depleted glycogen stores so they will use more fat stores.' },
+      { p: 'If you plan on doing HIIT only (no weights beforehand) make sure to warm up for 5-8 minutes and stretch before your HIIT session. By warming up properly you’re greatly decreasing your chances of injury, which is always my first priority. I always encourage my clients to wear a heart-rate monitor during their sessions to track their exertion.' },
+      { p: 'I do NOT recommend HIIT if you are just starting to get back into the swing of things or are brand new to exercising. I DO recommend that you take a week or two and begin to condition your heart, muscles, and joints to avoid injuries.' },
+      { p: 'DISCLAIMER: Make sure before beginning any exercise routine that you consult with your physician first. These are tips and exercises I use with some of my clients and are meant to serve as educational purposes only.' },
+    ],
+  },
+  {
+    slug: 'best-pricing-for-personaltraining',
+    title: 'What you can expect at Formula Fitness',
+    date: 'June 12, 2023',
+    author: 'Anthony Tran',
+    image: upload('2023/06/what-can-you-expect.jpg'),
+    excerpt:
+      'If you are working with us in person we have made several adjustments to how we operate. We have taken many precautions to keep all our members safe.',
+    content: [
+      { p: 'If you are working with us in person we have made several adjustments to how we operate due to COVID-19. We have taken many precautions to keep all our members safe. Our facility has HEPA filtered purified air that is circulated by our powerful HVAC system. In addition to all the personal disinfecting standards, we have also installed UV light disinfectants in our ventilation system in which the air passes by and kills viruses, bacteria, and mold—the same technology used in hospitals to disinfect their air.' },
+      { p: 'When it comes to fitness it all starts with the FMS screening test. The Functional Movement Systems (FMS) assessment is a science-based movement test that allows fitness professionals to see where clients have muscle imbalances that are very common due to desk jobs, mobile devices, and repetitive movements or positions. Each test is then graded and compared to future tests to measure results.' },
+      { p: 'Next you get set up with all your innovative technology. Here at Formula Fitness we have our own exclusive exercise app, nutrition app, and fitness trackers. One of the programs we use, MyZone, measures how hard you are actually working out with 99.7% accuracy. Without measurable data you are only guessing what your results would look like.' },
+      { p: 'Now that everything is set up the workouts begin. Whether you are totally new to fitness or you are a seasoned athlete we take you through a test workout to see where you are at. From here we will design a custom workout program that is just right for you. Workouts will be delivered whether it’s in person or virtually; and homework assignments will be in your mobile calendar on your fitness app.' },
+      { p: 'Education is a big component of what you will experience at Formula Fitness. We understand the more you learn and understand about science-based exercise, nutrition, and health the better your results will be. We want our clients to take their learnings and implement them when they have left and continue their ongoing fitness journey.' },
+      { p: 'What not to expect from Formula Fitness: people who do not care about you. We pride ourselves on exceptional world-class customer service. We will not offer a quick fix or gimmicky fitness goals, and we will not make you give up the foods you like. We believe there is no such thing as bad food, there are only bad qualities and quantities.' },
+      { p: 'What to expect from Formula Fitness: an experience that will exceed your expectations. Starting with our customer service, instruction, nutrition coaching, and simple innovative technology, it’s our mission to always bring you the best of us and everything the fitness industry has to offer.' },
+    ],
+  },
+]
+
+export const getPost = (slug) => posts.find((p) => p.slug === slug)

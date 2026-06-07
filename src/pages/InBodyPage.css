@@ -1,0 +1,100 @@
+.inbody-design {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+.inbody-design__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s var(--ease-standard), box-shadow 0.3s var(--ease-standard);
+}
+.inbody-design__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.inbody-design__card img {
+  height: 64px;
+  width: auto;
+}
+.inbody-design__card p {
+  color: var(--color-text-secondary);
+  line-height: var(--text-body-lh);
+}
+
+.inbody-tech {
+  align-items: center;
+  gap: var(--space-2xl);
+}
+.inbody-tech__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  order: -1;
+}
+.inbody-tech__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.inbody-tech__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+.inbody-tech__item h3 {
+  font-size: var(--text-h3);
+  margin-bottom: var(--space-2xs);
+  color: var(--color-brand);
+}
+.inbody-tech__item p {
+  color: var(--color-text-secondary);
+  line-height: var(--text-body-lh);
+}
+
+.inbody-results {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+.inbody-results figure {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.inbody-results img {
+  width: 100%;
+}
+.inbody-results figcaption {
+  padding: var(--space-lg);
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+  line-height: var(--text-body-lh);
+}
+
+@media (min-width: 768px) {
+  .inbody-design {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .inbody-tech__media {
+    order: 0;
+  }
+  .inbody-results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .inbody-design {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

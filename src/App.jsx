@@ -14,11 +14,15 @@ const YouthTraining = lazy(() => import('@pages/YouthTraining'))
 const Testimonials = lazy(() => import('@pages/Testimonials'))
 const Referrals = lazy(() => import('@pages/Referrals'))
 const Team = lazy(() => import('@pages/Team'))
+const BioPage = lazy(() => import('@pages/BioPage'))
 const JoinTeam = lazy(() => import('@pages/JoinTeam'))
 const Prices = lazy(() => import('@pages/Prices'))
 const Blogs = lazy(() => import('@pages/Blogs'))
+const BlogPost = lazy(() => import('@pages/BlogPost'))
 const About = lazy(() => import('@pages/About'))
 const FAQ = lazy(() => import('@pages/FAQ'))
+const Terms = lazy(() => import('@pages/Terms'))
+const Refund = lazy(() => import('@pages/Refund'))
 const NotFound = lazy(() => import('@pages/NotFound'))
 
 function App() {
@@ -39,11 +43,15 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/referrals" element={<Referrals />} />
             <Route path="/team-members-page" element={<Team />} />
+            <Route path="/bio-:slug" element={<BioPage />} />
             <Route path="/join-our-team" element={<JoinTeam />} />
             <Route path="/prices" element={<Prices />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:slug" element={<BlogPost />} />
             <Route path="/about" element={<About />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/terms-of-service" element={<Terms />} />
+            <Route path="/refund-policy" element={<Refund />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

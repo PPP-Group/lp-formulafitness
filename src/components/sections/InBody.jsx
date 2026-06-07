@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { upload } from '@utils/constants'
 import './InBody.css'
 
 const features = [
@@ -12,17 +13,16 @@ export default function InBody() {
     <section className="section inbody">
       <div className="container grid-2 inbody__grid">
         <div className="inbody__media">
-          <div className="inbody__device">
-            <span className="inbody__device-label">InBody 580</span>
-          </div>
+          <img src={upload('2023/06/Image-3.png')} alt="InBody 580 body composition analyzer" loading="lazy" />
         </div>
 
         <div className="inbody__content">
-          <span className="eyebrow">The Gold Standard in Accuracy</span>
+          <span className="eyebrow">the gold standard in accuracy</span>
           <h2 className="section-title">Meet the InBody 580 — Your Health, Quantified</h2>
           <p className="section-subtitle">
             Clinically validated and trusted by elite gyms, the InBody 580 at Formula Fitness
-            delivers a full-body audit in under a minute.
+            delivers a full-body audit in under a minute. Go beyond the scale with precise readings
+            of:
           </p>
 
           <ul className="inbody__features">

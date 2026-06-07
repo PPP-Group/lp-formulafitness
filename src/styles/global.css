@@ -58,6 +58,10 @@ h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
+  /* Resolve a cor no escopo do próprio título (não herda o literal do body).
+     Garante que seções de fundo escuro com --color-text-primary sobrescrito
+     tenham títulos legíveis. */
+  color: var(--color-text-primary);
 }
 
 /* ==========================================================================

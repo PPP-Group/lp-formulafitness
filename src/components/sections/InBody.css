@@ -6,27 +6,10 @@
   display: flex;
   justify-content: center;
 }
-.inbody__device {
-  position: relative;
+.inbody__media img {
   width: 100%;
-  max-width: 360px;
-  aspect-ratio: 3 / 4;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  background:
-    radial-gradient(circle at 50% 25%, rgba(70, 127, 247, 0.15), transparent 55%),
-    linear-gradient(160deg, #161616, #0a0a0a);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: var(--space-xl);
-}
-.inbody__device-label {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: var(--color-brand);
-  letter-spacing: 0.04em;
+  max-width: 440px;
+  object-fit: contain;
 }
 
 .inbody__content {

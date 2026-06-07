@@ -1,67 +1,45 @@
 import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
+import LeadForm from '@components/sections/LeadForm'
 import ConsultCTA from '@components/sections/ConsultCTA'
+import { company } from '@utils/constants'
 import './Prices.css'
-
-const plans = [
-  {
-    name: 'Private Training',
-    tagline: 'One-on-one coaching',
-    features: ['Dedicated personal trainer', 'Fully customized program', 'InBody progress tracking'],
-    featured: false,
-  },
-  {
-    name: 'Semi-Private',
-    tagline: 'Small group, big results',
-    features: ['2–4 clients per session', 'Individual programming', 'Most popular option'],
-    featured: true,
-  },
-  {
-    name: 'Recovery Lab',
-    tagline: 'Recover & restore',
-    features: ['Mobility & recovery tools', 'Add-on to any plan', 'Flexible scheduling'],
-    featured: false,
-  },
-]
 
 export default function Prices() {
   return (
     <>
       <Seo
         title="Prices"
-        description="Flexible training options at Formula Fitness. Book a consultation for personalized pricing."
+        description="Every journey is different. Enter your info to get personalized pricing for training at Formula Fitness."
         path="/prices"
       />
       <PageHero
         eyebrow="Membership"
-        title="Plans & Pricing"
-        description="Every journey is different. Book a consultation and we'll recommend the right plan for your goals."
+        title="Prices"
+        description="Every fitness journey is different, so pricing is tailored to your goals and program. Enter your info below and we'll get you personalized pricing."
       />
-      <div className="section">
-        <div className="container grid-3 prices__grid">
-          {plans.map((plan) => (
-            <article
-              key={plan.name}
-              className={`price-card ${plan.featured ? 'price-card--featured' : ''}`}
-            >
-              {plan.featured && <span className="price-card__tag">Most Popular</span>}
-              <h3 className="price-card__name">{plan.name}</h3>
-              <p className="price-card__tagline">{plan.tagline}</p>
-              <ul className="price-card__features">
-                {plan.features.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-              <a
-                href="#consult"
-                className={`btn ${plan.featured ? 'btn-primary' : 'btn-outline'} price-card__cta`}
-              >
-                Book a Consultation
-              </a>
-            </article>
-          ))}
+      <section className="section">
+        <div className="container prices-lead">
+          <div className="prices-lead__info">
+            <h2 className="section-title">Enter Info to Get Prices</h2>
+            <p className="section-subtitle">
+              Tell us a little about yourself and your goals. A fitness professional from our team
+              will reach out with pricing options that fit your needs and budget.
+            </p>
+            <ul className="prices-lead__contact">
+              <li>
+                <span>Phone</span>
+                <a href={company.phoneHref}>{company.phone}</a>
+              </li>
+              <li>
+                <span>Email</span>
+                <a href={`mailto:${company.email}`}>{company.email}</a>
+              </li>
+            </ul>
+          </div>
+          <LeadForm title="Enter your Contact Info" />
         </div>
-      </div>
+      </section>
       <ConsultCTA />
     </>
   )

@@ -4,40 +4,44 @@
    ========================================================================== */
 
 :root {
-  /* --- Cores: fundos ---
-     Extraídos do CSS real do site (Elementor kit). Fundo quase preto #020101. */
-  --color-bg-primary: #020101;
-  --color-bg-secondary: #0a0d14;
-  --color-bg-tertiary: #11151f;
-  --color-bg-card: #0c1018;
+  /* --- Cores: fundos (tema claro — fundo branco predominante) --- */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f4f7fc;
+  --color-bg-tertiary: #eaeff8;
+  --color-bg-card: #ffffff;
 
   /* --- Cores: marca (azul #467FF7 do site original) --- */
   --color-brand: #467ff7;
-  --color-brand-dark: #278ff0;
+  --color-brand-dark: #2f6adf;
   --color-brand-light: #6f9ffa;
   --color-navy: #182340;
 
   /* --- Cores: texto --- */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #b6bcc8;
-  --color-text-muted: #71767f;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #9ca3af;
   --color-text-on-brand: #ffffff;
 
   /* --- Cores: suporte --- */
-  --color-border: #1e2530;
-  --color-border-hover: #2c3645;
-  --color-divider: #161b24;
+  --color-border: #e2e8f0;
+  --color-border-hover: #cbd5e1;
+  --color-divider: #e2e8f0;
   --color-overlay: rgba(0, 0, 0, 0.75);
   --color-overlay-light: rgba(0, 0, 0, 0.4);
 
   --color-star-yellow: #fec42d;
-  --color-error: #ff4444;
+  --color-error: #ef4444;
   --color-success: #467ff7;
 
+  /* --- Hero background image (foto real auto-hospedada) ---
+     A variável é usada em Hero.css; o overlay escuro (.hero__overlay) garante legibilidade. */
+  --hero-bg-image: linear-gradient(160deg, rgba(13, 18, 24, 0.45), rgba(13, 18, 24, 0.7)),
+    url('/assets/uploads/2026/05/Formula-Fitness-03.2026-15-scaled.jpg');
+
   /* --- Gradientes --- */
-  --gradient-hero: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.85) 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.80) 100%);
   --gradient-card-hover: linear-gradient(180deg, transparent 0%, rgba(70, 127, 247, 0.05) 100%);
-  --gradient-section-fade: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+  --gradient-section-fade: linear-gradient(135deg, #f4f7fc 0%, #e8eef8 100%);
 
   /* --- Tipografia: famílias ---
      Site original: Poppins (headings), Sofia Pro (body), Rajdhani (display).
@@ -93,11 +97,11 @@
   --container-padding-x: clamp(1rem, 4vw, 2rem);
 
   /* --- Sombras --- */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(70, 127, 247, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 0 20px rgba(70, 127, 247, 0.20);
 
   /* --- Easing --- */
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);

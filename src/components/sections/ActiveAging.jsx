@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { upload } from '@utils/constants'
 import './ActiveAging.css'
 
 export default function ActiveAging() {
@@ -19,7 +20,11 @@ export default function ActiveAging() {
         </div>
 
         <div className="active-aging__media">
-          <div className="active-aging__panel" />
+          <img
+            src={upload('2023/11/services-landing.png')}
+            alt="An active aging member training at Formula Fitness"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

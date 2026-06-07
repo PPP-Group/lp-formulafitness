@@ -1,8 +1,8 @@
 import './VideoCard.css'
 
 // Card de vídeo: thumbnail do YouTube + botão de play sobreposto.
-export default function VideoCard({ videoId, name, quote, onPlay }) {
-  const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+export default function VideoCard({ videoId, name, quote, onPlay, thumb: thumbProp }) {
+  const thumb = thumbProp || `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
 
   return (
     <article className="video-card">

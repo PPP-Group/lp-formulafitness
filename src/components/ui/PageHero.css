@@ -1,6 +1,8 @@
 .page-hero {
   padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
-  background: var(--gradient-section-fade);
+  background:
+    radial-gradient(circle at 80% 50%, rgba(70, 127, 247, 0.08), transparent 55%),
+    var(--color-bg-secondary);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -16,4 +18,28 @@
   font-size: var(--text-body);
   line-height: var(--text-body-lh);
   max-width: 60ch;
+}
+
+.page-hero__cta {
+  margin-top: var(--space-xl);
+}
+
+/* Variante com foto de fundo (hero escuro) */
+.page-hero--image {
+  background-size: cover;
+  background-position: center;
+  border-bottom: none;
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.page-hero--image .page-hero__title {
+  color: #fff;
+}
+.page-hero--image .page-hero__desc {
+  color: rgba(255, 255, 255, 0.82);
+}
+.page-hero--image .eyebrow {
+  color: var(--color-brand-light);
 }

@@ -10,7 +10,7 @@ export default function Programs() {
         <SectionTitle
           eyebrow="What We Offer"
           title="Training Programs"
-          description="Propel your workout routine to new heights with our elite training programs, personalized to intensify and optimize your fitness journey."
+          description="Propel your workout routine to new heights with our elite training programs, personalized to intensify and optimize your fitness journey. Experience a training style meticulously tailored to your unique needs, ensuring maximized results and enhanced overall well-being."
           align="center"
         />
 
@@ -18,12 +18,12 @@ export default function Programs() {
           {programs.map((program) => (
             <article className="program-card" key={program.id}>
               <div className="program-card__media">
-                <span className="program-card__badge">{program.title}</span>
+                <img src={program.image} alt={program.title} loading="lazy" />
               </div>
               <div className="program-card__body">
                 <h3 className="program-card__title">{program.title}</h3>
                 <p className="program-card__desc">{program.description}</p>
-                <Link to={program.path} className="btn-link">
+                <Link to={program.path} className="btn-link" aria-label={program.cta}>
                   Learn More
                   <Arrow />
                 </Link>

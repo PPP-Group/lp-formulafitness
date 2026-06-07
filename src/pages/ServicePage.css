@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
+  box-shadow: var(--shadow-card);
 }
 .content-page__highlight-label {
   font-family: var(--font-heading);
@@ -47,4 +48,25 @@
   .content-page__highlights {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Bloco de horário (Semi-Private) */
+.schedule-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  text-align: center;
+}
+.schedule-block img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+.schedule-block__note {
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+  max-width: 70ch;
 }

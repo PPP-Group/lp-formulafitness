@@ -38,7 +38,9 @@ export default function Footer() {
           <h4 className="footer__heading">Latest News</h4>
           <ul>
             <li>
-              <Link to="/blogs">What You Can Expect at Formula Fitness</Link>
+              <Link to="/blogs/best-pricing-for-personaltraining">
+                What You Can Expect at Formula Fitness
+              </Link>
             </li>
           </ul>
         </div>

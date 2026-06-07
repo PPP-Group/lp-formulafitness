@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import SectionTitle from '@components/ui/SectionTitle'
 import VideoCard from '@components/ui/VideoCard'
 import Modal from '@components/ui/Modal'
@@ -13,23 +14,25 @@ export default function VideoTestimonials() {
   return (
     <section className="section section--alt">
       <div className="container">
-        <SectionTitle
-          eyebrow="Real Stories"
-          title="Personal Training, Personal Triumphs!"
-          description="Your unique goals and needs are prioritized, guiding you towards a sustainable and impactful fitness journey."
-          align="center"
-        />
+        <SectionTitle title="Watch These Testimonials!" align="center" />
 
         <div className="grid-3">
           {videoTestimonials.map((item) => (
             <VideoCard
               key={item.id}
               videoId={item.videoId}
+              thumb={item.thumb}
               name={item.name}
               quote={item.quote}
               onPlay={openVideo}
             />
           ))}
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: 'var(--space-2xl)' }}>
+          <Link to="/testimonials" className="btn btn-outline">
+            View More
+          </Link>
         </div>
       </div>
 

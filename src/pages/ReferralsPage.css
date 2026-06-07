@@ -1,0 +1,114 @@
+.ref-earn,
+.ref-tiers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+.ref-earn__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s var(--ease-standard), box-shadow 0.3s var(--ease-standard);
+}
+.ref-earn__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.ref-earn__points {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-brand);
+  margin-bottom: var(--space-sm);
+}
+.ref-earn__card h3 {
+  font-size: var(--text-h4);
+  margin-bottom: var(--space-sm);
+}
+.ref-earn__card p {
+  color: var(--color-text-secondary);
+  line-height: var(--text-body-lh);
+}
+
+.ref-tier {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+.ref-tier h3 {
+  font-size: var(--text-h4);
+  color: var(--color-brand);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+.ref-tier ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.ref-tier li {
+  color: var(--color-text-secondary);
+}
+
+.ref-vip {
+  max-width: 760px;
+}
+.ref-vip__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+.ref-vip__list li {
+  position: relative;
+  padding-left: var(--space-xl);
+  color: var(--color-text-secondary);
+  line-height: var(--text-body-lh);
+}
+.ref-vip__list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: var(--color-brand);
+}
+
+.ref-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+.ref-form__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.ref-form__fine {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  line-height: var(--text-body-lh);
+  margin-top: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .ref-earn {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ref-tiers {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .ref-form {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+  }
+}

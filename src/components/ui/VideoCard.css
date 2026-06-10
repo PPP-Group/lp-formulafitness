@@ -49,13 +49,21 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--color-brand);
-  color: var(--color-text-on-brand);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
   padding-left: 4px;
-  transition: transform 0.3s var(--ease-bounce);
+  transition: 
+    transform 0.3s var(--ease-bounce),
+    background 0.3s var(--ease-standard),
+    border-color 0.3s var(--ease-standard);
 }
 .video-card__thumb:hover .video-card__play {
   transform: translate(-50%, -50%) scale(1.1);
+  background: var(--color-brand);
+  border-color: var(--color-brand);
 }
 
 .video-card__name {

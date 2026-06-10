@@ -1,29 +1,88 @@
+/* ==========================================================================
+   LEAD FORM — Formula Fitness
+   ========================================================================== */
+
 .lead-form {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  box-shadow: var(--shadow-card);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.lead-form--compact {
+  padding: var(--space-xl);
   gap: var(--space-md);
 }
 
+/* --------------------------------------------------------------------------
+   Title
+   -------------------------------------------------------------------------- */
+
 .lead-form__title {
+  font-family: var(--font-heading);
   font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-text-primary);
   margin-bottom: var(--space-xs);
 }
+
+/* --------------------------------------------------------------------------
+   Row (First / Last Name side-by-side)
+   -------------------------------------------------------------------------- */
+
+.lead-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+@media (max-width: 480px) {
+  .lead-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Fields & Labels
+   -------------------------------------------------------------------------- */
+
+.lead-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lead-form__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.lead-form__label span {
+  color: var(--color-brand);
+  margin-left: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   Inputs
+   -------------------------------------------------------------------------- */
 
 .form-input {
   width: 100%;
   font-family: inherit;
   font-size: var(--text-body);
   color: var(--color-text-primary);
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-primary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 0.85rem 1rem;
-  transition: border-color 0.2s var(--ease-standard), box-shadow 0.2s var(--ease-standard);
+  padding: 0.75rem 1rem;
+  transition:
+    border-color 0.2s var(--ease-standard),
+    box-shadow 0.2s var(--ease-standard);
 }
 
 .form-input::placeholder {
@@ -38,29 +97,88 @@
 
 textarea.form-input {
   resize: vertical;
-  min-height: 88px;
+  min-height: 100px;
+  line-height: 1.6;
 }
+
+/* --------------------------------------------------------------------------
+   Select
+   -------------------------------------------------------------------------- */
+
+.lead-form__select-wrapper {
+  position: relative;
+}
+
+.lead-form__select-wrapper::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-text-muted);
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+}
+
+.form-select:invalid,
+.form-select option[value=""] {
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Submit button
+   -------------------------------------------------------------------------- */
 
 .lead-form__submit {
-  align-self: flex-start;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem 2rem;
   margin-top: var(--space-xs);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
 }
 
-.lead-form--compact {
-  padding: var(--space-lg);
-}
+/* --------------------------------------------------------------------------
+   Success state
+   -------------------------------------------------------------------------- */
 
 .lead-form--success {
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  min-height: 260px;
+  gap: var(--space-md);
+}
+
+.lead-form__success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(70, 127, 247, 0.12);
+  color: var(--color-brand);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .lead-form--success h3 {
   font-size: var(--text-h3);
-  margin-bottom: var(--space-xs);
   color: var(--color-brand);
 }
 
 .lead-form--success p {
   color: var(--color-text-secondary);
+  max-width: 36ch;
 }

@@ -1,29 +1,50 @@
+/* ==========================================================================
+   FOOTER — Formula Fitness
+   ========================================================================== */
+
 .footer {
-  /* escopo local: mantém footer escuro independente do tema global */
+  /* Escopo local: mantém footer escuro independente do tema global */
   --color-bg-secondary: #0c1018;
   --color-text-primary: #ffffff;
   --color-text-secondary: #b6bcc8;
   --color-text-muted: #71767f;
   --color-border: #1e2530;
   --color-brand: #467ff7;
+
   color: var(--color-text-primary);
   background: #0c1018;
   border-top: 1px solid #1e2530;
-  margin-top: auto;
-  padding-top: var(--space-md);
+  /* Espaçamento superior garante respiro logo abaixo da linha */
+  padding-top: var(--space-3xl);
 }
+
+/* --------------------------------------------------------------------------
+   Grid principal
+   -------------------------------------------------------------------------- */
 
 .footer__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
-  padding-top: var(--space-4xl);
+  padding-top: var(--space-xl);
   padding-bottom: var(--space-3xl);
 }
 
+/* --------------------------------------------------------------------------
+   Brand / Logo
+   -------------------------------------------------------------------------- */
+
 .footer__brand img {
-  height: 40px;
+  height: 100px;
   width: auto;
+  margin-bottom: var(--space-md);
+}
+
+.footer__tagline {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  max-width: 28ch;
   margin-bottom: var(--space-lg);
 }
 
@@ -31,25 +52,22 @@
   display: flex;
   gap: var(--space-sm);
 }
+
 .footer__social a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
   color: var(--color-text-secondary);
-  transition:
-    color 0.25s var(--ease-standard),
-    border-color 0.25s var(--ease-standard),
-    background 0.25s var(--ease-standard);
+  transition: color 0.25s var(--ease-standard);
 }
+
 .footer__social a:hover {
-  color: var(--color-text-on-brand);
-  background: var(--color-brand);
-  border-color: var(--color-brand);
+  color: var(--color-brand);
 }
+
+/* --------------------------------------------------------------------------
+   Column headings
+   -------------------------------------------------------------------------- */
 
 .footer__heading {
   font-family: var(--font-heading);
@@ -61,20 +79,23 @@
   line-height: 1;
 }
 
+/* --------------------------------------------------------------------------
+   Navigation columns
+   -------------------------------------------------------------------------- */
+
 .footer__col ul {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
 }
+
 .footer__col a {
   color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.7;
   transition: color 0.25s var(--ease-standard);
 }
-.footer__col a:hover {
-  color: var(--color-brand);
-}
+
 .footer__col a:hover {
   color: var(--color-brand);
 }
@@ -85,19 +106,90 @@
   font-style: italic;
 }
 
-.footer__contact li {
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-.footer__days {
-  color: var(--color-text-muted);
+/* --------------------------------------------------------------------------
+   Contact column
+   -------------------------------------------------------------------------- */
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer__contact-item--top {
+  align-items: flex-start;
+}
+
+.footer__contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--color-brand);
+  margin-top: 2px;
+  opacity: 0.85;
+}
+
+.footer__contact a {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  transition: color 0.25s var(--ease-standard);
+}
+
+.footer__contact a:hover {
+  color: var(--color-brand);
+}
+
+.footer__contact-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-xs) 0;
+}
+
+/* Hours nested list */
+.footer__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer__hours-row {
+  display: flex;
+  gap: var(--space-xs);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.footer__days {
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  min-width: 5.5ch;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom bar
+   -------------------------------------------------------------------------- */
+
 .footer__bar {
+  margin-top: var(--space-2xl);
   border-top: 1px solid var(--color-border);
   padding: var(--space-lg) 0;
 }
+
 .footer__bar-inner {
   display: flex;
   flex-direction: column;
@@ -105,47 +197,58 @@
   align-items: center;
   text-align: center;
 }
+
 .footer__bar p {
   color: var(--color-text-muted);
   font-size: 0.85rem;
 }
+
 .footer__legal {
   display: flex;
   gap: var(--space-lg);
 }
+
 .footer__legal a {
   color: var(--color-text-muted);
   font-size: 0.85rem;
   transition: color 0.25s var(--ease-standard);
 }
+
 .footer__legal a:hover {
   color: var(--color-brand);
 }
 
+/* --------------------------------------------------------------------------
+   Responsive — tablet
+   -------------------------------------------------------------------------- */
+
 @media (min-width: 600px) {
   .footer__grid {
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
   }
+
   .footer__col ul {
     gap: var(--space-md);
   }
-  .footer {
-    padding-top: 0;
-  }
 }
+
+/* --------------------------------------------------------------------------
+   Responsive — desktop
+   -------------------------------------------------------------------------- */
 
 @media (min-width: 1024px) {
   .footer__grid {
     grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: var(--space-3xl);
   }
+
   .footer__bar-inner {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
-  .footer__grid {
-    gap: var(--space-3xl);
-  }
+
   .footer__col ul {
     gap: var(--space-lg);
   }

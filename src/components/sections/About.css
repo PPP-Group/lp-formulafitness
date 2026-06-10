@@ -37,16 +37,24 @@
   width: 76px;
   height: 76px;
   border-radius: var(--radius-pill);
-  background: var(--color-brand);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #fff;
   display: grid;
   place-items: center;
   padding-left: 4px;
   box-shadow: var(--shadow-glow);
-  transition: transform 0.3s var(--ease-bounce);
+  transition: 
+    transform 0.3s var(--ease-bounce),
+    background 0.3s var(--ease-standard),
+    border-color 0.3s var(--ease-standard);
 }
 .about__play:hover .about__play-icon {
   transform: scale(1.08);
+  background: var(--color-brand);
+  border-color: var(--color-brand);
 }
 
 .about__media-caption {

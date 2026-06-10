@@ -1,0 +1,96 @@
+/* ==========================================================================
+   CONTACT SECTION — Formula Fitness
+   Layout: foto full-bleed à esquerda | formulário à direita
+   ========================================================================== */
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 600px;
+}
+
+/* --------------------------------------------------------------------------
+   Painel da foto (esquerda)
+   -------------------------------------------------------------------------- */
+
+.contact-section__photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+}
+
+.contact-section__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.contact-section__photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(13, 18, 28, 0.35) 0%,
+    rgba(13, 18, 28, 0.72) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2xl);
+}
+
+.contact-section__badge {
+  color: #fff;
+}
+
+.contact-section__badge-eyebrow {
+  display: inline-block;
+  font-size: var(--text-overline);
+  letter-spacing: var(--text-overline-ls);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-brand);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-section__badge-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Painel do formulário (direita)
+   -------------------------------------------------------------------------- */
+
+.contact-section__form-panel {
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-2xl);
+}
+
+.contact-section__form-panel .lead-form {
+  width: 100%;
+  max-width: 540px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — desktop
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 900px) {
+  .contact-section {
+    grid-template-columns: 1fr 1fr;
+    min-height: 700px;
+  }
+
+  .contact-section__photo {
+    min-height: unset;
+  }
+}

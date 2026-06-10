@@ -5,11 +5,32 @@ import { assets } from '@utils/constants'
 import { useScrollPosition } from '@hooks/useScrollPosition'
 import './Header.css'
 
+// Rotas cujo topo é um hero ESCURO (home + páginas com PageHero image).
+// Nelas o header pode ficar transparente com texto branco no topo.
+// Qualquer outra rota tem topo claro → header sólido desde o início (texto escuro legível).
+const DARK_HERO_ROUTES = new Set([
+  '/',
+  '/training-services',
+  '/personal-training',
+  '/semi-private-personal-training',
+  '/recovery-service',
+  '/active-aging',
+  '/inbody',
+  '/youth-training-program',
+  '/referrals',
+  '/about',
+  '/testimonials',
+])
+
 export default function Header() {
   const scrolled = useScrollPosition(50)
   const [menuOpen, setMenuOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState(null) // grupo expandido no mobile
   const { pathname } = useLocation()
+
+  // Header transparente só sobre hero escuro e no topo; caso contrário, sólido.
+  const hasDarkHero = DARK_HERO_ROUTES.has(pathname)
+  const solid = scrolled || menuOpen || !hasDarkHero
 
   // Fecha o menu mobile ao trocar de rota
   useEffect(() => {
@@ -26,7 +47,7 @@ export default function Header() {
   }, [menuOpen])
 
   return (
-    <header className={`header ${scrolled || menuOpen ? 'header--solid' : ''}`}>
+    <header className={`header ${solid ? 'header--solid' : ''}`}>
       <div className="container header__inner">
         <Link to="/" className="header__logo" aria-label="Formula Fitness — Home">
           <img src={assets.logo} alt="Formula Fitness" width="150" height="40" />

@@ -39,18 +39,11 @@
   height: 64px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.65;
-  transition: filter 0.3s var(--ease-standard), opacity 0.3s var(--ease-standard);
+  /* logos sempre coloridas */
+  transition: transform 0.3s var(--ease-bounce);
 }
 
+/* hover: a logo apenas cresce um pouco; a rolagem NÃO pausa */
 .partners__logo:hover img {
-  filter: grayscale(0);
-  opacity: 1;
-}
-
-@media (hover: hover) {
-  .partners__viewport:hover .partners__track {
-    animation-play-state: paused;
-  }
+  transform: scale(1.12);
 }

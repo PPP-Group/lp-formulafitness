@@ -111,9 +111,7 @@
 
   /* --- Layout --- */
   --header-height: 80px;
-  /* Site original usa cantos retos (border-radius 0) em botões/cards,
-     com pílulas (100px) em elementos pontuais. */
-  --radius-sm: 0px;
+  --radius-sm: 6px;
   --radius-md: 4px;
   --radius-lg: 8px;
   --radius-pill: 100px;

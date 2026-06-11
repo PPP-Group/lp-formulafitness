@@ -40,6 +40,7 @@ export const upload = (rel) => `${U}/${rel}`
 // Embeds do YouTube usados nos lightboxes de depoimento.
 export const youtube = {
   main: '3ktIZoJ0X20', // vídeo principal ("Personal Training at Formula Fitness Explained")
+  semiPrivate: 'e4VpoeYnIvU', // semi-private personal training background video
   katie: 'b2opnbIFN2s',
   dharshun: '7-c4PrDbBmo',
   adrian: 'gBsjx7-7vDw',

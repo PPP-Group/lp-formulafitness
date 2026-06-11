@@ -9,14 +9,16 @@ export default function FeatureRow({
   paragraphs = [],
   bullets = [],
   cta,
+  ctaHref = '/#consult',
   reverse = false,
   alt = false,
+  mediaClassName = '',
 }) {
   return (
     <section className={`section feature-row ${alt ? 'section--alt' : ''}`}>
       <div className={`container grid-2 feature-row__grid ${reverse ? 'feature-row__grid--reverse' : ''}`}>
         {image && (
-          <div className="feature-row__media">
+          <div className={`feature-row__media ${mediaClassName}`}>
             <img src={image} alt={imageAlt} loading="lazy" />
           </div>
         )}
@@ -39,7 +41,7 @@ export default function FeatureRow({
             </ul>
           )}
           {cta && (
-            <a href="#consult" className="btn btn-primary feature-row__cta">
+            <a href={ctaHref} className="btn btn-primary feature-row__cta">
               {cta}
             </a>
           )}

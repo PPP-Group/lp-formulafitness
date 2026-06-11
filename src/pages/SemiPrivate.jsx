@@ -5,12 +5,11 @@ import FeatureRow from '@components/sections/FeatureRow'
 import LocationBlock from '@components/sections/LocationBlock'
 import CtaBanner from '@components/sections/CtaBanner'
 import Results from '@components/sections/Results'
-import QuoteCarousel from '@components/ui/QuoteCarousel'
 import FindUs from '@components/sections/FindUs'
 import ConsultCTA from '@components/sections/ConsultCTA'
-import { shortTestimonials } from '@data/testimonials'
-import { upload } from '@utils/constants'
+import { upload, youtube } from '@utils/constants'
 import './ServicePage.css'
+import './PersonalTrainingPage.css'
 
 const steps = [
   {
@@ -122,25 +121,8 @@ export default function SemiPrivate() {
         eyebrow="Semi-Private Personal Training"
         title="Semi-Private Personal Training"
         description="Busy professionals, on-the-go parents, and active agers trust our data-driven coaching to shed fat, build strength, and stay injury-free—without the private-session price tag."
-        image={upload('2026/05/Formula-Fitness-03.2026-95-scaled.jpg')}
+        image={upload('2025/05/DSCF2558-scaled.jpg')}
         showCta
-        cta="Get Started"
-      />
-
-      <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-108-scaled.jpg')}
-        imageAlt="Members training together in a semi-private session"
-        eyebrow="Experience the difference"
-        heading="Everything You Need to Succeed"
-        bullets={[
-          'Elite Certified Trainers',
-          'Science-Based, Data-Driven Coaching',
-          'Precision Meal Planning',
-          'Personalized Blueprint for Your Unique Body',
-          'Safety & Recovery Built-In',
-          'Accountability That Works',
-          'Five-Star Member Experience',
-        ]}
         cta="Get Started"
       />
 
@@ -150,6 +132,40 @@ export default function SemiPrivate() {
         cta="Start My Fitness Journey"
         alt
       />
+
+      {/* Video background section — mirrors original site */}
+      <section className="pt-vbg" aria-label="Experience the Difference">
+        <div className="pt-vbg__media" aria-hidden="true">
+          <iframe
+            src={`https://www.youtube.com/embed/${youtube.semiPrivate}?autoplay=1&mute=1&loop=1&playlist=${youtube.semiPrivate}&controls=0&rel=0&showinfo=0&modestbranding=1&playsinline=1`}
+            title="Semi-private training background"
+            allow="autoplay; encrypted-media"
+          />
+        </div>
+        <div className="pt-vbg__overlay" aria-hidden="true" />
+        <div className="pt-vbg__content">
+          <div className="pt-vbg__content-inner">
+            <span className="eyebrow" style={{ color: 'rgba(255,255,255,0.7)' }}>Experience the Difference</span>
+            <h2 className="pt-vbg__title" style={{ marginTop: 'var(--space-sm)' }}>Everything You Need to Succeed</h2>
+            <ul className="pt-vbg__list">
+              {[
+                'Elite Certified Trainers',
+                'Science-Based, Data-Driven Coaching',
+                'Precision Meal Planning',
+                'Personalized Blueprint for Your Unique Body',
+                'Safety & Recovery Built-In',
+                'Accountability That Works',
+                'Five-Star Member Experience',
+              ].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <a href="/#consult" className="btn btn-primary pt-vbg__cta">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </section>
 
       {features.map((f) => (
         <FeatureRow
@@ -167,7 +183,7 @@ export default function SemiPrivate() {
         heading="Get Lean & Get Strong"
         subheading="Book Your First Session Now!"
         button="Get Started"
-        image={upload('2026/05/Formula-Fitness-03.2026-79-scaled.jpg')}
+        image={upload('2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg')}
       />
 
       <section className="section section--alt">
@@ -185,7 +201,6 @@ export default function SemiPrivate() {
       </section>
 
       <Results />
-      <QuoteCarousel items={shortTestimonials} title="Real People, Real Results" eyebrow="Testimonials" />
 
       <LocationBlock />
       <CtaBanner

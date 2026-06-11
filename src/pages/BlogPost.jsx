@@ -38,7 +38,7 @@ export default function BlogPost() {
             )
           )}
           <div className="post__cta">
-            <a href="#consult" className="btn btn-primary">
+            <a href="/#consult" className="btn btn-primary">
               Book a Consultation
             </a>
           </div>

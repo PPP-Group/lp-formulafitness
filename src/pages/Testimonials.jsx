@@ -72,7 +72,7 @@ export default function Testimonials() {
             challenge into a victory and crafting the best version of you.
           </p>
           <div className="tm-philosophy__cta">
-            <a href="#consult" className="btn btn-primary">Book A Consultation</a>
+            <a href="/#consult" className="btn btn-primary">Book A Consultation</a>
           </div>
         </div>
       </section>

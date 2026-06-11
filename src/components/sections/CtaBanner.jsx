@@ -7,7 +7,7 @@ export default function CtaBanner({ heading, subheading, button = 'Get Started',
       <div className="container cta-banner__inner">
         {heading && <h2 className="cta-banner__title">{heading}</h2>}
         {subheading && <p className="cta-banner__sub">{subheading}</p>}
-        <a href="#consult" className="btn btn-primary cta-banner__btn">
+        <a href="/#consult" className="btn btn-primary cta-banner__btn">
           {button}
         </a>
       </div>

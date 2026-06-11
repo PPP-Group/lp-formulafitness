@@ -10,11 +10,9 @@ import VideoTestimonials from '@components/sections/VideoTestimonials'
 import BMISection from '@components/sections/BMISection'
 import Reviews from '@components/sections/Reviews'
 import Results from '@components/sections/Results'
-import QuoteCarousel from '@components/ui/QuoteCarousel'
 import FindUs from '@components/sections/FindUs'
 import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
-import { shortTestimonials } from '@data/testimonials'
 
 export default function Home() {
   return (
@@ -35,7 +33,6 @@ export default function Home() {
       <BMISection />
       <Reviews />
       <Results />
-      <QuoteCarousel items={shortTestimonials} title="What Our Members Say" eyebrow="Testimonials" />
       <FindUs />
       <ContactSection />
       <ConsultCTA />

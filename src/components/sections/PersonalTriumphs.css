@@ -1,18 +1,43 @@
 .triumphs__grid {
-  align-items: center;
+  align-items: flex-end;
+}
+
+.triumphs__content {
+  padding-bottom: var(--space-xl);
 }
 
 .triumphs__media {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border);
+  position: relative;
 }
+
+/* card frame — cobre apenas a parte inferior onde está o fundo da foto,
+   deixando os braços flutuarem acima do enquadramento */
+.triumphs__media::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 58%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: transparent;
+  z-index: 0;
+}
+
 .triumphs__media img {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 100%;
-  min-height: 280px;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  transition: transform 0.4s var(--ease-standard);
+}
+
+.triumphs__media:hover img {
+  transform: scale(1.04);
 }
 
 .triumphs__content {

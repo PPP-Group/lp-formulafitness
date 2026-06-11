@@ -6,7 +6,7 @@
     radial-gradient(circle at 20% 30%, rgba(70, 127, 247, 0.22), transparent 55%),
     linear-gradient(160deg, #16223f, #0c1018);
   background-size: cover;
-  background-position: center;
+  background-position: center 25%;
 }
 .cta-banner__inner {
   display: flex;

@@ -5,11 +5,17 @@
 .inbody__media {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .inbody__media img {
   width: 100%;
   max-width: 440px;
   object-fit: contain;
+  transition: transform 0.4s var(--ease-standard);
+}
+
+.inbody__media:hover img {
+  transform: scale(1.04);
 }
 
 .inbody__content {

@@ -59,7 +59,7 @@
 }
 
 .header__logo img {
-  height: 36px;
+  height: 56px;
   width: auto;
 }
 
@@ -82,7 +82,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--color-text-secondary);
   padding: var(--space-xs) 0;

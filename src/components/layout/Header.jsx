@@ -81,7 +81,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <a href="#consult" className="btn btn-primary header__cta">
+        <a href="/#consult" className="btn btn-primary header__cta">
           Book a Consultation
         </a>
 
@@ -142,7 +142,7 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <a href="#consult" className="btn btn-primary mobile-menu__cta">
+          <a href="/#consult" className="btn btn-primary mobile-menu__cta">
             Book a Consultation
           </a>
         </nav>

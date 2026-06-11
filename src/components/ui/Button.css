@@ -1,0 +1,109 @@
+/* ==========================================================================
+   BUTTON — variantes, tamanhos e estados
+   Base: .btn em global.css (border-radius, font, transitions)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variante: secondary
+   -------------------------------------------------------------------------- */
+.btn-secondary {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border);
+  padding: 0.875rem 2rem;
+}
+.btn-secondary:hover {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-border-hover);
+  transform: translateY(-1px);
+}
+.btn-secondary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* --------------------------------------------------------------------------
+   Variante: ghost
+   -------------------------------------------------------------------------- */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid transparent;
+  padding: 0.875rem 2rem;
+}
+.btn-ghost:hover {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border);
+}
+
+/* --------------------------------------------------------------------------
+   Variante: danger
+   -------------------------------------------------------------------------- */
+.btn-danger {
+  background: var(--color-error);
+  color: var(--color-text-on-brand);
+  border: 2px solid var(--color-error);
+  padding: 0.875rem 2rem;
+}
+.btn-danger:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+}
+.btn-danger:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* --------------------------------------------------------------------------
+   Tamanhos
+   -------------------------------------------------------------------------- */
+.btn--sm {
+  font-size: var(--text-xs);
+  padding: 0.5rem 1rem;
+}
+.btn--lg {
+  font-size: var(--text-base);
+  padding: 1.125rem 2.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Estado: loading
+   -------------------------------------------------------------------------- */
+.btn--loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.btn__spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: var(--radius-full);
+  animation: btn-spin var(--duration-slow) linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --------------------------------------------------------------------------
+   Estado: disabled
+   -------------------------------------------------------------------------- */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Ícones
+   -------------------------------------------------------------------------- */
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  flex-shrink: 0;
+}

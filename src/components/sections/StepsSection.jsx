@@ -18,7 +18,7 @@ export default function StepsSection({ title, eyebrow, steps = [], cta, alt = fa
         </ol>
         {cta && (
           <div className="steps__cta">
-            <a href="#consult" className="btn btn-primary">
+            <a href="/#consult" className="btn btn-primary">
               {cta}
             </a>
           </div>

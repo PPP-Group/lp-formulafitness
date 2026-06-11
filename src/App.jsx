@@ -5,6 +5,7 @@ import ScrollToTop from '@components/layout/ScrollToTop'
 
 // Code splitting por rota (React.lazy + Suspense)
 const Home = lazy(() => import('@pages/Home'))
+const TrainingServices = lazy(() => import('@pages/TrainingServices'))
 const PersonalTraining = lazy(() => import('@pages/PersonalTraining'))
 const SemiPrivate = lazy(() => import('@pages/SemiPrivate'))
 const RecoveryService = lazy(() => import('@pages/RecoveryService'))
@@ -33,7 +34,7 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/training-services" element={<PersonalTraining />} />
+            <Route path="/training-services" element={<TrainingServices />} />
             <Route path="/personal-training" element={<PersonalTraining />} />
             <Route path="/semi-private-personal-training" element={<SemiPrivate />} />
             <Route path="/recovery-service" element={<RecoveryService />} />

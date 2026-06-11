@@ -14,7 +14,7 @@ export default function PageHero({ eyebrow, title, description, image, cta = 'Bo
         <h1 className="page-hero__title">{title}</h1>
         {description && <p className="page-hero__desc">{description}</p>}
         {showCta && (
-          <a href="#consult" className="btn btn-primary page-hero__cta">
+          <a href="/#consult" className="btn btn-primary page-hero__cta">
             {cta}
           </a>
         )}

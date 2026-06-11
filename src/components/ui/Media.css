@@ -1,0 +1,87 @@
+/* ==========================================================================
+   MEDIA — Image, Icon, Avatar
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Image
+   -------------------------------------------------------------------------- */
+.ds-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-gray-100);
+}
+
+.ds-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ds-image--cover  img { object-fit: cover; }
+.ds-image--contain img { object-fit: contain; }
+.ds-image--fill   img { object-fit: fill; }
+
+/* --------------------------------------------------------------------------
+   Icon
+   -------------------------------------------------------------------------- */
+.ds-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.ds-icon--xs  { width: 0.75rem;  height: 0.75rem; }
+.ds-icon--sm  { width: 1rem;     height: 1rem; }
+.ds-icon--md  { width: 1.25rem;  height: 1.25rem; }
+.ds-icon--lg  { width: 1.5rem;   height: 1.5rem; }
+.ds-icon--xl  { width: 2rem;     height: 2rem; }
+.ds-icon--2xl { width: 3rem;     height: 3rem; }
+
+.ds-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Cores */
+.ds-icon--brand   { color: var(--color-brand); }
+.ds-icon--muted   { color: var(--color-text-muted); }
+.ds-icon--inverse { color: var(--color-text-on-brand); }
+
+/* --------------------------------------------------------------------------
+   Avatar
+   -------------------------------------------------------------------------- */
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+  font-weight: var(--font-semibold);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.avatar--xs  { width: 1.5rem;  height: 1.5rem;  font-size: var(--text-xs); }
+.avatar--sm  { width: 2rem;    height: 2rem;    font-size: var(--text-xs); }
+.avatar--md  { width: 2.5rem;  height: 2.5rem;  font-size: var(--text-sm); }
+.avatar--lg  { width: 3.5rem;  height: 3.5rem;  font-size: var(--text-base); }
+.avatar--xl  { width: 5rem;    height: 5rem;    font-size: var(--text-xl); }
+.avatar--2xl { width: 7rem;    height: 7rem;    font-size: var(--text-3xl); }
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar__initials {
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+}

@@ -36,7 +36,7 @@ export default function About() {
             Health is Wealth — Upgrade To A Stronger Sustainable Body
           </h2>
           <Accordion items={philosophyPillars} />
-          <a href="#consult" className="btn btn-primary about__cta">
+          <a href="/#consult" className="btn btn-primary about__cta">
             Get Started
           </a>
         </div>

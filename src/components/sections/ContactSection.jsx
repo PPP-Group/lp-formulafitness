@@ -6,7 +6,7 @@ const PHOTO = '/assets/uploads/2023/06/Formula-Fitness-GroupHIIT-4.jpg'
 
 export default function ContactSection() {
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="consult">
       {/* Foto de fundo / painel esquerdo */}
       <div className="contact-section__photo" aria-hidden="true">
         <img

@@ -7,11 +7,10 @@ import LocationBlock from '@components/sections/LocationBlock'
 import Partners from '@components/sections/Partners'
 import CtaBanner from '@components/sections/CtaBanner'
 import Results from '@components/sections/Results'
-import QuoteCarousel from '@components/ui/QuoteCarousel'
 import FindUs from '@components/sections/FindUs'
 import ConsultCTA from '@components/sections/ConsultCTA'
-import { shortTestimonials } from '@data/testimonials'
-import { upload } from '@utils/constants'
+import { upload, youtube } from '@utils/constants'
+import './PersonalTrainingPage.css'
 
 const steps = [
   {
@@ -143,10 +142,23 @@ export default function PersonalTraining() {
         eyebrow="Private Personal Training"
         title="Personal Training"
         description="Your goals deserve more than generic workouts. Our data-driven approach, combined with elite certified coaches, provides personalized training that delivers strength, confidence, and results."
-        image={upload('2026/05/Formula-Fitness-03.2026-34-scaled.jpg')}
+        image={upload('2025/05/Consultation-Pic-scaled.jpg')}
         showCta
         cta="Book a consultation"
       />
+
+      <section className="section pt-explainer">
+        <div className="container pt-explainer__inner">
+          <div className="pt-explainer__video">
+            <iframe
+              src={`https://www.youtube.com/embed/${youtube.main}?rel=0`}
+              title="Personal Training at Formula Fitness Explained"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
 
       <StepsSection
         title="Three Steps to Your Fitness Journey"
@@ -155,23 +167,37 @@ export default function PersonalTraining() {
         alt
       />
 
-      <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-44-scaled.jpg')}
-        imageAlt="Elite certified trainer coaching a client"
-        eyebrow="Elite Certified Trainers"
-        heading="Elite 1-on-1 Coaching"
-        paragraphs={[
-          'Trusted by busy executives, motivated parents, and active aging members. Science-backed methods to build strength and shed fat, with safety, recovery, and live biomechanics coaching built into a five-star member experience.',
-        ]}
-        bullets={[
-          'Trusted by Busy Executives, Motivated Parents, and Active Aging Members',
-          'Science-Backed Methods to Build Strength and Shed Fat',
-          'Safety & Recovery Built-In',
-          'Live Biomechanics Coaching',
-          'Five-Star Member Experience',
-        ]}
-        cta="Book a consultation"
-      />
+      {/* Video background section — Elite Certified Trainers */}
+      <section className="pt-vbg" aria-label="Elite Certified Trainers">
+        <div className="pt-vbg__media" aria-hidden="true">
+          <iframe
+            src={`https://www.youtube.com/embed/${youtube.main}?autoplay=1&mute=1&loop=1&playlist=${youtube.main}&controls=0&rel=0&showinfo=0&modestbranding=1&playsinline=1`}
+            title="Formula Fitness training background"
+            allow="autoplay; encrypted-media"
+          />
+        </div>
+        <div className="pt-vbg__overlay" aria-hidden="true" />
+        <div className="pt-vbg__content">
+          <div className="pt-vbg__content-inner">
+            <h2 className="pt-vbg__title">Elite Certified Trainers</h2>
+            <ul className="pt-vbg__list">
+              {[
+                'Elite 1-on-1 Coaching',
+                'Trusted by Busy Executives, Motivated Parents, and Active Aging Members',
+                'Science-Backed Methods to Build Strength and Shed Fat',
+                'Safety & Recovery Built-In',
+                'Live Biomechanics Coaching',
+                'Five-Star Member Experience',
+              ].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <a href="/#consult" className="btn btn-primary pt-vbg__cta">
+              Book A Consultation
+            </a>
+          </div>
+        </div>
+      </section>
 
       <div className="section section--alt">
         <div className="container">
@@ -230,7 +256,6 @@ export default function PersonalTraining() {
       />
 
       <Results />
-      <QuoteCarousel items={shortTestimonials} title="Real People, Real Results" eyebrow="Testimonials" />
 
       <LocationBlock />
       <Partners />
@@ -238,7 +263,7 @@ export default function PersonalTraining() {
         heading="Start Your Transformation with Expert Coaching"
         subheading="Experience results-driven training built for you!"
         button="Book a consultation"
-        image={upload('2026/05/Formula-Fitness-03.2026-79-scaled.jpg')}
+        image={upload('2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg')}
       />
       <FindUs />
       <ConsultCTA />

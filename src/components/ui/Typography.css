@@ -1,0 +1,101 @@
+/* ==========================================================================
+   TYPOGRAPHY — Heading, Text, Code
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Heading
+   -------------------------------------------------------------------------- */
+.heading {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  line-height: var(--leading-tight);
+}
+
+.heading--1 { font-size: var(--text-h1); font-weight: var(--font-bold); }
+.heading--2 { font-size: var(--text-h2); font-weight: var(--font-bold); }
+.heading--3 { font-size: var(--text-h3); font-weight: var(--font-bold); }
+.heading--4 { font-size: var(--text-h4); font-weight: var(--font-semibold); }
+.heading--5 { font-size: var(--text-lg);  font-weight: var(--font-semibold); }
+.heading--6 { font-size: var(--text-base); font-weight: var(--font-semibold); }
+
+.heading--display {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: var(--text-display-lh);
+  letter-spacing: var(--text-display-ls);
+  font-weight: var(--font-bold);
+}
+
+/* Modificadores de peso */
+.heading--normal   { font-weight: var(--font-normal); }
+.heading--medium   { font-weight: var(--font-medium); }
+.heading--semibold { font-weight: var(--font-semibold); }
+.heading--bold     { font-weight: var(--font-bold); }
+
+/* Modificadores de cor */
+.heading--brand   { color: var(--color-brand); }
+.heading--muted   { color: var(--color-text-muted); }
+.heading--inverse { color: var(--color-text-on-brand); }
+
+/* --------------------------------------------------------------------------
+   Text
+   -------------------------------------------------------------------------- */
+.text {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+}
+
+.text--body    { font-size: var(--text-body);  line-height: var(--leading-relaxed); }
+.text--lead    { font-size: var(--text-lg);    line-height: var(--leading-relaxed); color: var(--color-text-secondary); }
+.text--small   { font-size: var(--text-small); line-height: var(--leading-normal); }
+.text--caption { font-size: var(--text-xs);    line-height: var(--leading-normal); color: var(--color-text-muted); }
+.text--label   {
+  font-size: var(--text-overline);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--text-overline-ls);
+  text-transform: uppercase;
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+}
+
+/* Modificadores de cor */
+.text--brand     { color: var(--color-brand); }
+.text--secondary { color: var(--color-text-secondary); }
+.text--muted     { color: var(--color-text-muted); }
+.text--inverse   { color: var(--color-text-on-brand); }
+.text--success   { color: var(--color-success-green); }
+.text--warning   { color: var(--color-warning); }
+.text--error     { color: var(--color-error); }
+
+/* --------------------------------------------------------------------------
+   Code
+   -------------------------------------------------------------------------- */
+.code--inline {
+  font-family: var(--font-mono, 'Fira Code', 'Cascadia Code', monospace);
+  font-size: 0.875em;
+  background: var(--color-gray-100);
+  color: var(--color-primary-700);
+  padding: 0.125em 0.375em;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border);
+}
+
+.code--block {
+  display: block;
+  font-family: var(--font-mono, 'Fira Code', 'Cascadia Code', monospace);
+  font-size: var(--text-sm);
+  background: var(--color-accent-500);
+  color: var(--color-gray-100);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  line-height: var(--leading-relaxed);
+}
+
+.code--block code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}

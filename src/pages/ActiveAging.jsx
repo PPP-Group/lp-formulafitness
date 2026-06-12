@@ -8,6 +8,7 @@ import Results from '@components/sections/Results'
 import VideoCard from '@components/ui/VideoCard'
 import Modal from '@components/ui/Modal'
 import FindUs from '@components/sections/FindUs'
+import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { videoTestimonials, resultsGallery } from '@data/testimonials'
 import { upload } from '@utils/constants'
@@ -187,6 +188,7 @@ export default function ActiveAging() {
       </section>
 
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
 
       <Modal open={!!active} onClose={close} label={active?.name}>

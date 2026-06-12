@@ -6,16 +6,17 @@ import FeatureRow from '@components/sections/FeatureRow'
 import LocationBlock from '@components/sections/LocationBlock'
 import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
+import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload } from '@utils/constants'
 
 const steps = [
-  { title: 'Movement Assessment', body: 'Every athlete starts here. We screen posture, mobility, and movement patterns to build a program that fits your child, not the other way around.' },
-  { title: 'Posture & Alignment', body: 'Good movement starts with a strong foundation. We correct imbalances early so young athletes move better, stand taller, and stay injury-free.' },
-  { title: 'Strength Training', body: 'Age-appropriate strength work that builds real, usable power. Safe progressions designed to support growing bodies, not overload them.' },
-  { title: 'Conditioning', body: 'Stamina, speed, and work capacity that carries over to any sport. Kids learn how to push, recover, and compete at a higher level.' },
-  { title: 'Functional Movement', body: 'Squat, hinge, push, pull, run, jump, land. We train the fundamental patterns every young athlete needs to move with confidence.' },
-  { title: 'Total-Body Integration', body: 'Core, upper body, and lower body working as one. The foundation for every sport: soccer, baseball, basketball, dance, and beyond.' },
+  { icon: upload('2026/05/icon-ff-youth-1.png'), title: 'Movement Assessment', body: 'Every athlete starts here. We screen posture, mobility, and movement patterns to build a program that fits your child, not the other way around.' },
+  { icon: upload('2026/05/icon-ff-youth-2.png'), title: 'Posture & Alignment', body: 'Good movement starts with a strong foundation. We correct imbalances early so young athletes move better, stand taller, and stay injury-free.' },
+  { icon: upload('2026/05/icon-ff-youth-3.png'), title: 'Strength Training', body: 'Age-appropriate strength work that builds real, usable power. Safe progressions designed to support growing bodies, not overload them.' },
+  { icon: upload('2026/05/icon-ff-youth-4.png'), title: 'Conditioning', body: 'Stamina, speed, and work capacity that carries over to any sport. Kids learn how to push, recover, and compete at a higher level.' },
+  { icon: upload('2026/05/icon-ff-youth-5.png'), title: 'Functional Movement', body: 'Squat, hinge, push, pull, run, jump, land. We train the fundamental patterns every young athlete needs to move with confidence.' },
+  { icon: upload('2026/05/icon-ff-youth-6.png'), title: 'Total-Body Integration', body: 'Core, upper body, and lower body working as one. The foundation for every sport: soccer, baseball, basketball, dance, and beyond.' },
 ]
 
 export default function YouthTraining() {
@@ -30,7 +31,8 @@ export default function YouthTraining() {
         eyebrow="Youth Training Program"
         title="Built Strong. Built Young. Built for Life."
         description="Youth athletic development that builds better movers, stronger athletes, and more confident kids."
-        image={upload('2026/05/Formula-Fitness-03.2026-71-scaled.jpg')}
+        image={upload('2026/05/WhatsApp-Image-2026-04-16-at-15.26.08-1.jpeg')}
+        badgeImage={upload('2026/04/Gemini_Generated_Image_ehaqfaehaqfaehaq.png')}
         showCta
         cta="Book a consultation"
       />
@@ -45,7 +47,7 @@ export default function YouthTraining() {
       />
 
       <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-95-scaled.jpg')}
+        image={upload('2026/04/WhatsApp-Image-2026-04-16-at-15.26.09.jpeg')}
         imageAlt="Young athlete training with a coach"
         heading="Why Choose Youth Performance Training"
         paragraphs={[
@@ -62,7 +64,7 @@ export default function YouthTraining() {
       />
 
       <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-108-scaled.jpg')}
+        image={upload('2026/04/WhatsApp-Image-2026-04-16-at-15.26.08.jpeg')}
         imageAlt="Youth conditioning session"
         heading="Results Driven Youth Training"
         paragraphs={[
@@ -84,9 +86,10 @@ export default function YouthTraining() {
         heading="Start Your Transformation with Expert Coaching"
         subheading="Experience results-driven training built for you!"
         button="Book a consultation"
-        image={upload('2026/05/Formula-Fitness-03.2026-79-scaled.jpg')}
+        image={upload('2026/05/WhatsApp-Image-2026-04-16-at-15.26.08-1.jpeg')}
       />
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
     </>
   )

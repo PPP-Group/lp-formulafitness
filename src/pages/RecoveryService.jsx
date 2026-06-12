@@ -2,6 +2,7 @@ import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import FeatureRow from '@components/sections/FeatureRow'
 import FindUs from '@components/sections/FindUs'
+import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload } from '@utils/constants'
 
@@ -77,6 +78,7 @@ export default function RecoveryService() {
       />
 
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
     </>
   )

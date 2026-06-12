@@ -6,6 +6,7 @@ import LocationBlock from '@components/sections/LocationBlock'
 import CtaBanner from '@components/sections/CtaBanner'
 import Results from '@components/sections/Results'
 import FindUs from '@components/sections/FindUs'
+import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload, youtube } from '@utils/constants'
 import './ServicePage.css'
@@ -210,6 +211,7 @@ export default function SemiPrivate() {
         image={upload('2026/05/Formula-Fitness-03.2026-34-scaled.jpg')}
       />
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
     </>
   )

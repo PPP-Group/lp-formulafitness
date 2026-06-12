@@ -3,6 +3,7 @@ import SectionTitle from '@components/ui/SectionTitle'
 import ReviewsGrid from '@components/sections/ReviewsGrid'
 import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
+import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload } from '@utils/constants'
 import './TestimonialsPage.css'
@@ -78,6 +79,7 @@ export default function Testimonials() {
       </section>
 
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
     </>
   )

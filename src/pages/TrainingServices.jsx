@@ -4,6 +4,7 @@ import FeatureRow from '@components/sections/FeatureRow'
 import StepsSection from '@components/sections/StepsSection'
 import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
+import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload } from '@utils/constants'
 import './TrainingServicesPage.css'
@@ -215,6 +216,7 @@ export default function TrainingServices() {
       />
 
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
     </>
   )

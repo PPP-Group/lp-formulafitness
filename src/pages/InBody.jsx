@@ -4,6 +4,7 @@ import SectionTitle from '@components/ui/SectionTitle'
 import FeatureRow from '@components/sections/FeatureRow'
 import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
+import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload } from '@utils/constants'
 import './InBodyPage.css'
@@ -47,9 +48,25 @@ export default function InBody() {
           'InBody scan is the next generation of premium body composition analyzer for health professionals.',
           'It analyzes the Segmental ECW Ratio and Segmental Phase Angle, allowing professional-grade screening for detailed health assessment. This information guides fitness, wellness, and nutrition professionals to make tailored interventions.',
         ]}
+        mediaClassName="inbody-device-media"
       />
 
       <section className="section section--alt">
+        <div className="container">
+          <SectionTitle title="See the InBody Scan in Action" align="center" />
+          <div className="inbody-video">
+            <video
+              className="inbody-video__player"
+              src={upload('2026/05/Jason-Website-1.mp4')}
+              poster={upload('2026/06/image-65.png')}
+              controls
+              playsInline
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <SectionTitle title="InBody Scan Sophisticated Design" align="center" />
           <div className="inbody-design">
@@ -105,6 +122,7 @@ export default function InBody() {
         image={upload('2026/05/Formula-Fitness-03.2026-95-scaled.jpg')}
       />
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
     </>
   )

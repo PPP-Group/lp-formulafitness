@@ -8,6 +8,7 @@ import Partners from '@components/sections/Partners'
 import CtaBanner from '@components/sections/CtaBanner'
 import Results from '@components/sections/Results'
 import FindUs from '@components/sections/FindUs'
+import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload, youtube } from '@utils/constants'
 import './PersonalTrainingPage.css'
@@ -266,6 +267,7 @@ export default function PersonalTraining() {
         image={upload('2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg')}
       />
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
     </>
   )

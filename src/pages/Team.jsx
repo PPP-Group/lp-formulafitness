@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import ConsultCTA from '@components/sections/ConsultCTA'
+import ContactSection from '@components/sections/ContactSection'
 import FindUs from '@components/sections/FindUs'
 import { team } from '@data/team'
 import './Team.css'
@@ -37,6 +38,7 @@ export default function Team() {
         </div>
       </div>
       <FindUs />
+      <ContactSection />
       <ConsultCTA />
     </>
   )

@@ -10,7 +10,10 @@ export default function StepsSection({ title, eyebrow, steps = [], cta, alt = fa
         <ol className="steps__grid">
           {steps.map((step, i) => (
             <li className="step-card" key={step.title}>
-              <span className="step-card__num">{String(i + 1).padStart(2, '0')}</span>
+              {step.icon
+                ? <img src={step.icon} className="step-card__icon" alt="" aria-hidden="true" />
+                : <span className="step-card__num">{String(i + 1).padStart(2, '0')}</span>
+              }
               <h3 className="step-card__title">{step.title}</h3>
               <p className="step-card__body">{step.body}</p>
             </li>

@@ -24,6 +24,34 @@
   margin-top: var(--space-xl);
 }
 
+/* Variante com badge lateral */
+.page-hero--badge .page-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.page-hero__badge img {
+  width: 260px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Badge sobre fundo escuro (quando hero também usa image) */
+.page-hero--image.page-hero--badge .page-hero__inner {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .page-hero--badge .page-hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .page-hero__badge {
+    display: none;
+  }
+}
+
 /* Variante com foto de fundo (hero escuro) */
 .page-hero--image {
   background-size: cover;

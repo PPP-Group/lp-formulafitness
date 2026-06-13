@@ -12,3 +12,19 @@
   padding-bottom: var(--space-sm);
   border-bottom: 2px solid var(--color-border);
 }
+
+/* Accordions de cada categoria agrupados num cartão do design system */
+.faq-page .accordion {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 0 var(--space-lg);
+}
+.faq-page .accordion-item:last-child {
+  border-bottom: none;
+}
+/* respiro lateral do conteúdo dentro do cartão */
+.faq-page .accordion-content p {
+  padding-right: var(--space-md);
+}

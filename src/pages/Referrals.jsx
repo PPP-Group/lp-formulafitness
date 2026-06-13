@@ -38,7 +38,7 @@ export default function Referrals() {
         eyebrow="Referral Program"
         title="Friends Don't Let Friends Train Alone"
         description="Refer a friend to Formula Fitness and earn points toward free sessions, gear, and tech. The more friends you bring, the more you earn."
-        image={upload('2026/05/Formula-Fitness-03.2026-64-3-scaled.jpg')}
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
         showCta
         cta="Refer a Friend"
       />

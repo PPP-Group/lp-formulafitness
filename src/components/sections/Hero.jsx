@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 export default function Hero() {
@@ -17,9 +18,9 @@ export default function Hero() {
           sleep routines, diet/nutrition, and fitness goals.
         </p>
         <div className="hero__actions anim-fade-up" style={{ animationDelay: '300ms' }}>
-          <a href="/#consult" className="btn btn-primary">
+          <Link to="/#consult" className="btn btn-primary">
             Book a Consultation
-          </a>
+          </Link>
         </div>
       </div>
     </section>

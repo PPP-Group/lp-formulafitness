@@ -2,7 +2,7 @@ import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import LeadForm from '@components/sections/LeadForm'
 import ConsultCTA from '@components/sections/ConsultCTA'
-import { company } from '@utils/constants'
+import { company, upload } from '@utils/constants'
 import './Prices.css'
 
 export default function Prices() {
@@ -17,6 +17,7 @@ export default function Prices() {
         eyebrow="Membership"
         title="Prices"
         description="Every fitness journey is different, so pricing is tailored to your goals and program. Enter your info below and we'll get you personalized pricing."
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <section className="section">
         <div className="container prices-lead">

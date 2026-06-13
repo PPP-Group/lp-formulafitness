@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import SectionTitle from '@components/ui/SectionTitle'
@@ -193,9 +194,9 @@ export default function PersonalTraining() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <a href="/#consult" className="btn btn-primary pt-vbg__cta">
+            <Link to="/#consult" className="btn btn-primary pt-vbg__cta">
               Book A Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </section>

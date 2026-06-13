@@ -1,9 +1,13 @@
 import { partners } from '@data/services'
 import './Partners.css'
 
-// "OUR PARTNERS" — marquee infinito de logos (CSS puro). Lista duplicada p/ loop seamless.
+// "OUR PARTNERS" — marquee infinito de logos (CSS puro).
+// Cada metade repete a lista 3x para sempre exceder a largura da tela (inclusive
+// monitores largos/ultrawide), evitando espaços vazios; duas metades idênticas
+// garantem o loop seamless via translateX(-50%).
 export default function Partners() {
-  const loop = [...partners, ...partners]
+  const half = [...partners, ...partners, ...partners]
+  const loop = [...half, ...half]
 
   return (
     <section className="partners" aria-label="Our partners">

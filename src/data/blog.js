@@ -9,7 +9,7 @@ export const posts = [
     title: 'Revitalize Your Fitness',
     date: 'April 17, 2025',
     author: 'Anthony Tran',
-    image: upload('2026/05/Formula-Fitness-03.2026-15-scaled.jpg'),
+    image: upload('2025/05/DSCF2558-scaled.jpg'),
     excerpt:
       'Feeling stuck in a rut with your workouts? You’re not alone. Whether you’ve hit a plateau or just haven’t felt that same drive lately, sometimes all it takes is a little revitalization to get back on track.',
     content: [
@@ -55,7 +55,7 @@ export const posts = [
     title: 'Feel Comfortable, Not Intimidated at the Gym',
     date: 'November 24, 2023',
     author: 'Anthony Tran',
-    image: upload('2026/05/Formula-Fitness-03.2026-108-scaled.jpg'),
+    image: upload('2025/05/DSCF1279-scaled.jpg'),
     excerpt:
       "Ever stepped into a gym and felt like you've landed on another planet? Yep, we know that feeling all too well. We're all about making your fitness journey as chill as your favorite hangout spot.",
     content: [
@@ -75,7 +75,7 @@ export const posts = [
     title: 'One-on-One vs small group training. Which is right for you?',
     date: 'August 18, 2023',
     author: 'Anthony Tran',
-    image: upload('2026/05/Formula-Fitness-03.2026-44-scaled.jpg'),
+    image: upload('2025/05/9-Flexibility-scaled.jpg'),
     excerpt:
       'If you’ve decided to take your health seriously, personal training is a sure-fire way to maximize your results. But which kind of personal training is a better fit for you?',
     content: [

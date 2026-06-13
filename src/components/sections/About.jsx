@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Accordion from '@components/ui/Accordion'
 import Modal from '@components/ui/Modal'
 import { philosophyPillars } from '@data/services'
@@ -36,9 +37,9 @@ export default function About() {
             Health is Wealth — Upgrade To A Stronger Sustainable Body
           </h2>
           <Accordion items={philosophyPillars} />
-          <a href="/#consult" className="btn btn-primary about__cta">
+          <Link to="/#consult" className="btn btn-primary about__cta">
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
 

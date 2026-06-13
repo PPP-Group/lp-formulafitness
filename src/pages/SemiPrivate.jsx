@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import StepsSection from '@components/sections/StepsSection'
@@ -161,9 +162,9 @@ export default function SemiPrivate() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <a href="/#consult" className="btn btn-primary pt-vbg__cta">
+            <Link to="/#consult" className="btn btn-primary pt-vbg__cta">
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { upload } from '@utils/constants'
 import './PersonalTriumphs.css'
 
@@ -20,9 +21,9 @@ export default function PersonalTriumphs() {
             highly-skilled team, dedicated to fostering your whole health improvement and propelling
             you towards lasting transformation and wellness.
           </p>
-          <a href="/#consult" className="btn btn-primary triumphs__cta">
+          <Link to="/#consult" className="btn btn-primary triumphs__cta">
             Book a Consultation
-          </a>
+          </Link>
         </div>
       </div>
     </section>

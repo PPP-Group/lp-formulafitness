@@ -22,10 +22,18 @@ const DARK_HERO_ROUTES = new Set([
   '/testimonials',
 ])
 
+// Item ativo = rota atual bate com o próprio path ou com o de algum filho.
+function isItemActive(item, pathname) {
+  if (item.path === pathname) return true
+  if (item.children) return item.children.some((c) => c.path === pathname)
+  return false
+}
+
 export default function Header() {
   const scrolled = useScrollPosition(50)
   const [menuOpen, setMenuOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState(null) // grupo expandido no mobile
+  const [openDropdown, setOpenDropdown] = useState(null) // dropdown aberto no desktop
   const { pathname } = useLocation()
 
   // Header transparente só sobre hero escuro e no topo; caso contrário, sólido.
@@ -36,6 +44,7 @@ export default function Header() {
   useEffect(() => {
     setMenuOpen(false)
     setOpenGroup(null)
+    setOpenDropdown(null)
   }, [pathname])
 
   // Bloqueia o scroll do body quando o menu fullscreen está aberto
@@ -56,34 +65,51 @@ export default function Header() {
         {/* Navegação desktop */}
         <nav className="header__nav" aria-label="Primary">
           <ul className="header__menu">
-            {navigation.map((item) => (
-              <li
-                key={item.label}
-                className={`header__item ${item.children ? 'has-dropdown' : ''}`}
-              >
-                <Link to={item.path} className="header__link">
-                  {item.label}
-                  {item.children && <Chevron />}
-                </Link>
-                {item.children && (
-                  <ul className="header__dropdown">
-                    {item.children.map((child) => (
-                      <li key={child.path}>
-                        <Link to={child.path} className="header__dropdown-link">
-                          {child.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
+            {navigation.map((item) => {
+              const active = isItemActive(item, pathname)
+              return (
+                <li
+                  key={item.label}
+                  className={`header__item ${item.children ? 'has-dropdown' : ''} ${
+                    openDropdown === item.label ? 'is-open' : ''
+                  }`}
+                  onMouseEnter={() => setOpenDropdown(item.children ? item.label : null)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <Link
+                    to={item.path}
+                    className={`header__link ${active ? 'header__link--active' : ''}`}
+                    aria-current={active ? 'page' : undefined}
+                  >
+                    {item.label}
+                    {item.children && <Chevron />}
+                  </Link>
+                  {item.children && (
+                    <ul className="header__dropdown">
+                      {item.children.map((child) => (
+                        <li key={child.path}>
+                          <Link
+                            to={child.path}
+                            className={`header__dropdown-link ${
+                              child.path === pathname ? 'is-active' : ''
+                            }`}
+                            aria-current={child.path === pathname ? 'page' : undefined}
+                          >
+                            {child.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              )
+            })}
           </ul>
         </nav>
 
-        <a href="/#consult" className="btn btn-primary header__cta">
+        <Link to="/#consult" className="btn btn-primary header__cta">
           Book a Consultation
-        </a>
+        </Link>
 
         {/* Botão hamburger (mobile) */}
         <button
@@ -142,9 +168,9 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <a href="/#consult" className="btn btn-primary mobile-menu__cta">
+          <Link to="/#consult" className="btn btn-primary mobile-menu__cta">
             Book a Consultation
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

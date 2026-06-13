@@ -1,7 +1,29 @@
+import { useEffect, useRef, useState } from 'react'
 import { company } from '@utils/constants'
 import './FindUs.css'
 
 export default function FindUs() {
+  const mapRef = useRef(null)
+  const [showMap, setShowMap] = useState(false)
+
+  // Só monta o iframe do Google Maps quando a seção se aproxima da viewport,
+  // mantendo-o fora do caminho crítico de carregamento da página.
+  useEffect(() => {
+    const el = mapRef.current
+    if (!el || showMap) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShowMap(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '300px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [showMap])
+
   return (
     <section className="section find-us">
       <div className="container">
@@ -9,14 +31,21 @@ export default function FindUs() {
         <h2 className="section-title find-us__title">Find Us</h2>
 
         <div className="find-us__grid">
-          {/* Mapa */}
-          <div className="find-us__map">
-            <iframe
-              src={company.mapEmbed}
-              title="Formula Fitness location map"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+          {/* Mapa — adiado via IntersectionObserver */}
+          <div className="find-us__map" ref={mapRef}>
+            {showMap ? (
+              <iframe
+                src={company.mapEmbed}
+                title="Formula Fitness location map"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            ) : (
+              <div className="find-us__map-placeholder" aria-hidden="true">
+                <LocationIcon />
+                <span>Loading map…</span>
+              </div>
+            )}
           </div>
 
           {/* Painel de informações */}

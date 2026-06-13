@@ -17,7 +17,7 @@ export default function BioPage() {
       <Seo
         title={`${member.name} — ${member.role}`}
         description={`Meet ${member.name}, ${member.role} at Formula Fitness.`}
-        path={`/bio-${member.slug}`}
+        path={`/bio/${member.slug}`}
       />
       <section className="bio">
         <div className="container bio__top">

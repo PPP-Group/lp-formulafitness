@@ -1,12 +1,23 @@
 .consult {
-  /* seção escura de CTA — contraste intencional com o resto da página clara */
+  /* CTA final — foto da equipe com overlay escuro + parallax */
   color: #ffffff;
   padding: var(--section-padding-y) 0;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(70, 127, 247, 0.18), transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(24, 35, 64, 0.8), transparent 55%),
-    #0c1018;
+  background-image:
+    linear-gradient(rgba(8, 12, 20, 0.8), rgba(8, 12, 20, 0.8)),
+    url('/assets/uploads/2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* parallax no scroll */
+  background-color: #0c1018; /* fallback */
   text-align: center;
+}
+
+/* background-attachment: fixed causa jank/incompatibilidade em mobile — desliga */
+@media (max-width: 768px) {
+  .consult {
+    background-attachment: scroll;
+  }
 }
 
 .consult__inner {

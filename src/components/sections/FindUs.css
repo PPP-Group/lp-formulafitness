@@ -46,6 +46,25 @@
   display: block;
 }
 
+/* Placeholder enquanto o iframe do mapa não monta */
+.find-us__map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 100%;
+  height: 340px;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+.find-us__map-placeholder svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-brand);
+}
+
 /* --------------------------------------------------------------------------
    Painel de informações
    -------------------------------------------------------------------------- */
@@ -157,7 +176,8 @@
     align-items: center;
   }
 
-  .find-us__map iframe {
+  .find-us__map iframe,
+  .find-us__map-placeholder {
     height: 400px;
   }
 }

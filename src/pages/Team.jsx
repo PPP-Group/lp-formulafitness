@@ -5,6 +5,7 @@ import ConsultCTA from '@components/sections/ConsultCTA'
 import ContactSection from '@components/sections/ContactSection'
 import FindUs from '@components/sections/FindUs'
 import { team } from '@data/team'
+import { upload } from '@utils/constants'
 import './Team.css'
 
 export default function Team() {
@@ -19,6 +20,7 @@ export default function Team() {
         eyebrow="Meet the Team"
         title="Here To Serve You"
         description="Formula Fitness has distinguished itself as a premier health and wellness center, thanks to our innovative, client-first approach and our exceptional, dedicated team. What truly sets us apart are the individuals below—their extensive expertise, unwavering commitment, and passion for transforming the health and well-being of our clients and community."
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <div className="section">
         <div className="container grid-3 team__grid">
@@ -29,7 +31,7 @@ export default function Team() {
               </div>
               <h3 className="team-card__name">{member.name}</h3>
               <p className="team-card__role">{member.role}</p>
-              <Link to={`/bio-${member.slug}`} className="btn-link team-card__bio-link">
+              <Link to={`/bio/${member.slug}`} className="btn-link team-card__bio-link">
                 Read bio
                 <Arrow />
               </Link>

@@ -17,6 +17,7 @@ const Referrals = lazy(() => import('@pages/Referrals'))
 const Team = lazy(() => import('@pages/Team'))
 const BioPage = lazy(() => import('@pages/BioPage'))
 const JoinTeam = lazy(() => import('@pages/JoinTeam'))
+const JobPost = lazy(() => import('@pages/JobPost'))
 const Prices = lazy(() => import('@pages/Prices'))
 const Blogs = lazy(() => import('@pages/Blogs'))
 const BlogPost = lazy(() => import('@pages/BlogPost'))
@@ -44,8 +45,9 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/referrals" element={<Referrals />} />
             <Route path="/team-members-page" element={<Team />} />
-            <Route path="/bio-:slug" element={<BioPage />} />
+            <Route path="/bio/:slug" element={<BioPage />} />
             <Route path="/join-our-team" element={<JoinTeam />} />
+            <Route path="/join-our-team/:slug" element={<JobPost />} />
             <Route path="/prices" element={<Prices />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogs/:slug" element={<BlogPost />} />

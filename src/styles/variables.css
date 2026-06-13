@@ -35,11 +35,16 @@
 
   /* --- Hero background image (foto real auto-hospedada) ---
      A variável é usada em Hero.css; o overlay escuro (.hero__overlay) garante legibilidade. */
-  --hero-bg-image: linear-gradient(160deg, rgba(13, 18, 24, 0.45), rgba(13, 18, 24, 0.7)),
-    url('/assets/uploads/2026/05/Formula-Fitness-03.2026-152-scaled.jpg');
+  --hero-bg-image: url('/assets/uploads/2026/05/Formula-Fitness-03.2026-152-scaled.jpg');
 
   /* --- Gradientes --- */
-  --gradient-hero: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.80) 100%);
+  /* Topo claro (rostos da equipe visíveis) → base escura (texto legível). */
+  --gradient-hero: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.28) 42%,
+    rgba(0, 0, 0, 0.82) 100%
+  );
   --gradient-card-hover: linear-gradient(180deg, transparent 0%, rgba(70, 127, 247, 0.05) 100%);
   --gradient-section-fade: linear-gradient(135deg, #f4f7fc 0%, #e8eef8 100%);
 

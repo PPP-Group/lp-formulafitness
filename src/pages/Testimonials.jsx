@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Seo from '@components/ui/Seo'
 import SectionTitle from '@components/ui/SectionTitle'
 import ReviewsGrid from '@components/sections/ReviewsGrid'
@@ -73,7 +74,7 @@ export default function Testimonials() {
             challenge into a victory and crafting the best version of you.
           </p>
           <div className="tm-philosophy__cta">
-            <a href="/#consult" className="btn btn-primary">Book A Consultation</a>
+            <Link to="/#consult" className="btn btn-primary">Book A Consultation</Link>
           </div>
         </div>
       </section>

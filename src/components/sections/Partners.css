@@ -24,15 +24,17 @@
 .partners__track {
   display: flex;
   align-items: center;
-  gap: var(--space-4xl);
   width: max-content;
   animation: marquee 40s linear infinite;
 }
 
+/* O espaçamento é margin-right (parte da largura de cada item), e não gap,
+   para que translateX(-50%) caia exatamente no início do 2º conjunto = loop seamless. */
 .partners__logo {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
+  margin-right: var(--space-4xl);
 }
 
 .partners__logo img {

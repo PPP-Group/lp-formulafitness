@@ -3,6 +3,7 @@ import PageHero from '@components/ui/PageHero'
 import Accordion from '@components/ui/Accordion'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { faqCategories } from '@data/faq'
+import { upload } from '@utils/constants'
 import './FAQ.css'
 
 export default function FAQ() {
@@ -17,6 +18,7 @@ export default function FAQ() {
         eyebrow="FAQs"
         title="Frequently Asked Questions"
         description="Everything you need to know before you get started."
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <div className="section">
         <div className="container faq-page">

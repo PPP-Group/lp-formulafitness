@@ -113,7 +113,7 @@ export default function About() {
           <SectionTitle title="Meet our strongest team" align="center" />
           <div className="about-team">
             {team.map((m) => (
-              <Link to={`/bio-${m.slug}`} className="about-team__card" key={m.slug}>
+              <Link to={`/bio/${m.slug}`} className="about-team__card" key={m.slug}>
                 <div className="about-team__photo">
                   <img src={m.photo} alt={m.name} loading="lazy" />
                 </div>

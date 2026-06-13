@@ -3,6 +3,7 @@ import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { posts } from '@data/blog'
+import { upload } from '@utils/constants'
 import './Blogs.css'
 
 export default function Blogs() {
@@ -17,6 +18,7 @@ export default function Blogs() {
         eyebrow="Latest News"
         title="Blogs"
         description="Insights, tips, and stories to support your fitness journey."
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <div className="section">
         <div className="container blog__grid">

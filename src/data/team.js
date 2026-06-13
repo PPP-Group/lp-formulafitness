@@ -1,6 +1,6 @@
 import { upload } from '@utils/constants'
 
-// Equipe Formula Fitness (página /team-members-page) + bios individuais (/bio-:slug).
+// Equipe Formula Fitness (página /team-members-page) + bios individuais (/bio/:slug).
 // Conteúdo verbatim do site original.
 
 export const team = [

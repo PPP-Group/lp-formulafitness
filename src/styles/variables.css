@@ -48,12 +48,10 @@
   --gradient-card-hover: linear-gradient(180deg, transparent 0%, rgba(70, 127, 247, 0.05) 100%);
   --gradient-section-fade: linear-gradient(135deg, #f4f7fc 0%, #e8eef8 100%);
 
-  /* --- Tipografia: famílias ---
-     Site original: Poppins (headings), Sofia Pro (body), Rajdhani (display).
-     Sofia Pro é paga — usamos Sofia Sans (Google) como substituta fiel. */
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Sofia Sans', 'Helvetica Neue', sans-serif;
-  --font-display: 'Rajdhani', 'Poppins', sans-serif;
+  /* --- Tipografia: famílias --- */
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Sora', sans-serif;
+  --font-display: 'Sora', sans-serif;
 
   /* --- Tipografia: escala --- */
   --text-display: clamp(2.5rem, 5vw, 4.5rem);

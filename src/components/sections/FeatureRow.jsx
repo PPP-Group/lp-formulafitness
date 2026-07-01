@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import './FeatureRow.css'
 
 // Linha de feature: imagem + (eyebrow, heading, parágrafo, bullets, CTA). Alterna lados.
@@ -41,9 +43,15 @@ export default function FeatureRow({
             </ul>
           )}
           {cta && (
-            <a href={ctaHref} className="btn btn-primary feature-row__cta">
-              {cta}
-            </a>
+            ctaHref === '/#consult' ? (
+              <ConsultLink className="btn btn-primary feature-row__cta">
+                {cta}
+              </ConsultLink>
+            ) : (
+              <Link to={ctaHref} className="btn btn-primary feature-row__cta">
+                {cta}
+              </Link>
+            )
           )}
         </div>
       </div>

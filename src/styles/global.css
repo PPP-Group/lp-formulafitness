@@ -20,6 +20,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   scroll-padding-top: var(--header-height);
   overflow-y: overlay;
+  /* Scrollbar Firefox (Chrome/Edge usam ::-webkit-scrollbar abaixo) */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand) transparent;
 }
 
 body {
@@ -229,6 +232,23 @@ h6 {
 }
 .btn-link:hover {
   gap: 0.75rem;
+}
+
+/* ==========================================================================
+   VÍDEO — link de fallback (YouTube)
+   ========================================================================== */
+
+.video-fallback {
+  display: inline-block;
+  width: 100%;
+  margin-top: var(--space-sm);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-brand);
+}
+
+.video-fallback:hover {
+  text-decoration: underline;
 }
 
 /* ==========================================================================

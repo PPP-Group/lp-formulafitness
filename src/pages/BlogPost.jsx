@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import Seo from '@components/ui/Seo'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { getPost } from '@data/blog'
@@ -38,9 +39,9 @@ export default function BlogPost() {
             )
           )}
           <div className="post__cta">
-            <Link to="/#consult" className="btn btn-primary">
+            <ConsultLink className="btn btn-primary">
               Book a Consultation
-            </Link>
+            </ConsultLink>
           </div>
         </div>
       </article>

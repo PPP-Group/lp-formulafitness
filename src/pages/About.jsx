@@ -70,8 +70,14 @@ export default function About() {
         <div className="container">
           <SectionTitle eyebrow="Our Values" title="What We Stand For" align="center" />
           <div className="about-values">
-            {values.map((v) => (
-              <article className="about-value" key={v.title}>
+            {values.map((v, i) => (
+              <article
+                className={`about-value ${i === values.length - 1 ? 'about-value--featured' : ''}`}
+                key={v.title}
+              >
+                <span className="about-value__num" aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
                 <h3>{v.title}</h3>
                 <p>{v.body}</p>
               </article>

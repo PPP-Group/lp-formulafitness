@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import SectionTitle from '@components/ui/SectionTitle'
@@ -159,6 +159,14 @@ export default function PersonalTraining() {
               allowFullScreen
             />
           </div>
+          <a
+            className="video-fallback"
+            href={`https://www.youtube.com/watch?v=${youtube.main}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Trouble viewing? Watch on YouTube ↗
+          </a>
         </div>
       </section>
 
@@ -194,9 +202,9 @@ export default function PersonalTraining() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <Link to="/#consult" className="btn btn-primary pt-vbg__cta">
+            <ConsultLink className="btn btn-primary pt-vbg__cta">
               Book A Consultation
-            </Link>
+            </ConsultLink>
           </div>
         </div>
       </section>

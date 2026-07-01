@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import './ConsultCTA.css'
 
 // Banner final de CTA — "Ready to take the first step?" (presente em todas as páginas).
@@ -11,9 +11,9 @@ export default function ConsultCTA() {
           Contact us for a personalized consultation and see how we can tailor a program just for
           you.
         </p>
-        <Link to="/#consult" className="btn btn-primary consult__cta">
+        <ConsultLink className="btn btn-primary consult__cta">
           Join Us Today
-        </Link>
+        </ConsultLink>
       </div>
     </section>
   )

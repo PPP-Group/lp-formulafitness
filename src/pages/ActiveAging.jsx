@@ -68,10 +68,11 @@ export default function ActiveAging() {
       <section className="section aa-values">
         <div className="container">
           <span className="eyebrow">what is active aging?</span>
-          <p className="aa-values__list">
-            ENERGY <span>|</span> LONGEVITY <span>|</span> LIFE <span>|</span> LESS LIMITATION{' '}
-            <span>|</span> STRONG
-          </p>
+          <ul className="aa-values__list">
+            {['Energy', 'Longevity', 'Life', 'Less Limitation', 'Strong'].map((word) => (
+              <li key={word} className="aa-values__chip">{word}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -193,14 +194,24 @@ export default function ActiveAging() {
 
       <Modal open={!!active} onClose={close} label={active?.name}>
         {active && (
-          <div className="modal__video">
-            <iframe
-              src={`https://www.youtube.com/embed/${active.videoId}?autoplay=1&rel=0`}
-              title={active.name}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+          <>
+            <div className="modal__video">
+              <iframe
+                src={`https://www.youtube.com/embed/${active.videoId}?autoplay=1&rel=0`}
+                title={active.name}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <a
+              className="video-fallback"
+              href={`https://www.youtube.com/watch?v=${active.videoId}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Trouble viewing? Watch on YouTube ↗
+            </a>
+          </>
         )}
       </Modal>
     </>

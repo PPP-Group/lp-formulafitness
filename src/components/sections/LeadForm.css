@@ -95,6 +95,25 @@
   box-shadow: 0 0 0 3px rgba(70, 127, 247, 0.15);
 }
 
+/* --------------------------------------------------------------------------
+   Validation error state
+   -------------------------------------------------------------------------- */
+
+.form-input.is-invalid {
+  border-color: var(--color-error, #e5484d);
+}
+
+.form-input.is-invalid:focus {
+  border-color: var(--color-error, #e5484d);
+  box-shadow: 0 0 0 3px rgba(229, 72, 77, 0.15);
+}
+
+.lead-form__error {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-error, #e5484d);
+}
+
 textarea.form-input {
   resize: vertical;
   min-height: 100px;
@@ -133,6 +152,11 @@ textarea.form-input {
 .form-select:invalid,
 .form-select option[value=""] {
   color: var(--color-text-muted);
+}
+
+.form-select option:not([value=""]) {
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
 }
 
 /* --------------------------------------------------------------------------

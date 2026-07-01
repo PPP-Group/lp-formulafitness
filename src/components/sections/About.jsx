@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import Accordion from '@components/ui/Accordion'
 import Modal from '@components/ui/Modal'
 import { philosophyPillars } from '@data/services'
@@ -36,10 +36,10 @@ export default function About() {
           <h2 className="section-title">
             Health is Wealth — Upgrade To A Stronger Sustainable Body
           </h2>
-          <Accordion items={philosophyPillars} />
-          <Link to="/#consult" className="btn btn-primary about__cta">
+          <Accordion items={philosophyPillars} defaultOpen={-1} />
+          <ConsultLink className="btn btn-primary about__cta">
             Get Started
-          </Link>
+          </ConsultLink>
         </div>
       </div>
 
@@ -52,6 +52,14 @@ export default function About() {
             allowFullScreen
           />
         </div>
+        <a
+          className="video-fallback"
+          href={`https://www.youtube.com/watch?v=${youtube.main}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Trouble viewing? Watch on YouTube ↗
+        </a>
       </Modal>
     </section>
   )

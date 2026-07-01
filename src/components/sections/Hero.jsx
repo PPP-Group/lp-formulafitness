@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import './Hero.css'
 
 export default function Hero() {
@@ -18,9 +18,9 @@ export default function Hero() {
           sleep routines, diet/nutrition, and fitness goals.
         </p>
         <div className="hero__actions anim-fade-up" style={{ animationDelay: '300ms' }}>
-          <Link to="/#consult" className="btn btn-primary">
+          <ConsultLink className="btn btn-primary">
             Book a Consultation
-          </Link>
+          </ConsultLink>
         </div>
       </div>
     </section>

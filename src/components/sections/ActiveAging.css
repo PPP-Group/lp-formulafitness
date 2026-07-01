@@ -9,6 +9,15 @@
 }
 .active-aging__cta {
   align-self: flex-start;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .active-aging__cta {
+    align-self: stretch;
+  }
 }
 
 .active-aging__media {

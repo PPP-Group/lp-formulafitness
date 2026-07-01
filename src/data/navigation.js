@@ -23,9 +23,9 @@ export const navigation = [
   },
   {
     label: 'Team',
-    path: '/team-members-page',
+    path: '/team',
     children: [
-      { label: 'Our Team', path: '/team-members-page' },
+      { label: 'Our Team', path: '/team' },
       { label: 'Join Our Team', path: '/join-our-team' },
     ],
   },

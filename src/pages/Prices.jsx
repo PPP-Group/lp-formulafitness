@@ -19,9 +19,16 @@ export default function Prices() {
         description="Every fitness journey is different, so pricing is tailored to your goals and program. Enter your info below and we'll get you personalized pricing."
         image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
-      <section className="section">
+      <section className="section" id="consult">
         <div className="container prices-lead">
           <div className="prices-lead__info">
+            <figure className="prices-lead__photo">
+              <img
+                src={upload('2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg')}
+                alt="Formula Fitness personal training session"
+                loading="lazy"
+              />
+            </figure>
             <h2 className="section-title">Enter Info to Get Prices</h2>
             <p className="section-subtitle">
               Tell us a little about yourself and your goals. A fitness professional from our team

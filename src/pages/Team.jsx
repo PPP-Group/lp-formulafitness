@@ -14,7 +14,7 @@ export default function Team() {
       <Seo
         title="Our Team"
         description="Meet the highly-skilled trainers and team behind Formula Fitness — here to serve you with expertise, commitment, and passion."
-        path="/team-members-page"
+        path="/team"
       />
       <PageHero
         eyebrow="Meet the Team"

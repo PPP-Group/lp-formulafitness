@@ -36,58 +36,133 @@
 .aa-values {
   text-align: center;
   background: var(--color-bg-secondary);
+  padding-bottom: var(--section-padding-y-small);
+}
+
+/* FeatureRow imediatamente após aa-values fica mais próximo */
+.aa-values + .feature-row {
+  padding-top: var(--section-padding-y-small);
 }
 .aa-values .eyebrow {
   display: block;
+  margin-bottom: var(--space-xl);
 }
 .aa-values__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.aa-values__chip {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1.25rem, 3vw, 2.25rem);
+  font-size: clamp(1rem, 2vw, 1.35rem);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--color-text-primary);
-}
-.aa-values__list span {
+  letter-spacing: 0.07em;
   color: var(--color-brand);
-  margin: 0 0.25em;
+  background: rgba(70, 127, 247, 0.07);
+  border: 1.5px solid rgba(70, 127, 247, 0.22);
+  border-radius: var(--radius-pill);
+  padding: 0.85rem 2rem;
+  cursor: default;
+  transition:
+    background 0.25s var(--ease-standard),
+    color 0.25s var(--ease-standard),
+    border-color 0.25s var(--ease-standard),
+    transform 0.25s var(--ease-bounce),
+    box-shadow 0.25s var(--ease-standard);
+}
+.aa-values__chip:hover {
+  background: var(--color-brand);
+  color: #ffffff;
+  border-color: var(--color-brand);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(70, 127, 247, 0.3);
 }
 
+/* ── What You Get ─────────────────────────────────── */
 .aa-inclusions {
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
   gap: var(--space-md);
-  max-width: 900px;
-  margin: 0 auto;
+  margin-top: var(--space-xl);
 }
 .aa-inclusions li {
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
   display: flex;
   align-items: flex-start;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   color: var(--color-text-primary);
   line-height: var(--text-body-lh);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.3s var(--ease-standard),
+    box-shadow 0.3s var(--ease-standard),
+    border-color 0.3s var(--ease-standard);
+}
+.aa-inclusions li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-brand);
 }
 .aa-inclusions svg {
-  color: var(--color-brand);
   flex-shrink: 0;
-  margin-top: 4px;
+  color: var(--color-brand);
+  background: rgba(70, 127, 247, 0.1);
+  border-radius: 50%;
+  padding: 7px;
+  width: 20px;
+  height: 20px;
+  box-sizing: content-box;
 }
 
+/* ── Our Focus ────────────────────────────────────── */
 .aa-focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-md);
+  counter-reset: focus-counter;
+  margin-top: var(--space-xl);
 }
 .aa-focus li {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
+  counter-increment: focus-counter;
+  position: relative;
+  background: var(--color-brand);
+  color: #ffffff;
   border-radius: var(--radius-pill);
-  padding: 0.65rem 1.5rem;
+  padding: 0.9rem 1.75rem 0.9rem 3.5rem;
   font-family: var(--font-heading);
   font-weight: 600;
-  color: var(--color-brand);
-  box-shadow: var(--shadow-card);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 16px rgba(70, 127, 247, 0.28);
+  transition:
+    transform 0.25s var(--ease-bounce),
+    box-shadow 0.25s var(--ease-standard);
+}
+.aa-focus li::before {
+  content: counter(focus-counter, decimal-leading-zero);
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+}
+.aa-focus li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(70, 127, 247, 0.42);
 }
 
 .aa-programs {
@@ -152,14 +227,34 @@
   transform: scale(1.06);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 520px) {
   .aa-inclusions {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 519px) {
+  .aa-focus {
+    flex-direction: column;
+  }
+  .aa-focus li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) {
   .aa-gallery {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+@media (min-width: 1024px) {
+  .aa-inclusions {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (min-width: 768px) {
   .aa-programs {
     grid-template-columns: repeat(3, 1fr);

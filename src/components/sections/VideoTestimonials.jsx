@@ -38,14 +38,24 @@ export default function VideoTestimonials() {
 
       <Modal open={!!active} onClose={close} label={active?.name}>
         {active && (
-          <div className="modal__video">
-            <iframe
-              src={`https://www.youtube.com/embed/${active.videoId}?autoplay=1&rel=0`}
-              title={active.name}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+          <>
+            <div className="modal__video">
+              <iframe
+                src={`https://www.youtube.com/embed/${active.videoId}?autoplay=1&rel=0`}
+                title={active.name}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <a
+              className="video-fallback"
+              href={`https://www.youtube.com/watch?v=${active.videoId}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Trouble viewing? Watch on YouTube ↗
+            </a>
+          </>
         )}
       </Modal>
     </section>

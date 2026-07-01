@@ -59,7 +59,6 @@ export default function Footer() {
                 <Link to={link.path}>{link.label}</Link>
               </li>
             ))}
-            <li className="footer__soon">coming soon 1/25/2026</li>
           </ul>
         </div>
 

@@ -133,7 +133,7 @@
   transition: height 0.5s var(--ease-decelerate);
 }
 .header--pill .header__logo img {
-  height: 28px;
+  height: 34px;
 }
 
 /* Nav desktop (base: oculta) */
@@ -403,6 +403,30 @@ a.header__cta {
   margin-top: var(--space-xl);
 }
 
+/* Mobile pill: encolhe até bolha redonda no canto superior direito */
+@media (max-width: 767px) {
+  .header--pill {
+    left: auto;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  .header--pill .header__inner {
+    padding: 0;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+  .header--pill .header__logo {
+    display: none;
+  }
+  .header--pill .header__burger {
+    margin-left: 0;
+  }
+}
+
 /* Médio: tablet — nav + CTA visíveis, sem hamburger */
 @media (min-width: 768px) {
   .header__inner {
@@ -412,7 +436,7 @@ a.header__cta {
     height: 40px;
   }
   .header--pill .header__logo img {
-    height: 28px;
+    height: 34px;
   }
   .header__nav {
     display: flex;
@@ -456,7 +480,7 @@ a.header__cta {
     height: 52px;
   }
   .header--pill .header__logo img {
-    height: 34px;
+    height: 42px;
   }
   .header__menu {
     gap: var(--space-xl);

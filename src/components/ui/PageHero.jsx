@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import './PageHero.css'
 
 export default function PageHero({ eyebrow, title, description, image, badgeImage, cta = 'Book a Consultation', showCta = false }) {
@@ -15,9 +15,9 @@ export default function PageHero({ eyebrow, title, description, image, badgeImag
           <h1 className="page-hero__title">{title}</h1>
           {description && <p className="page-hero__desc">{description}</p>}
           {showCta && (
-            <Link to="/#consult" className="btn btn-primary page-hero__cta">
+            <ConsultLink className="btn btn-primary page-hero__cta">
               {cta}
-            </Link>
+            </ConsultLink>
           )}
         </div>
         {hasBadge && (

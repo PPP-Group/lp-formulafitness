@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { navigation } from '@data/navigation'
+import ConsultLink from '@components/ui/ConsultLink'
 import { assets } from '@utils/constants'
 import { useScrollPosition } from '@hooks/useScrollPosition'
 import './Header.css'
@@ -17,6 +18,11 @@ const DARK_HERO_ROUTES = new Set([
   '/referrals',
   '/about',
   '/testimonials',
+  '/team',
+  '/prices',
+  '/blogs',
+  '/faq',
+  '/join-our-team',
 ])
 
 function isNavItemActive(item, pathname) {
@@ -33,7 +39,8 @@ export default function Header() {
   const [openGroup, setOpenGroup] = useState(null)
   const { pathname } = useLocation()
 
-  const hasDarkHero = DARK_HERO_ROUTES.has(pathname)
+  // .has() cobre rotas exatas; startsWith cobre a vaga individual (/join-our-team/:slug)
+  const hasDarkHero = DARK_HERO_ROUTES.has(pathname) || pathname.startsWith('/join-our-team/')
   const isPill = scrolled && !menuOpen
   const solid = scrolled || menuOpen || !hasDarkHero
 
@@ -53,11 +60,25 @@ export default function Header() {
     .filter(Boolean)
     .join(' ')
 
+  const handleLogoClick = (e) => {
+    // Já na home: o Link não muda a rota, então rolamos ao topo manualmente
+    if (pathname === '/') {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    setMenuOpen(false)
+  }
+
   return (
     <>
       <header className={headerClass}>
         <div className="container header__inner">
-          <Link to="/" className="header__logo" aria-label="Formula Fitness — Home">
+          <Link
+            to="/"
+            className="header__logo"
+            aria-label="Formula Fitness — Home"
+            onClick={handleLogoClick}
+          >
             <img src={assets.logo} alt="Formula Fitness" width="150" height="40" />
           </Link>
 
@@ -100,9 +121,9 @@ export default function Header() {
             </ul>
           </nav>
 
-          <a href="/#consult" className="btn btn-primary header__cta">
+          <ConsultLink className="btn btn-primary header__cta" onClick={() => setMenuOpen(false)}>
             Book a Consultation
-          </a>
+          </ConsultLink>
 
           <button
             type="button"
@@ -165,9 +186,12 @@ export default function Header() {
               )
             })}
           </ul>
-          <a href="/#consult" className="btn btn-primary mobile-menu__cta">
+          <ConsultLink
+            className="btn btn-primary mobile-menu__cta"
+            onClick={() => setMenuOpen(false)}
+          >
             Book a Consultation
-          </a>
+          </ConsultLink>
         </nav>
       </div>
     </>

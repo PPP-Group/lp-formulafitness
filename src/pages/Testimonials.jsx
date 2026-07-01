@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import Seo from '@components/ui/Seo'
 import SectionTitle from '@components/ui/SectionTitle'
 import ReviewsGrid from '@components/sections/ReviewsGrid'
@@ -59,7 +59,7 @@ export default function Testimonials() {
         heading="Start Your Transformation!"
         subheading="Click the Button Below!"
         button="Get Started"
-        image={upload('2026/05/Formula-Fitness-03.2026-79-scaled.jpg')}
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
 
       <section className="section tm-philosophy">
@@ -74,7 +74,7 @@ export default function Testimonials() {
             challenge into a victory and crafting the best version of you.
           </p>
           <div className="tm-philosophy__cta">
-            <Link to="/#consult" className="btn btn-primary">Book A Consultation</Link>
+            <ConsultLink className="btn btn-primary">Book A Consultation</ConsultLink>
           </div>
         </div>
       </section>

@@ -89,9 +89,16 @@ export default function Referrals() {
         </div>
       </section>
 
-      <section className="section section--alt">
+      <section className="section section--alt" id="consult">
         <div className="container ref-form">
           <div className="ref-form__info">
+            <figure className="ref-form__photo">
+              <img
+                src={upload('2025/05/DSCF1279-scaled.jpg')}
+                alt="Formula Fitness personal training consultation"
+                loading="lazy"
+              />
+            </figure>
             <h2 className="section-title">Ready to Earn?</h2>
             <p className="section-subtitle">
               Fill out the form below and we will take care of the rest. Your friend gets a personal

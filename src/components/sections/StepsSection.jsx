@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import SectionTitle from '@components/ui/SectionTitle'
 import './StepsSection.css'
 
@@ -22,9 +22,9 @@ export default function StepsSection({ title, eyebrow, steps = [], cta, alt = fa
         </ol>
         {cta && (
           <div className="steps__cta">
-            <Link to="/#consult" className="btn btn-primary">
+            <ConsultLink className="btn btn-primary">
               {cta}
-            </Link>
+            </ConsultLink>
           </div>
         )}
       </div>

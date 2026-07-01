@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import StepsSection from '@components/sections/StepsSection'
@@ -162,9 +162,9 @@ export default function SemiPrivate() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <Link to="/#consult" className="btn btn-primary pt-vbg__cta">
+            <ConsultLink className="btn btn-primary pt-vbg__cta">
               Get Started
-            </Link>
+            </ConsultLink>
           </div>
         </div>
       </section>
@@ -209,7 +209,7 @@ export default function SemiPrivate() {
         heading="Build Strength & Gain Confidence"
         subheading="Get Started Today!"
         button="Get Started"
-        image={upload('2026/05/Formula-Fitness-03.2026-34-scaled.jpg')}
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <FindUs />
       <ContactSection />

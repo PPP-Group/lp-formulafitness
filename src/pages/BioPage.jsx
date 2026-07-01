@@ -10,7 +10,7 @@ export default function BioPage() {
   const { slug } = useParams()
   const member = getMember(slug)
 
-  if (!member) return <Navigate to="/team-members-page" replace />
+  if (!member) return <Navigate to="/team" replace />
 
   return (
     <>
@@ -62,7 +62,7 @@ export default function BioPage() {
                 </ul>
               </div>
             )}
-            <Link to="/team-members-page" className="btn-link bio__back">
+            <Link to="/team" className="btn-link bio__back">
               ‹ Back to team
             </Link>
           </aside>

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import ConsultLink from '@components/ui/ConsultLink'
 import './CtaBanner.css'
 
 // Banner curto de CTA (ex.: "Get Lean & Get Strong" / "Book Your First Session Now!").
@@ -8,9 +8,9 @@ export default function CtaBanner({ heading, subheading, button = 'Get Started',
       <div className="container cta-banner__inner">
         {heading && <h2 className="cta-banner__title">{heading}</h2>}
         {subheading && <p className="cta-banner__sub">{subheading}</p>}
-        <Link to="/#consult" className="btn btn-primary cta-banner__btn">
+        <ConsultLink className="btn btn-primary cta-banner__btn">
           {button}
-        </Link>
+        </ConsultLink>
       </div>
     </section>
   )

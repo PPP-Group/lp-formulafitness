@@ -119,7 +119,7 @@ export default function InBody() {
       <CtaBanner
         heading="Get Your InBody Analysis Today—Click The Button Below!"
         button="Book a Consultation"
-        image={upload('2026/05/Formula-Fitness-03.2026-95-scaled.jpg')}
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <FindUs />
       <ContactSection />

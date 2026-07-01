@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from '@components/layout/Layout'
 import ScrollToTop from '@components/layout/ScrollToTop'
 
@@ -44,7 +44,9 @@ function App() {
             <Route path="/youth-training-program" element={<YouthTraining />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/referrals" element={<Referrals />} />
-            <Route path="/team-members-page" element={<Team />} />
+            <Route path="/team" element={<Team />} />
+            {/* Redirect da URL antiga para não quebrar links/SEO */}
+            <Route path="/team-members-page" element={<Navigate to="/team" replace />} />
             <Route path="/bio/:slug" element={<BioPage />} />
             <Route path="/join-our-team" element={<JoinTeam />} />
             <Route path="/join-our-team/:slug" element={<JobPost />} />

@@ -50,6 +50,12 @@
   align-self: flex-start;
 }
 
+@media (max-width: 767px) {
+  .triumphs__cta {
+    align-self: center;
+  }
+}
+
 @media (min-width: 768px) {
   .triumphs__media {
     order: 1;

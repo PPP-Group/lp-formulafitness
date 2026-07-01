@@ -3,7 +3,7 @@ import SectionTitle from '@components/ui/SectionTitle'
 import './StepsSection.css'
 
 // "Three/Six Steps to Your Fitness Journey" — passos numerados + CTA opcional.
-export default function StepsSection({ title, eyebrow, steps = [], cta, alt = false }) {
+export default function StepsSection({ title, eyebrow, steps = [], cta, alt = false, ctaVariant = 'consult' }) {
   return (
     <section className={`section steps ${alt ? 'section--alt' : ''}`}>
       <div className="container">
@@ -22,7 +22,7 @@ export default function StepsSection({ title, eyebrow, steps = [], cta, alt = fa
         </ol>
         {cta && (
           <div className="steps__cta">
-            <ConsultLink className="btn btn-primary">
+            <ConsultLink className="btn btn-primary" variant={ctaVariant}>
               {cta}
             </ConsultLink>
           </div>

@@ -1,6 +1,6 @@
 import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
-import LeadForm from '@components/sections/LeadForm'
+import ConsultLink from '@components/ui/ConsultLink'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { company, upload } from '@utils/constants'
 import './Prices.css'
@@ -16,7 +16,7 @@ export default function Prices() {
       <PageHero
         eyebrow="Membership"
         title="Prices"
-        description="Every fitness journey is different, so pricing is tailored to your goals and program. Enter your info below and we'll get you personalized pricing."
+        description="Every fitness journey is different, so pricing is tailored to your goals and program. Enter your info here and we'll get you personalized pricing."
         image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <section className="section" id="consult">
@@ -44,8 +44,10 @@ export default function Prices() {
                 <a href={`mailto:${company.email}`}>{company.email}</a>
               </li>
             </ul>
+            <ConsultLink className="btn btn-primary prices-lead__cta" variant="consult">
+              Get Started
+            </ConsultLink>
           </div>
-          <LeadForm title="Enter your Contact Info" />
         </div>
       </section>
       <ConsultCTA />

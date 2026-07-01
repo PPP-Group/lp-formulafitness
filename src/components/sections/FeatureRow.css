@@ -16,6 +16,19 @@
   object-fit: cover;
 }
 
+/* Imagens vetorizadas com fundo branco — remove o card e usa blend para sumir o branco */
+.feature-row__media--blend {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
+}
+.feature-row__media--blend img {
+  object-fit: contain;
+  min-height: unset;
+  mix-blend-mode: multiply;
+}
+
 .feature-row__content {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,22 @@
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (min-width: 520px) {
+  .team__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 860px) {
+  .team__grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-md);
+  }
+}
+
 .team-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);

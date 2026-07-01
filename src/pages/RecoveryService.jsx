@@ -26,6 +26,7 @@ export default function RecoveryService() {
       <FeatureRow
         image={upload('2023/10/Group-81226.png')}
         imageAlt="Recovery methods at Formula Fitness"
+        mediaClassName="feature-row__media--blend"
         eyebrow="Recovery"
         heading="Recovery Methods"
         bullets={[
@@ -69,6 +70,7 @@ export default function RecoveryService() {
       <FeatureRow
         image={upload('2023/10/Group-81239.png')}
         imageAlt="Move freely, live boldly"
+        mediaClassName="feature-row__media--blend"
         heading="Move Freely, Live Boldly: Increase Mobility and Decrease Pain with Us"
         paragraphs={[
           'Boosted mobility and reduced pain paves the way for a life of boundless movement and freedom.',

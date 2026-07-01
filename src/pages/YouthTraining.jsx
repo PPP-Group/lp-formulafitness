@@ -35,6 +35,7 @@ export default function YouthTraining() {
         badgeImage={upload('2026/04/Gemini_Generated_Image_ehaqfaehaqfaehaq.png')}
         showCta
         cta="Book a consultation"
+        ctaVariant="youth"
       />
 
       <Partners />
@@ -43,12 +44,14 @@ export default function YouthTraining() {
         title="Six Steps to Your Fitness Journey"
         steps={steps}
         cta="Start My Fitness Journey"
+        ctaVariant="youth"
         alt
       />
 
       <FeatureRow
         image={upload('2026/04/WhatsApp-Image-2026-04-16-at-15.26.09.jpeg')}
         imageAlt="Young athlete training with a coach"
+        ctaVariant="youth"
         heading="Why Choose Youth Performance Training"
         paragraphs={[
           'Youth athletes are not small adults. Our program is built specifically for growing bodies, focusing on movement quality, strength development, and confidence in a safe and structured environment.',
@@ -66,6 +69,7 @@ export default function YouthTraining() {
       <FeatureRow
         image={upload('2026/04/WhatsApp-Image-2026-04-16-at-15.26.08.jpeg')}
         imageAlt="Youth conditioning session"
+        ctaVariant="youth"
         heading="Results Driven Youth Training"
         paragraphs={[
           'Every session is designed around how kids and teens actually develop. We combine movement training, strength work, and conditioning in a way that is safe, engaging, and effective for young athletes.',
@@ -87,6 +91,7 @@ export default function YouthTraining() {
         subheading="Experience results-driven training built for you!"
         button="Book a consultation"
         image={upload('2026/05/WhatsApp-Image-2026-04-16-at-15.26.08-1.jpeg')}
+        ctaVariant="youth"
       />
       <FindUs />
       <ContactSection />

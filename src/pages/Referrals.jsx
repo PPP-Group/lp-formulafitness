@@ -2,13 +2,13 @@ import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import SectionTitle from '@components/ui/SectionTitle'
 import StepsSection from '@components/sections/StepsSection'
-import LeadForm from '@components/sections/LeadForm'
+import ConsultLink from '@components/ui/ConsultLink'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload } from '@utils/constants'
 import './ReferralsPage.css'
 
 const steps = [
-  { title: 'Submit the Referral', body: "Fill out the short form below with your name and your friend's info. Takes less than a minute." },
+  { title: 'Submit the Referral', body: "Fill out the short form with your name and your friend's info. Takes less than a minute." },
   { title: 'Your Friend Signs Up', body: 'When your friend completes their consultation and joins a training program, your points get credited automatically.' },
   { title: 'Redeem Your Rewards', body: 'Use your points for free sessions, branded gear, or fitness tech. Your call.' },
 ]
@@ -41,6 +41,7 @@ export default function Referrals() {
         image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
         showCta
         cta="Refer a Friend"
+        ctaVariant="referral"
       />
 
       <StepsSection title="3 Steps. That's It." steps={steps} alt />
@@ -101,7 +102,7 @@ export default function Referrals() {
             </figure>
             <h2 className="section-title">Ready to Earn?</h2>
             <p className="section-subtitle">
-              Fill out the form below and we will take care of the rest. Your friend gets a personal
+              Fill out the form and we will take care of the rest. Your friend gets a personal
               invitation from our team, and your points start adding up as soon as they join.
             </p>
             <p className="ref-form__fine">
@@ -110,8 +111,10 @@ export default function Referrals() {
               the referral form. Points are not transferable between members. Redemption is available
               for any reward at or above your available balance.
             </p>
+            <ConsultLink className="btn btn-primary ref-form__cta" variant="referral">
+              Refer a Friend
+            </ConsultLink>
           </div>
-          <LeadForm title="Refer a Friend" buttonLabel="Refer a Friend" />
         </div>
       </section>
 

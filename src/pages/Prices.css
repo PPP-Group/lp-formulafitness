@@ -3,11 +3,18 @@
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
   align-items: start;
+  max-width: 640px;
+  margin: 0 auto;
 }
 .prices-lead__info {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  align-items: center;
+  text-align: center;
+}
+.prices-lead__cta {
+  margin-top: var(--space-md);
 }
 .prices-lead__photo {
   margin: 0;
@@ -29,11 +36,13 @@
   flex-direction: column;
   gap: var(--space-md);
   margin-top: var(--space-md);
+  align-items: center;
 }
 .prices-lead__contact li {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  align-items: center;
 }
 .prices-lead__contact span {
   font-size: var(--text-overline);
@@ -44,11 +53,4 @@
 }
 .prices-lead__contact a:hover {
   color: var(--color-brand);
-}
-
-@media (min-width: 900px) {
-  .prices-lead {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3xl);
-  }
 }

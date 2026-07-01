@@ -1,32 +1,20 @@
-import { useNavigate } from 'react-router-dom'
+import { useFormModal } from '@components/ui/FormModalProvider'
 
-// CTA que leva ao formulário de consulta (#consult).
-// - Se a página atual já contém a seção #consult, rola suavemente até ela — SEMPRE,
-//   inclusive em cliques repetidos. Isso corrige o "segundo clique morto": ao navegar
-//   por hash, o React Router não detecta mudança quando a URL já é /#consult, então o
-//   scroll não voltava a disparar.
-// - Se a página não tem formulário próprio, navega para o formulário da home (/#consult).
-export default function ConsultLink({ className, children, onClick, ...rest }) {
-  const navigate = useNavigate()
+// CTA de conversão do site. Abre o pop-up com o formulário correspondente:
+//  - variant="consult"  (padrão) → formulário geral de consulta
+//  - variant="referral"          → formulário de indicação (página Referrals)
+//
+// Mantém-se como <a href="/#consult"> por dois motivos: preserva a estilização
+// de seletores existentes (ex.: a.header__cta) e a acessibilidade de link
+// focável. O href serve apenas de fallback — o clique abre o modal.
+export default function ConsultLink({ className, children, variant = 'consult', onClick, ...rest }) {
+  const { openForm } = useFormModal()
 
   const handleClick = (e) => {
     onClick?.(e)
     if (e.defaultPrevented) return
     e.preventDefault()
-
-    const target = document.getElementById('consult')
-    if (target) {
-      // Defere um frame: se o clique veio do menu mobile (que trava o scroll do
-      // body com overflow:hidden), dá tempo do React fechar o menu e restaurar o
-      // scroll antes de rolarmos até o formulário.
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        })
-      })
-    } else {
-      navigate('/#consult')
-    }
+    openForm(variant)
   }
 
   return (

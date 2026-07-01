@@ -12,6 +12,7 @@ export default function FeatureRow({
   bullets = [],
   cta,
   ctaHref = '/#consult',
+  ctaVariant = 'consult',
   reverse = false,
   alt = false,
   mediaClassName = '',
@@ -44,7 +45,7 @@ export default function FeatureRow({
           )}
           {cta && (
             ctaHref === '/#consult' ? (
-              <ConsultLink className="btn btn-primary feature-row__cta">
+              <ConsultLink className="btn btn-primary feature-row__cta" variant={ctaVariant}>
                 {cta}
               </ConsultLink>
             ) : (

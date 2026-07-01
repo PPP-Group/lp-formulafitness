@@ -85,11 +85,18 @@
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
   align-items: start;
+  max-width: 640px;
+  margin: 0 auto;
 }
 .ref-form__info {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  align-items: center;
+  text-align: center;
+}
+.ref-form__cta {
+  margin-top: var(--space-md);
 }
 .ref-form__photo {
   margin: 0;
@@ -119,11 +126,5 @@
   }
   .ref-tiers {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (min-width: 900px) {
-  .ref-form {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3xl);
   }
 }

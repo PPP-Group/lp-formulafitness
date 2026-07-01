@@ -1,39 +1,43 @@
-import { Suspense, lazy } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Suspense } from 'react'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Layout from '@components/layout/Layout'
 import ScrollToTop from '@components/layout/ScrollToTop'
+import RouteErrorBoundary from '@components/ui/RouteErrorBoundary'
+import lazyWithRetry from '@utils/lazyWithRetry'
 
-// Code splitting por rota (React.lazy + Suspense)
-const Home = lazy(() => import('@pages/Home'))
-const TrainingServices = lazy(() => import('@pages/TrainingServices'))
-const PersonalTraining = lazy(() => import('@pages/PersonalTraining'))
-const SemiPrivate = lazy(() => import('@pages/SemiPrivate'))
-const RecoveryService = lazy(() => import('@pages/RecoveryService'))
-const ActiveAging = lazy(() => import('@pages/ActiveAging'))
-const InBody = lazy(() => import('@pages/InBody'))
-const YouthTraining = lazy(() => import('@pages/YouthTraining'))
-const Testimonials = lazy(() => import('@pages/Testimonials'))
-const Referrals = lazy(() => import('@pages/Referrals'))
-const Team = lazy(() => import('@pages/Team'))
-const BioPage = lazy(() => import('@pages/BioPage'))
-const JoinTeam = lazy(() => import('@pages/JoinTeam'))
-const JobPost = lazy(() => import('@pages/JobPost'))
-const Prices = lazy(() => import('@pages/Prices'))
-const Blogs = lazy(() => import('@pages/Blogs'))
-const BlogPost = lazy(() => import('@pages/BlogPost'))
-const About = lazy(() => import('@pages/About'))
-const FAQ = lazy(() => import('@pages/FAQ'))
-const Terms = lazy(() => import('@pages/Terms'))
-const Refund = lazy(() => import('@pages/Refund'))
-const NotFound = lazy(() => import('@pages/NotFound'))
+// Code splitting por rota (lazyWithRetry = React.lazy + retry/auto-reload)
+const Home = lazyWithRetry(() => import('@pages/Home'))
+const TrainingServices = lazyWithRetry(() => import('@pages/TrainingServices'))
+const PersonalTraining = lazyWithRetry(() => import('@pages/PersonalTraining'))
+const SemiPrivate = lazyWithRetry(() => import('@pages/SemiPrivate'))
+const RecoveryService = lazyWithRetry(() => import('@pages/RecoveryService'))
+const ActiveAging = lazyWithRetry(() => import('@pages/ActiveAging'))
+const InBody = lazyWithRetry(() => import('@pages/InBody'))
+const YouthTraining = lazyWithRetry(() => import('@pages/YouthTraining'))
+const Testimonials = lazyWithRetry(() => import('@pages/Testimonials'))
+const Referrals = lazyWithRetry(() => import('@pages/Referrals'))
+const Team = lazyWithRetry(() => import('@pages/Team'))
+const BioPage = lazyWithRetry(() => import('@pages/BioPage'))
+const JoinTeam = lazyWithRetry(() => import('@pages/JoinTeam'))
+const JobPost = lazyWithRetry(() => import('@pages/JobPost'))
+const Prices = lazyWithRetry(() => import('@pages/Prices'))
+const Blogs = lazyWithRetry(() => import('@pages/Blogs'))
+const BlogPost = lazyWithRetry(() => import('@pages/BlogPost'))
+const About = lazyWithRetry(() => import('@pages/About'))
+const FAQ = lazyWithRetry(() => import('@pages/FAQ'))
+const Terms = lazyWithRetry(() => import('@pages/Terms'))
+const Refund = lazyWithRetry(() => import('@pages/Refund'))
+const NotFound = lazyWithRetry(() => import('@pages/NotFound'))
 
 function App() {
+  const location = useLocation()
   return (
     <>
       <ScrollToTop />
-      <Suspense fallback={<div className="route-fallback" aria-hidden="true" />}>
-        <Routes>
-          <Route element={<Layout />}>
+      <RouteErrorBoundary routeKey={location.pathname}>
+        <Suspense fallback={<div className="route-fallback" aria-hidden="true" />}>
+          <Routes>
+            <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/training-services" element={<TrainingServices />} />
             <Route path="/personal-training" element={<PersonalTraining />} />
@@ -58,9 +62,10 @@ function App() {
             <Route path="/terms-of-service" element={<Terms />} />
             <Route path="/refund-policy" element={<Refund />} />
             <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </Suspense>
+            </Route>
+          </Routes>
+        </Suspense>
+      </RouteErrorBoundary>
     </>
   )
 }

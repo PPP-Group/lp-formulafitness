@@ -1,7 +1,7 @@
 import ConsultLink from '@components/ui/ConsultLink'
 import './PageHero.css'
 
-export default function PageHero({ eyebrow, title, description, image, badgeImage, cta = 'Book a Consultation', showCta = false }) {
+export default function PageHero({ eyebrow, title, description, image, badgeImage, cta = 'Book a Consultation', showCta = false, ctaVariant = 'consult' }) {
   const styled = !!image
   const hasBadge = !!badgeImage
   return (
@@ -15,7 +15,7 @@ export default function PageHero({ eyebrow, title, description, image, badgeImag
           <h1 className="page-hero__title">{title}</h1>
           {description && <p className="page-hero__desc">{description}</p>}
           {showCta && (
-            <ConsultLink className="btn btn-primary page-hero__cta">
+            <ConsultLink className="btn btn-primary page-hero__cta" variant={ctaVariant}>
               {cta}
             </ConsultLink>
           )}

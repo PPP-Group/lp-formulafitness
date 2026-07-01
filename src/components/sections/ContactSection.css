@@ -1,6 +1,6 @@
 /* ==========================================================================
    CONTACT SECTION — Formula Fitness
-   Layout: foto full-bleed à esquerda | formulário à direita
+   Layout: foto full-bleed à esquerda | painel CTA navy à direita
    ========================================================================== */
 
 .contact-section {
@@ -63,21 +63,65 @@
 }
 
 /* --------------------------------------------------------------------------
-   Painel do formulário (direita)
+   Painel CTA (direita) — fundo navy, ocupa altura total
    -------------------------------------------------------------------------- */
 
-.contact-section__form-panel {
-  background: var(--color-bg-secondary);
+.contact-section__cta-panel {
+  background: var(--color-navy);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--space-3xl) var(--space-2xl);
 }
 
-.contact-section__form-panel .lead-form {
-  width: 100%;
-  max-width: 540px;
-  box-shadow: var(--shadow-lg);
+.contact-section__cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-lg);
+  max-width: 420px;
+}
+
+.contact-section__cta-eyebrow {
+  display: inline-block;
+  font-size: var(--text-overline);
+  letter-spacing: var(--text-overline-ls);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-brand);
+}
+
+.contact-section__cta-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.contact-section__cta-text {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: var(--text-body);
+  line-height: var(--text-body-lh);
+}
+
+.contact-section__cta-btn {
+  background: var(--color-brand);
+  color: #ffffff;
+  border: 2px solid var(--color-brand);
+  padding: 0.875rem 2rem;
+  margin-top: var(--space-xs);
+  transition:
+    background 0.3s var(--ease-standard),
+    border-color 0.3s var(--ease-standard),
+    transform 0.2s var(--ease-standard);
+}
+.contact-section__cta-btn:hover {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 /* --------------------------------------------------------------------------

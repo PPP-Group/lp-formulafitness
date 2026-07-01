@@ -23,7 +23,7 @@ export default function Team() {
         image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <div className="section">
-        <div className="container grid-3 team__grid">
+        <div className="container team__grid">
           {team.map((member) => (
             <article className="team-card" key={member.slug}>
               <div className="team-card__photo">

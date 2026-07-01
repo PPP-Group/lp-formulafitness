@@ -1,0 +1,28 @@
+.route-error {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.route-error__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-md);
+  max-width: 420px;
+}
+
+.route-error__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  color: var(--color-text-primary);
+}
+
+.route-error__text {
+  color: var(--color-text-secondary);
+  line-height: var(--text-body-lh);
+  margin-bottom: var(--space-sm);
+}

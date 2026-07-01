@@ -37,7 +37,7 @@ export default function TrainingServices() {
         eyebrow="Our Services"
         title="Training Services"
         description="One gym, every tool you need. From elite 1-on-1 coaching and small-group sessions to cutting-edge recovery and active aging programs — all tailored to you."
-        image={upload('2026/05/Formula-Fitness-03.2026-15-scaled.jpg')}
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
         showCta
         cta="Book a Consultation"
       />

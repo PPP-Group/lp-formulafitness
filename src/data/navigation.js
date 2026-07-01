@@ -5,6 +5,7 @@ export const navigation = [
     label: 'Services',
     path: '/training-services',
     children: [
+      { label: 'All Services', path: '/training-services' },
       { label: 'Personal Training', path: '/personal-training' },
       { label: 'Semi-Private', path: '/semi-private-personal-training' },
       { label: 'Recovery Service', path: '/recovery-service' },

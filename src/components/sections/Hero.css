@@ -20,7 +20,7 @@
      O overlay escuro (.hero__overlay) garante legibilidade sobre qualquer foto. */
   background-image: var(--hero-bg-image);
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
   background-color: #0d1218; /* fallback enquanto a foto carrega */
 }

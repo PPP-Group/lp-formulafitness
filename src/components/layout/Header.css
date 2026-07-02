@@ -130,7 +130,10 @@
 .header__logo img {
   height: 38px;
   width: auto;
-  transition: height 0.5s var(--ease-decelerate);
+  transition: height 0.5s var(--ease-decelerate), opacity 0.3s var(--ease-standard);
+}
+.header__logo-full {
+  height: 56px;
 }
 .header--pill .header__logo img {
   height: 34px;
@@ -430,6 +433,9 @@ a.header__cta {
   }
   .header__logo img {
     height: 40px;
+  }
+  .header__logo-full {
+    height: 60px;
   }
   .header--pill .header__logo img {
     height: 34px;

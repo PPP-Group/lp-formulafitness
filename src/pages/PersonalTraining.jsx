@@ -11,6 +11,7 @@ import Results from '@components/sections/Results'
 import FindUs from '@components/sections/FindUs'
 import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
+import AutoplayVideo from '@components/ui/AutoplayVideo'
 import { upload, youtube } from '@utils/constants'
 import './PersonalTrainingPage.css'
 
@@ -149,24 +150,10 @@ export default function PersonalTraining() {
         cta="Book a consultation"
       />
 
-      <section className="section pt-explainer">
-        <div className="container pt-explainer__inner">
-          <div className="pt-explainer__video">
-            <iframe
-              src={`https://www.youtube.com/embed/${youtube.main}?rel=0`}
-              title="Personal Training at Formula Fitness Explained"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-          <a
-            className="video-fallback"
-            href={`https://www.youtube.com/watch?v=${youtube.main}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Trouble viewing? Watch on YouTube ↗
-          </a>
+      <section className="section section--alt">
+        <div className="container">
+          <SectionTitle title="See Personal Training in Action" align="center" />
+          <AutoplayVideo src={upload('2026/05/Chris-Website-1.mp4')} />
         </div>
       </section>
 

@@ -87,23 +87,3 @@
   flex-shrink: 0;
 }
 
-/* ── Explainer video embed ── */
-.pt-explainer__inner {
-  max-width: 900px;
-}
-
-.pt-explainer__video {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.pt-explainer__video iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}

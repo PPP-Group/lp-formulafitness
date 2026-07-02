@@ -13,7 +13,7 @@ export default function InBody() {
     <section className="section inbody">
       <div className="container grid-2 inbody__grid">
         <div className="inbody__media">
-          <img src={upload('2023/06/Image-3.png')} alt="InBody 580 body composition analyzer" loading="lazy" />
+          <img src={upload('2025/04/580-img.png')} alt="InBody 580 body composition analyzer" loading="lazy" />
         </div>
 
         <div className="inbody__content">

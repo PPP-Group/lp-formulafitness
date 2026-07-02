@@ -79,7 +79,10 @@ export default function Header() {
             aria-label="Formula Fitness — Home"
             onClick={handleLogoClick}
           >
-            <img src={assets.logo} alt="Formula Fitness" width="150" height="40" />
+            {scrolled
+              ? <img src="/favicon.png" alt="Formula Fitness" width="40" height="40" className="header__logo-icon" />
+              : <img src={assets.logo} alt="Formula Fitness" width="70" height="81" className="header__logo-full" />
+            }
           </Link>
 
           <nav className="header__nav" aria-label="Primary">

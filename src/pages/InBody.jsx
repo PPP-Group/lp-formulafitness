@@ -6,6 +6,7 @@ import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
 import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
+import AutoplayVideo from '@components/ui/AutoplayVideo'
 import { upload } from '@utils/constants'
 import './InBodyPage.css'
 
@@ -54,15 +55,10 @@ export default function InBody() {
       <section className="section section--alt">
         <div className="container">
           <SectionTitle title="See the InBody Scan in Action" align="center" />
-          <div className="inbody-video">
-            <video
-              className="inbody-video__player"
-              src={upload('2026/05/Jason-Website-1.mp4')}
-              poster={upload('2026/06/image-65.png')}
-              controls
-              playsInline
-            />
-          </div>
+          <AutoplayVideo
+            src={upload('2026/05/Jason-Website-1.mp4')}
+            poster={upload('2026/06/image-65.png')}
+          />
         </div>
       </section>
 

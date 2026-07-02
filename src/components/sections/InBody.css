@@ -9,7 +9,7 @@
 }
 .inbody__media img {
   width: 100%;
-  max-width: 440px;
+  max-width: 320px;
   object-fit: contain;
   transition: transform 0.4s var(--ease-standard);
 }

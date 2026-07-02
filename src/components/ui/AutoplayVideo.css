@@ -1,0 +1,31 @@
+.autoplay-video {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: #000;
+}
+
+.autoplay-video__player {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.autoplay-video__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.autoplay-video__sound-btn {
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1.75rem;
+  font-size: var(--text-sm);
+  box-shadow: var(--shadow-lg);
+  gap: var(--space-xs);
+}

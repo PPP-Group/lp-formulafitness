@@ -37,6 +37,7 @@ export default function Header() {
   const scrolled = useScrollPosition(60)
   const [menuOpen, setMenuOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState(null)
+  const [openDropdown, setOpenDropdown] = useState(null)
   const { pathname } = useLocation()
 
   // .has() cobre rotas exatas; startsWith cobre a vaga individual (/join-our-team/:slug)
@@ -47,6 +48,7 @@ export default function Header() {
   useEffect(() => {
     setMenuOpen(false)
     setOpenGroup(null)
+    setOpenDropdown(null)
   }, [pathname])
 
   useEffect(() => {
@@ -92,11 +94,20 @@ export default function Header() {
                 return (
                   <li
                     key={item.label}
-                    className={`header__item ${item.children ? 'has-dropdown' : ''}`}
+                    className={`header__item ${item.children ? 'has-dropdown' : ''} ${item.children && openDropdown === item.label ? 'is-open' : ''}`}
+                    onFocus={item.children ? () => setOpenDropdown(item.label) : undefined}
+                    onBlur={
+                      item.children
+                        ? (e) => {
+                            if (!e.currentTarget.contains(e.relatedTarget)) setOpenDropdown(null)
+                          }
+                        : undefined
+                    }
                   >
                     <Link
                       to={item.path}
                       className={`header__link ${active ? 'header__link--active' : ''}`}
+                      onClick={() => setOpenDropdown(null)}
                     >
                       {item.label}
                       {item.children && <Chevron />}
@@ -110,6 +121,7 @@ export default function Header() {
                               <Link
                                 to={child.path}
                                 className={`header__dropdown-link ${childActive ? 'header__dropdown-link--active' : ''}`}
+                                onClick={() => setOpenDropdown(null)}
                               >
                                 {child.label}
                               </Link>

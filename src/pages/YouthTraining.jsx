@@ -6,7 +6,6 @@ import FeatureRow from '@components/sections/FeatureRow'
 import LocationBlock from '@components/sections/LocationBlock'
 import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
-import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload } from '@utils/constants'
 
@@ -94,7 +93,6 @@ export default function YouthTraining() {
         ctaVariant="youth"
       />
       <FindUs />
-      <ContactSection />
       <ConsultCTA />
     </>
   )

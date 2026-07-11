@@ -1,5 +1,8 @@
 /* ==========================================================================
    FORM MODAL — Formula Fitness
+   Sempre montado no DOM (para pré-carregar os iframes); a visibilidade é
+   controlada por .is-open. Fechado = invisível mas ainda renderizado, então
+   os formulários continuam carregados e prontos.
    ========================================================================== */
 
 .form-modal {
@@ -11,7 +14,22 @@
   justify-content: center;
   padding: var(--space-lg);
   background: var(--color-overlay);
-  animation: fadeIn 0.25s var(--ease-standard);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  /* Fechado: joga o subtree inteiro para fora da tela. Necessário porque o
+     form_embed.js do GHL força `visibility:visible; pointer-events:auto` no
+     inline-style dos iframes, sobrescrevendo o que definimos no pai — sem isto,
+     o iframe invisível continua capturando cliques/hover por cima da página.
+     Off-screen, os iframes seguem renderizados (e carregados/aquecidos). */
+  transform: translateX(-9999px);
+  transition: opacity 0.25s var(--ease-standard);
+}
+.form-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
 }
 
 .form-modal__panel {
@@ -23,10 +41,14 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-2xl);
   overflow: hidden;
-  animation: scaleIn 0.3s var(--ease-standard);
+  transform: scale(0.96);
+  transition: transform 0.3s var(--ease-standard);
+}
+.form-modal.is-open .form-modal__panel {
+  transform: scale(1);
 }
 
-/* Botão X flutuante sobre o scroll — z-index garante visibilidade. */
+/* Botão X flutuante sobre o scroll. */
 .form-modal__close {
   position: absolute;
   top: var(--space-sm);
@@ -70,6 +92,9 @@
   background: var(--color-brand);
   border-radius: 99px;
 }
+
+/* A visibilidade de cada iframe é controlada pelo wrapper `.ghl-frame`
+   (ver GhlFrame.css) — resiste ao form_embed.js sobrescrever o inline-style. */
 
 @media (max-width: 480px) {
   .form-modal {

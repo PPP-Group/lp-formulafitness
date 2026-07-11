@@ -50,7 +50,9 @@
   color: var(--color-text-secondary);
   line-height: var(--text-body-lh);
 }
-.job-post__card a {
+/* Só links de texto inline ficam azuis — exclui os botões (.btn), senão o
+   "Apply Now" (btn-primary) herdaria texto azul sobre fundo azul (ilegível). */
+.job-post__card a:not(.btn) {
   color: var(--color-brand);
 }
 .job-post__apply {

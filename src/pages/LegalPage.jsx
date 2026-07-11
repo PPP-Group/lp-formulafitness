@@ -10,7 +10,8 @@ export default function LegalPage({ title, path, intro, sections = [] }) {
       <Seo title={title} description={intro} path={path} />
       <PageHero eyebrow="Legal" title={title} description={intro} />
       <div className="section">
-        <div className="container" style={{ maxWidth: '780px' }}>
+        <div className="container">
+          <div style={{ maxWidth: '780px' }}>
           {sections.map((s) => (
             <section className="content-block" key={s.heading} style={{ marginBottom: 'var(--space-2xl)' }}>
               <h2 className="content-block__heading">{s.heading}</h2>
@@ -28,6 +29,7 @@ export default function LegalPage({ title, path, intro, sections = [] }) {
             </a>{' '}
             or {company.phone}.
           </p>
+          </div>
         </div>
       </div>
       <ConsultCTA />

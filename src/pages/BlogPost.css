@@ -50,6 +50,30 @@
   line-height: 1.8;
   margin-bottom: var(--space-lg);
 }
+.post__list {
+  list-style: none;
+  margin: 0 0 var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.post__list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+.post__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-brand);
+}
+
 .post__cta {
   margin-top: var(--space-xl);
 }

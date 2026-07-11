@@ -128,15 +128,16 @@
 }
 
 .header__logo img {
-  height: 38px;
+  height: 46px;
   width: auto;
   transition: height 0.5s var(--ease-decelerate), opacity 0.3s var(--ease-standard);
 }
-.header__logo-full {
-  height: 56px;
+/* especificidade (0,2,0) para vencer `.header__logo img` (0,1,1) */
+.header__logo .header__logo-full {
+  height: 70px;
 }
 .header--pill .header__logo img {
-  height: 34px;
+  height: 42px;
 }
 
 /* Nav desktop (base: oculta) */
@@ -174,7 +175,8 @@
 .header__item .chevron {
   transition: transform 0.2s var(--ease-standard);
 }
-.header__item.has-dropdown:hover .chevron {
+.header__item.has-dropdown:hover .chevron,
+.header__item.has-dropdown.is-open .chevron {
   transform: rotate(180deg);
 }
 
@@ -203,7 +205,7 @@
     visibility 0.2s;
 }
 .header__item.has-dropdown:hover .header__dropdown,
-.header__item.has-dropdown:focus-within .header__dropdown {
+.header__item.has-dropdown.is-open .header__dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
@@ -432,13 +434,13 @@ a.header__cta {
     gap: var(--space-xs);
   }
   .header__logo img {
-    height: 40px;
+    height: 52px;
   }
-  .header__logo-full {
-    height: 60px;
+  .header__logo .header__logo-full {
+    height: 74px;
   }
   .header--pill .header__logo img {
-    height: 34px;
+    height: 42px;
   }
   .header__nav {
     display: flex;
@@ -479,10 +481,10 @@ a.header__cta {
     gap: var(--space-md);
   }
   .header__logo img {
-    height: 52px;
+    height: 62px;
   }
   .header--pill .header__logo img {
-    height: 42px;
+    height: 50px;
   }
   .header__menu {
     gap: var(--space-xl);

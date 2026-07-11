@@ -5,7 +5,6 @@ import SectionTitle from '@components/ui/SectionTitle'
 import FeatureRow from '@components/sections/FeatureRow'
 import Accordion from '@components/ui/Accordion'
 import FindUs from '@components/sections/FindUs'
-import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { team } from '@data/team'
 import { faqCategories } from '@data/faq'
@@ -144,7 +143,6 @@ export default function About() {
       </section>
 
       <FindUs />
-      <ContactSection />
       <ConsultCTA />
     </>
   )

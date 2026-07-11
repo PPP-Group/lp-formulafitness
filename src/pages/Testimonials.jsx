@@ -1,11 +1,12 @@
 import ConsultLink from '@components/ui/ConsultLink'
 import Seo from '@components/ui/Seo'
+import PageHero from '@components/ui/PageHero'
 import SectionTitle from '@components/ui/SectionTitle'
-import ReviewsGrid from '@components/sections/ReviewsGrid'
+import WallOfLove from '@components/sections/WallOfLove'
 import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
-import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
+import { videoTestimonials, transformations, shortTestimonials } from '@data/testimonials'
 import { upload } from '@utils/constants'
 import './TestimonialsPage.css'
 
@@ -21,6 +22,29 @@ const reviews = [
 const names = ['Rachel', 'Chase', 'Anna', 'Erik', 'Marissa', 'Miguel', 'Dharshun', 'Yaska', 'Heather', 'Toby', 'Cathy', 'Daniel', 'Monica', 'Adriane', 'Alisha', 'CJ', 'Renata', 'Thomas', 'Michael', 'Daisy', 'Ruby', 'Angela', 'Levik', 'Lizzi']
 const galleryImages = Array.from({ length: 15 }, (_, i) => upload(`2025/06/${15 + i}.png`))
 
+// Compõe o mural (Wall of Love) a partir de conteúdo real já existente:
+// depoimentos com foto (reviews) + Yelp curtos (shortTestimonials) + vídeos
+// (videoTestimonials) + fotos de resultado (transformations). Nada inventado.
+const FEATURED = new Set(['john', 'joyce'])
+const textCards = [
+  ...reviews.filter((r) => FEATURED.has(r.id)).map((r) => ({ ...r, type: 'text', featured: true })),
+  ...reviews.filter((r) => !FEATURED.has(r.id)).map((r) => ({ ...r, type: 'text' })),
+  ...shortTestimonials.map((s) => ({ ...s, type: 'text' })),
+]
+const mediaCards = []
+videoTestimonials.forEach((v, i) => {
+  mediaCards.push({ ...v, type: 'video' })
+  if (transformations[i]) mediaCards.push({ ...transformations[i], type: 'result' })
+})
+// Intercala um card de mídia a cada 2 cards de texto, para distribuir vídeos/fotos.
+const wallItems = []
+let mi = 0
+textCards.forEach((card, i) => {
+  wallItems.push(card)
+  if ((i + 1) % 2 === 0 && mi < mediaCards.length) wallItems.push(mediaCards[mi++])
+})
+while (mi < mediaCards.length) wallItems.push(mediaCards[mi++])
+
 export default function Testimonials() {
   return (
     <>
@@ -29,17 +53,20 @@ export default function Testimonials() {
         description="Real people, real results. Hear from Formula Fitness members about their transformations and experience."
         path="/testimonials"
       />
-      <ReviewsGrid
-        items={reviews}
-        hero
+      <PageHero
         eyebrow="Testimonials"
         title={
           <>
             Real People <span className="text-accent">Real Results</span>
           </>
         }
+        description="Real people, real results. Hear from Formula Fitness members about their transformations and experience."
         image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
+        showCta
+        cta="Book A Consultation"
       />
+
+      <WallOfLove items={wallItems} />
 
       <section className="section section--alt">
         <div className="container">
@@ -80,7 +107,6 @@ export default function Testimonials() {
       </section>
 
       <FindUs />
-      <ContactSection />
       <ConsultCTA />
     </>
   )

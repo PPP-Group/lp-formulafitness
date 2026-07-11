@@ -8,9 +8,8 @@ import Results from '@components/sections/Results'
 import VideoCard from '@components/ui/VideoCard'
 import Modal from '@components/ui/Modal'
 import FindUs from '@components/sections/FindUs'
-import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
-import { videoTestimonials, resultsGallery } from '@data/testimonials'
+import { videoTestimonials } from '@data/testimonials'
 import { upload } from '@utils/constants'
 import './ActiveAgingPage.css'
 
@@ -36,12 +35,44 @@ const programs = [
   { title: 'Flexibility Focus', image: upload('2025/02/9-Flexibility-scaled.jpg') },
 ]
 
-const gallery = [
-  upload('2023/11/services-landing.png'),
-  upload('2023/11/landing-before-afer.png'),
-  resultsGallery[0].image,
-  resultsGallery[3].image,
-  resultsGallery[5].image,
+// Ícone com atributos SVG padronizados (traço, tamanho, cor herdada).
+function Icon({ children }) {
+  return (
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {children}
+    </svg>
+  )
+}
+
+// "What is Active Aging?" — 5 palavras-chave (conteúdo original) + ícone.
+const aaValues = [
+  { word: 'Energy', icon: <Icon><path d="M13 3L5 13h5l-1 8 8-10h-5l1-8z" /></Icon> },
+  { word: 'Longevity', icon: <Icon><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z" /></Icon> },
+  { word: 'Life', icon: <Icon><circle cx="12" cy="12" r="4" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" /></Icon> },
+  { word: 'Less Limitation', icon: <Icon><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5" /></Icon> },
+  { word: 'Strong', icon: <Icon><path d="M4 8v8M7 6v12M17 6v12M20 8v8M7 12h10" /></Icon> },
+]
+
+// Ícones dos 8 cards de "What You Get" (mesma ordem do array `inclusions`).
+const inclusionIcons = [
+  <Icon key="i0"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></Icon>,
+  <Icon key="i1"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z" /></Icon>,
+  <Icon key="i2"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.2" /></Icon>,
+  <Icon key="i3"><circle cx="12" cy="7" r="3.2" /><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" /></Icon>,
+  <Icon key="i4"><path d="M4 20V11M10 20V5M16 20v-7M22 20H2" /></Icon>,
+  <Icon key="i5"><path d="M21 12a9 9 0 1 1-3-6.7L21 8" /><path d="M21 3v5h-5" /></Icon>,
+  <Icon key="i6"><path d="M4 3v7a2 2 0 0 0 2 2 2 2 0 0 0 2-2V3M6 12v9M18 3c-2 0-3 2-3 5s1 4 3 4v9" /></Icon>,
+  <Icon key="i7"><path d="M10.5 3.5a4.95 4.95 0 0 1 7 7l-7 7a4.95 4.95 0 0 1-7-7l7-7z" /><path d="M8.5 8.5l7 7" /></Icon>,
 ]
 
 export default function ActiveAging() {
@@ -67,10 +98,13 @@ export default function ActiveAging() {
 
       <section className="section aa-values">
         <div className="container">
-          <span className="eyebrow">what is active aging?</span>
-          <ul className="aa-values__list">
-            {['Energy', 'Longevity', 'Life', 'Less Limitation', 'Strong'].map((word) => (
-              <li key={word} className="aa-values__chip">{word}</li>
+          <SectionTitle title="What is Active Aging?" align="center" />
+          <ul className="aa-values__grid">
+            {aaValues.map(({ word, icon }) => (
+              <li className="aa-value-card" key={word}>
+                <span className="aa-value-card__icon">{icon}</span>
+                <span className="aa-value-card__word">{word}</span>
+              </li>
             ))}
           </ul>
         </div>
@@ -100,12 +134,18 @@ export default function ActiveAging() {
         <div className="container">
           <SectionTitle eyebrow="included in every active aging program" title="What You Get" align="center" />
           <ul className="aa-inclusions">
-            {inclusions.map((i) => (
-              <li key={i}>
-                <Check />
-                <span>{i}</span>
-              </li>
-            ))}
+            {inclusions.map((item, idx) => {
+              const match = item.match(/^(.*?)\s*\((.*)\)\s*$/)
+              const title = match ? match[1] : item
+              const desc = match ? match[2] : ''
+              return (
+                <li className="aa-inclusion-card" key={item}>
+                  <span className="aa-inclusion-card__icon">{inclusionIcons[idx % inclusionIcons.length]}</span>
+                  <h3 className="aa-inclusion-card__title">{title}</h3>
+                  {desc && <p className="aa-inclusion-card__desc">{desc}</p>}
+                </li>
+              )
+            })}
           </ul>
         </div>
       </section>
@@ -175,21 +215,7 @@ export default function ActiveAging() {
 
       <Results />
 
-      <section className="section section--alt">
-        <div className="container">
-          <SectionTitle eyebrow="our social circle" title="Your Journey at a Glance" description="Take a sneak peek into our studio and witness the transformation in action." align="center" />
-          <div className="aa-gallery">
-            {gallery.map((src, i) => (
-              <div className="aa-gallery__item" key={i}>
-                <img src={src} alt="Formula Fitness studio moment" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <FindUs />
-      <ContactSection />
       <ConsultCTA />
 
       <Modal open={!!active} onClose={close} label={active?.name}>
@@ -215,13 +241,5 @@ export default function ActiveAging() {
         )}
       </Modal>
     </>
-  )
-}
-
-function Check() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
   )
 }

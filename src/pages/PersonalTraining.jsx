@@ -5,11 +5,8 @@ import SectionTitle from '@components/ui/SectionTitle'
 import StepsSection from '@components/sections/StepsSection'
 import FeatureRow from '@components/sections/FeatureRow'
 import LocationBlock from '@components/sections/LocationBlock'
-import Partners from '@components/sections/Partners'
-import CtaBanner from '@components/sections/CtaBanner'
 import Results from '@components/sections/Results'
 import FindUs from '@components/sections/FindUs'
-import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import AutoplayVideo from '@components/ui/AutoplayVideo'
 import { upload, youtube } from '@utils/constants'
@@ -255,15 +252,7 @@ export default function PersonalTraining() {
       <Results />
 
       <LocationBlock />
-      <Partners />
-      <CtaBanner
-        heading="Start Your Transformation with Expert Coaching"
-        subheading="Experience results-driven training built for you!"
-        button="Book a consultation"
-        image={upload('2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg')}
-      />
       <FindUs />
-      <ContactSection />
       <ConsultCTA />
     </>
   )

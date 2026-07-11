@@ -1,0 +1,206 @@
+/* ==========================================================================
+   WALL OF LOVE — Formula Fitness
+   Mural masonry (CSS columns) com cards de tamanhos variados: texto, vídeo e
+   foto de resultado. Reveal por card no scroll + hover de elevação.
+   ========================================================================== */
+
+.wall__grid {
+  margin-top: var(--space-2xl);
+  column-count: 1;
+  column-gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .wall__grid { column-count: 2; }
+}
+@media (min-width: 1024px) {
+  .wall__grid { column-count: 3; }
+}
+@media (min-width: 1440px) {
+  .wall__grid { column-count: 4; }
+}
+
+/* ── Card base (layout + reveal + hover) ──────────────────────────── */
+.wall__card {
+  break-inside: avoid;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-lg);
+  /* reveal inicial (JS adiciona .is-in ao entrar no viewport) */
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s var(--ease-decelerate),
+    transform 0.4s var(--ease-standard),
+    box-shadow 0.3s var(--ease-standard),
+    border-color 0.3s var(--ease-standard);
+}
+.wall__card.is-in {
+  opacity: 1;
+  transform: none;
+}
+.wall__card.is-in:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Cards com superfície (texto e vídeo). */
+.wall__card--text,
+.wall__card--video {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-lg);
+}
+.wall__card--text.is-in:hover,
+.wall__card--video.is-in:hover {
+  border-color: var(--color-brand);
+}
+
+/* ── Card de texto ────────────────────────────────────────────────── */
+.wall-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+.wall-card__stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--color-star-yellow);
+}
+.wall-card__verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-brand);
+}
+
+.wall-card__quote {
+  color: var(--color-text-secondary);
+  line-height: var(--text-body-lh);
+}
+
+.wall-card__person {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+.wall-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.wall-card__avatar--initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+}
+.wall-card__name {
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+/* ── Card featured (destaque navy) ────────────────────────────────── */
+.wall__card--featured {
+  position: relative;
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  overflow: hidden;
+}
+.wall__card--featured::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.35em;
+  right: 0.15em;
+  font-family: var(--font-display);
+  font-size: 7rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+.wall__card--featured .wall-card__quote {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  position: relative;
+}
+.wall__card--featured .wall-card__verified {
+  color: var(--color-brand-light);
+}
+.wall__card--featured .wall-card__person {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+.wall__card--featured .wall-card__name {
+  color: #ffffff;
+}
+.wall__card--featured .wall-card__avatar {
+  width: 52px;
+  height: 52px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+.wall__card--featured.is-in:hover {
+  border-color: var(--color-brand);
+}
+
+/* ── Card de resultado (foto antes/depois com legenda) ────────────── */
+.wall__card--result {
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.wall-card__figure {
+  margin: 0;
+  position: relative;
+}
+.wall-card__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.wall-card__result {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-lg) var(--space-md) var(--space-md);
+  background: linear-gradient(to top, rgba(24, 35, 64, 0.92) 0%, rgba(24, 35, 64, 0) 100%);
+  color: #ffffff;
+}
+.wall-card__result-name {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+}
+.wall-card__result-text {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Card de vídeo ────────────────────────────────────────────────── */
+.wall__card--video .video-card__name {
+  font-size: var(--text-h4);
+}
+
+/* Sem animação para quem prefere movimento reduzido. */
+@media (prefers-reduced-motion: reduce) {
+  .wall__card {
+    opacity: 1;
+    transform: none;
+    transition: box-shadow 0.3s var(--ease-standard), border-color 0.3s var(--ease-standard);
+  }
+}

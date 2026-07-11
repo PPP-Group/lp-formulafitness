@@ -31,13 +31,19 @@ export default function BlogPost() {
         </div>
 
         <div className="container post__body">
-          {post.content.map((block, i) =>
-            block.h ? (
-              <h2 key={i}>{block.h}</h2>
-            ) : (
-              <p key={i}>{block.p}</p>
-            )
-          )}
+          {post.content.map((block, i) => {
+            if (block.h) return <h2 key={i}>{block.h}</h2>
+            if (block.list) {
+              return (
+                <ul className="post__list" key={i}>
+                  {block.list.map((item, j) => (
+                    <li key={j}>{item}</li>
+                  ))}
+                </ul>
+              )
+            }
+            return <p key={i}>{block.p}</p>
+          })}
           <div className="post__cta">
             <ConsultLink className="btn btn-primary">
               Book a Consultation

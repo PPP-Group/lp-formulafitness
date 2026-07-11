@@ -1,56 +1,168 @@
-.prices-lead {
+/* ── Trust badges ───────────────────────────────────────────────────── */
+.prices-trust__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.prices-trust__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+}
+.prices-trust__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--color-brand);
+  background: rgba(70, 127, 247, 0.1);
+}
+.prices-trust__title {
+  font-size: var(--text-h4);
+  margin-bottom: 2px;
+}
+.prices-trust__text {
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+  line-height: var(--text-body-lh);
+}
+
+/* ── Formulário embutido + prova social ─────────────────────────────── */
+.prices-form {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
   align-items: start;
-  max-width: 640px;
-  margin: 0 auto;
 }
-.prices-lead__info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  align-items: center;
-  text-align: center;
-}
-.prices-lead__cta {
-  margin-top: var(--space-md);
-}
-.prices-lead__photo {
-  margin: 0;
-  border-radius: var(--radius-xl);
+.prices-form__frame {
+  margin-top: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
 }
-.prices-lead__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.prices-form__frame .ghl-frame {
   display: block;
+  width: 100%;
 }
 
-.prices-lead__contact {
+/* Aside — prova social */
+.prices-form__aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+.prices-proof {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+}
+.prices-proof__stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--color-star-yellow);
+}
+.prices-proof__score {
+  color: var(--color-text-secondary);
+}
+.prices-proof__score strong {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-text-primary);
+}
+.prices-proof__yelp {
+  font-weight: var(--font-bold);
+  color: #d32323;
+}
+.prices-proof__yelp:hover {
+  text-decoration: underline;
+}
+
+.prices-quote {
+  background: var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  color: #ffffff;
+}
+.prices-quote p {
+  line-height: var(--text-body-lh);
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: var(--space-sm);
+}
+.prices-quote cite {
+  font-style: normal;
+  font-weight: var(--font-semibold);
+  font-size: var(--text-small);
+  color: var(--color-brand-light);
+}
+
+.prices-contact {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  margin-top: var(--space-md);
-  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.prices-lead__contact li {
+.prices-contact li {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  align-items: center;
 }
-.prices-lead__contact span {
+.prices-contact span {
   font-size: var(--text-overline);
   letter-spacing: var(--text-overline-ls);
   text-transform: uppercase;
   font-weight: 600;
   color: var(--color-text-muted);
 }
-.prices-lead__contact a:hover {
+.prices-contact a:hover {
   color: var(--color-brand);
+}
+
+/* ── FAQ rápida ─────────────────────────────────────────────────────── */
+.prices-faq {
+  max-width: 760px;
+}
+.prices-faq .accordion {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 0 var(--space-lg);
+  margin-top: var(--space-lg);
+}
+.prices-faq .accordion-item:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 640px) {
+  .prices-trust__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .prices-form {
+    grid-template-columns: 1.7fr 1fr;
+    gap: var(--space-3xl);
+  }
 }

@@ -1,7 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import Seo from '@components/ui/Seo'
 import FindUs from '@components/sections/FindUs'
-import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { getMember } from '@data/team'
 import './BioPage.css'
@@ -70,7 +69,6 @@ export default function BioPage() {
       </section>
 
       <FindUs />
-      <ContactSection />
       <ConsultCTA />
     </>
   )

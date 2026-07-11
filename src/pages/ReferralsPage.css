@@ -1,21 +1,37 @@
-.ref-earn,
-.ref-tiers {
+/* ── How You Earn — cards com ícone em círculo azul ─────────────────── */
+.ref-earn {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-xl);
+  margin-top: var(--space-2xl);
 }
-
 .ref-earn__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   box-shadow: var(--shadow-card);
-  transition: transform 0.3s var(--ease-standard), box-shadow 0.3s var(--ease-standard);
+  transition: transform 0.3s var(--ease-standard), box-shadow 0.3s var(--ease-standard), border-color 0.3s var(--ease-standard);
 }
 .ref-earn__card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: var(--color-brand);
+}
+.ref-earn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  color: var(--color-brand);
+  background: rgba(70, 127, 247, 0.1);
+  margin-bottom: var(--space-md);
 }
 .ref-earn__points {
   display: inline-block;
@@ -23,7 +39,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-brand);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 .ref-earn__card h3 {
   font-size: var(--text-h4);
@@ -34,52 +50,131 @@
   line-height: var(--text-body-lh);
 }
 
-.ref-tier {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  box-shadow: var(--shadow-card);
-  text-align: center;
+/* ── What You Can Redeem — lista de tiers + foto ────────────────────── */
+.ref-redeem {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  margin-top: var(--space-2xl);
 }
-.ref-tier h3 {
-  font-size: var(--text-h4);
-  color: var(--color-brand);
-  margin-bottom: var(--space-md);
-  padding-bottom: var(--space-sm);
-  border-bottom: 1px solid var(--color-border);
-}
-.ref-tier ul {
+.ref-redeem__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
-.ref-tier li {
+.ref-tier-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-brand);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s var(--ease-standard), box-shadow 0.25s var(--ease-standard);
+}
+.ref-tier-row:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+.ref-tier-row__points {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: var(--color-brand);
+}
+.ref-tier-row__rewards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-md);
   color: var(--color-text-secondary);
+  line-height: var(--text-body-lh);
+}
+.ref-tier-row__reward {
+  position: relative;
+  padding-left: var(--space-md);
+}
+.ref-tier-row__reward::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.5;
 }
 
+/* Tier mais alto (mais valioso) — destaque brand sólido */
+.ref-tier-row--featured {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  border-left-color: #ffffff;
+}
+.ref-tier-row--featured .ref-tier-row__points {
+  color: #ffffff;
+}
+.ref-tier-row--featured .ref-tier-row__rewards {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ref-redeem__photo {
+  margin: 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow-md);
+}
+.ref-redeem__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── VIP Treatment — banner full-width brand ────────────────────────── */
 .ref-vip {
-  max-width: 760px;
+  background: var(--color-brand);
+  padding: var(--section-padding-y) 0;
+}
+.ref-vip__inner {
+  max-width: 780px;
+  text-align: center;
+  color: #ffffff;
+}
+.ref-vip__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--text-h2-lh);
+  color: #ffffff;
+  margin-bottom: var(--space-lg);
 }
 .ref-vip__list {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  margin-top: var(--space-lg);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 .ref-vip__list li {
   position: relative;
   padding-left: var(--space-xl);
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.94);
   line-height: var(--text-body-lh);
 }
 .ref-vip__list li::before {
   content: '★';
   position: absolute;
   left: 0;
-  color: var(--color-brand);
+  color: #ffffff;
 }
 
+/* ── Ready to Earn (form CTA centrado) ──────────────────────────────── */
 .ref-form {
   display: grid;
   grid-template-columns: 1fr;
@@ -112,7 +207,6 @@
   object-position: center;
   display: block;
 }
-
 .ref-form__fine {
   font-size: var(--text-small);
   color: var(--color-text-muted);
@@ -124,7 +218,13 @@
   .ref-earn {
     grid-template-columns: repeat(3, 1fr);
   }
-  .ref-tiers {
-    grid-template-columns: repeat(4, 1fr);
+  .ref-tier-row {
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+  .ref-redeem {
+    grid-template-columns: 1.15fr 1fr;
+    gap: var(--space-3xl);
   }
 }

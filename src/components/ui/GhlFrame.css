@@ -1,0 +1,19 @@
+/* ==========================================================================
+   GHL FRAME — wrapper de proteção
+   O form_embed.js do GoHighLevel reescreve o inline-style do IFRAME
+   (display/visibility/pointer-events), mas NÃO toca neste DIV. Então o clipe
+   do formulário inativo mora aqui: height:0 + overflow:hidden resiste ao script.
+   ========================================================================== */
+
+.ghl-frame {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+.ghl-frame.is-active {
+  height: auto;
+  overflow: visible;
+  visibility: visible;
+  pointer-events: auto;
+}

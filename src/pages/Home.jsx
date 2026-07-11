@@ -11,7 +11,6 @@ import BMISection from '@components/sections/BMISection'
 import Reviews from '@components/sections/Reviews'
 import Results from '@components/sections/Results'
 import FindUs from '@components/sections/FindUs'
-import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 
 export default function Home() {
@@ -34,7 +33,6 @@ export default function Home() {
       <Reviews />
       <Results />
       <FindUs />
-      <ContactSection />
       <ConsultCTA />
     </>
   )

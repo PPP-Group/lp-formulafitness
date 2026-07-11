@@ -1,9 +1,29 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './Accordion.css'
 
-// Accordion com auto-collapse: apenas um item aberto por vez.
-export default function Accordion({ items, defaultOpen = 0 }) {
+// Accordion. Modo padrão: um item aberto por vez (defaultOpen = índice).
+// Modo `multiple`: vários itens abertos ao mesmo tempo; `defaultOpen="all"`
+// abre todos de início (usado no modo de busca da FAQ).
+export default function Accordion({ items, defaultOpen = 0, multiple = false }) {
   const [openIndex, setOpenIndex] = useState(defaultOpen)
+  const [openSet, setOpenSet] = useState(
+    () => new Set(defaultOpen === 'all' ? items.map((_, i) => i) : [])
+  )
+
+  const isOpen = (i) => (multiple ? openSet.has(i) : openIndex === i)
+
+  const toggle = (i) => {
+    if (multiple) {
+      setOpenSet((prev) => {
+        const next = new Set(prev)
+        if (next.has(i)) next.delete(i)
+        else next.add(i)
+        return next
+      })
+    } else {
+      setOpenIndex((prev) => (prev === i ? -1 : i))
+    }
+  }
 
   return (
     <div className="accordion">
@@ -11,8 +31,8 @@ export default function Accordion({ items, defaultOpen = 0 }) {
         <AccordionItem
           key={item.title}
           item={item}
-          isOpen={openIndex === i}
-          onToggle={() => setOpenIndex((prev) => (prev === i ? -1 : i))}
+          isOpen={isOpen(i)}
+          onToggle={() => toggle(i)}
         />
       ))}
     </div>
@@ -21,6 +41,13 @@ export default function Accordion({ items, defaultOpen = 0 }) {
 
 function AccordionItem({ item, isOpen, onToggle }) {
   const contentRef = useRef(null)
+  const [maxHeight, setMaxHeight] = useState(0)
+
+  // Mede a altura real após montar/atualizar — cobre o caso de item já aberto
+  // no primeiro render (busca), quando o ref ainda não existia.
+  useEffect(() => {
+    setMaxHeight(isOpen ? contentRef.current?.scrollHeight || 0 : 0)
+  }, [isOpen, item.body])
 
   return (
     <div className={`accordion-item ${isOpen ? 'is-open' : ''}`}>
@@ -48,10 +75,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
           />
         </svg>
       </button>
-      <div
-        className="accordion-content"
-        style={{ maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : 0 }}
-      >
+      <div className="accordion-content" style={{ maxHeight: maxHeight ? `${maxHeight}px` : 0 }}>
         <p ref={contentRef}>{item.body}</p>
       </div>
     </div>

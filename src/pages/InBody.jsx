@@ -2,9 +2,7 @@ import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import SectionTitle from '@components/ui/SectionTitle'
 import FeatureRow from '@components/sections/FeatureRow'
-import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
-import ContactSection from '@components/sections/ContactSection'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import AutoplayVideo from '@components/ui/AutoplayVideo'
 import { upload } from '@utils/constants'
@@ -112,13 +110,7 @@ export default function InBody() {
         </div>
       </section>
 
-      <CtaBanner
-        heading="Get Your InBody Analysis Today—Click The Button Below!"
-        button="Book a Consultation"
-        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
-      />
       <FindUs />
-      <ContactSection />
       <ConsultCTA />
     </>
   )

@@ -154,8 +154,8 @@ export default function PersonalTraining() {
       </section>
 
       <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-53-scaled.jpg')}
-        imageAlt="Coach guiding a personal training session"
+        image={upload('2025/05/DSCF0126-scaled.jpg')}
+        imageAlt="Coach guiding a client through a personal training exercise"
         heading="Why Choose Personal Training?"
         paragraphs={['Investing in a professional coach is the fastest and safest route to your goal. Here’s why:']}
         bullets={[
@@ -170,8 +170,8 @@ export default function PersonalTraining() {
       />
 
       <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-64-3-scaled.jpg')}
-        imageAlt="Results-driven personal training workout"
+        image={upload('2025/05/653A5DC6-640B-408B-A904-0D11F2793F79-export-scaled.jpg')}
+        imageAlt="Coach correcting a client's form during a results-driven workout"
         heading="Results-Driven Workouts"
         paragraphs={[
           'Activate dormant muscles, mobilize tight areas, and warm up to prevent injuries. Your coach guides you through the main sets, followed by a metabolism-boosting finisher and recovery with stretching and vibration therapy.',

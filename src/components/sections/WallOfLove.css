@@ -139,17 +139,6 @@
   position: relative;
   overflow: hidden;
 }
-.wall__card--featured::before {
-  content: '\201C';
-  position: absolute;
-  top: -0.35em;
-  right: 0.15em;
-  font-family: var(--font-display);
-  font-size: 7rem;
-  line-height: 1;
-  color: rgba(24, 35, 64, 0.05);
-  pointer-events: none;
-}
 .wall__card--featured .wall-card__quote {
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);

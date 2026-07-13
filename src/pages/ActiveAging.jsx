@@ -89,7 +89,7 @@ export default function ActiveAging() {
         eyebrow="Welcome to Formula Fitness"
         title="Your Gateway to Active Aging"
         description="Formula Fitness takes an innovative, client-first approach to health and wellness. It’s more than personal training. We focus on your whole health: stress management, sleep routines, diet/nutrition, and fitness goals."
-        image={upload('2025/02/group-young-sporty-smiling-people-warrior-two-pose-scaled.jpg')}
+        image={upload('2026/06/download.jpeg')}
         showCta
         cta="Join Us Today"
       />
@@ -109,8 +109,8 @@ export default function ActiveAging() {
       </section>
 
       <FeatureRow
-        image={upload('2024/01/Group-81235.jpg')}
-        imageAlt="Active aging member training"
+        image={upload('2026/06/Domaine-Artemis.jpeg')}
+        imageAlt="Active aging members training on treadmills"
         eyebrow="about US"
         heading="Fitness After 50 Is About Well-Being, Balance, and Strength"
         mediaClassName="aa-about-media"
@@ -168,8 +168,8 @@ export default function ActiveAging() {
       </section>
 
       <FeatureRow
-        image={upload('2025/05/DSCF2558-scaled.jpg')}
-        imageAlt="Service that shines"
+        image={upload('2026/06/At-Harbor-Oaks-Golden-Years-we-offer-gentle-fitness-exercises-specifically-tailored-for-elderly-ind.jpeg')}
+        imageAlt="Active aging members lifting dumbbells together"
         eyebrow="our services"
         heading="Service That Shines"
         paragraphs={[

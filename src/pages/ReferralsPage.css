@@ -139,6 +139,22 @@
   display: block;
 }
 
+/* Imagem vetorizada (PNG com transparência real) — sem moldura/sombra de
+   "foto", object-fit: contain para não cortar o recorte irregular. */
+.ref-redeem__photo--cutout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+.ref-redeem__photo--cutout img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 /* ── VIP Treatment — banner full-width brand ────────────────────────── */
 .ref-vip {
   background: var(--color-brand);
@@ -188,5 +204,11 @@
   .ref-redeem {
     grid-template-columns: 1.15fr 1fr;
     gap: var(--space-3xl);
+  }
+  /* Imagem vetorizada maior que sua coluna — "estoura" um pouco para a
+     direita (só existe espaço nesse breakpoint, pois no mobile é 1 coluna). */
+  .ref-redeem__photo--cutout img {
+    width: 125%;
+    max-width: 125%;
   }
 }

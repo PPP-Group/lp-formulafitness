@@ -25,7 +25,7 @@ export default function RecoveryService() {
       <FeatureRow
         image={upload('2023/10/Group-81226.png')}
         imageAlt="Recovery methods at Formula Fitness"
-        mediaClassName="feature-row__media--blend"
+        mediaClassName="feature-row__media--blend feature-row__media--zoom"
         eyebrow="Recovery"
         heading="Recovery Methods"
         bullets={[
@@ -40,6 +40,7 @@ export default function RecoveryService() {
       <FeatureRow
         image={upload('2023/10/DSCF2536-scaled-1-e1778628191463.jpg')}
         imageAlt="A member feeling refreshed after recovery"
+        mediaClassName="feature-row__media--zoom"
         heading="Feel Better Now"
         paragraphs={[
           'Experience the rejuvenating power of our recovery services, designed to heal, refresh, and revitalize your body.',
@@ -59,6 +60,7 @@ export default function RecoveryService() {
       <FeatureRow
         image={upload('2023/07/Group-81234.png')}
         imageAlt="Assisted stretching session"
+        mediaClassName="feature-row__media--no-border feature-row__media--zoom"
         heading="Experience Assisted Stretching at Every Session"
         paragraphs={[
           'All members enjoy a targeted stretch at the end of each personal or semi-private training session. Our guided techniques focus on the muscles that truly need attention, helping improve flexibility, correct posture, and reduce tension. Leave each workout feeling more balanced, recharged, and ready for your next challenge.',
@@ -69,7 +71,7 @@ export default function RecoveryService() {
       <FeatureRow
         image={upload('2023/10/Group-81239.png')}
         imageAlt="Move freely, live boldly"
-        mediaClassName="feature-row__media--blend"
+        mediaClassName="feature-row__media--blend feature-row__media--zoom"
         heading="Move Freely, Live Boldly: Increase Mobility and Decrease Pain with Us"
         paragraphs={[
           'Boosted mobility and reduced pain paves the way for a life of boundless movement and freedom.',

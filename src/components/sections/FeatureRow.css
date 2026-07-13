@@ -16,6 +16,19 @@
   object-fit: cover;
 }
 
+.feature-row__media--no-border {
+  border: none;
+  box-shadow: none;
+}
+
+/* Zoom no hover — mesmo padrão usado em outras seções do site (ex.: .about__media) */
+.feature-row__media--zoom img {
+  transition: transform 0.4s var(--ease-standard);
+}
+.feature-row__media--zoom:hover img {
+  transform: scale(1.04);
+}
+
 /* Imagens vetorizadas com fundo branco — remove o card e usa blend para sumir o branco */
 .feature-row__media--blend {
   border: none;

@@ -30,6 +30,7 @@ const features = [
   {
     heading: 'Science-Based, Data-Driven Coaching',
     image: upload('2025/05/WhatsApp-Image-2025-05-09-at-13.50.19_b7c74ba0.jpg'),
+    mediaClassName: 'feature-row__media--zoom',
     bullets: [
       'MyZone® live heart-rate feedback',
       'InBody® muscle-to-fat analysis',
@@ -42,6 +43,7 @@ const features = [
   {
     heading: 'Precision Meal Planning',
     image: upload('2025/05/Untitled-1200-x-800-px-2.png'),
+    mediaClassName: 'feature-row__media--zoom',
     reverse: true,
     bullets: [
       'BMR-calibrated calorie targets and macros tuned to your goals',
@@ -54,6 +56,7 @@ const features = [
   {
     heading: 'Custom Blueprints in a Small Group Setting',
     image: upload('2025/05/WhatsApp-Image-2025-05-09-at-13.44.34_4c7ce809.jpg'),
+    mediaClassName: 'feature-row__media--zoom',
     bullets: [
       '4-to-1 client-to-coach ratio with a personal progress roadmap',
       'Goal-specific workout tracks built around your schedule, injuries, and ambitions',
@@ -65,6 +68,7 @@ const features = [
   {
     heading: 'Your Member App',
     image: upload('2025/05/Sample-Meal-Plan-1.png'),
+    mediaClassName: 'feature-row__media--zoom',
     reverse: true,
     paragraphs: ['All the tools you need, always in your pocket:'],
     bullets: [
@@ -76,6 +80,7 @@ const features = [
   {
     heading: 'Safety & Recovery Built-In',
     image: upload('2023/07/Group-81234.png'),
+    mediaClassName: 'feature-row__media--no-border feature-row__media--zoom',
     bullets: [
       'Dynamic joint activation and technique-first coaching',
       'Guided cooldown & mobility: movement screens catch issues before they become injuries',
@@ -87,6 +92,7 @@ const features = [
   {
     heading: 'Accountability That Works',
     image: upload('2025/05/653A5DC6-640B-408B-A904-0D11F2793F79-export-scaled.jpg'),
+    mediaClassName: 'feature-row__media--zoom',
     reverse: true,
     bullets: [
       'Dedicated success coach, automated app reminders, and weekly scorecards',
@@ -99,6 +105,7 @@ const features = [
   {
     heading: 'Five-Star Member Experience',
     image: upload('2025/04/DSCF2629-scaled.jpg'),
+    mediaClassName: 'feature-row__media--zoom',
     bullets: [
       'Front-desk hospitality and quick-response support (<2 hrs)',
       'We reverse-engineer your ideal gym visit and iterate from feedback',
@@ -172,6 +179,7 @@ export default function SemiPrivate() {
           key={f.heading}
           image={f.image}
           imageAlt={f.heading}
+          mediaClassName={f.mediaClassName}
           heading={f.heading}
           paragraphs={f.paragraphs}
           bullets={f.bullets}

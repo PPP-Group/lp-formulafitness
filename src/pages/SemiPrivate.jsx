@@ -3,7 +3,6 @@ import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import StepsSection from '@components/sections/StepsSection'
 import FeatureRow from '@components/sections/FeatureRow'
-import LocationBlock from '@components/sections/LocationBlock'
 import CtaBanner from '@components/sections/CtaBanner'
 import Results from '@components/sections/Results'
 import FindUs from '@components/sections/FindUs'
@@ -30,7 +29,7 @@ const steps = [
 const features = [
   {
     heading: 'Science-Based, Data-Driven Coaching',
-    image: upload('2025/05/DSCF1279-scaled.jpg'),
+    image: upload('2025/05/WhatsApp-Image-2025-05-09-at-13.50.19_b7c74ba0.jpg'),
     bullets: [
       'MyZone® live heart-rate feedback',
       'InBody® muscle-to-fat analysis',
@@ -46,7 +45,7 @@ const features = [
     reverse: true,
     bullets: [
       'BMR-calibrated calorie targets and macros tuned to your goals',
-      'Foods you actually like to eat — age, sex, lean mass, and activity level all factor in',
+      'Foods you actually like to eat: age, sex, lean mass, and activity level all factor in',
       'Global cuisine options: Indian, Asian, Hispanic, Mediterranean, vegetarian & more',
       'Swap-out lists keep meals fresh without derailing results',
       'Weekly coach check-ins fine-tune portions and timing',
@@ -54,7 +53,7 @@ const features = [
   },
   {
     heading: 'Custom Blueprints in a Small Group Setting',
-    image: upload('2025/05/DSCF2558-scaled.jpg'),
+    image: upload('2025/05/WhatsApp-Image-2025-05-09-at-13.44.34_4c7ce809.jpg'),
     bullets: [
       '4-to-1 client-to-coach ratio with a personal progress roadmap',
       'Goal-specific workout tracks built around your schedule, injuries, and ambitions',
@@ -65,21 +64,21 @@ const features = [
   },
   {
     heading: 'Your Member App',
-    image: upload('2026/05/Formula-Fitness-03.2026-38-scaled.jpg'),
+    image: upload('2025/05/Sample-Meal-Plan-1.png'),
     reverse: true,
     paragraphs: ['All the tools you need, always in your pocket:'],
     bullets: [
-      'Homework Calendar – quick at-home workouts for off days',
-      '24/7 Messaging – DM your coach any time',
-      'Video Library – demos of every exercise so you’re never guessing',
+      'Homework Calendar: quick at-home workouts for off days',
+      '24/7 Messaging: DM your coach any time',
+      'Video Library: demos of every exercise so you’re never guessing',
     ],
   },
   {
     heading: 'Safety & Recovery Built-In',
-    image: upload('2025/05/9-Flexibility-scaled.jpg'),
+    image: upload('2023/07/Group-81234.png'),
     bullets: [
       'Dynamic joint activation and technique-first coaching',
-      'Guided cooldown & mobility — movement screens catch issues before they become injuries',
+      'Guided cooldown & mobility: movement screens catch issues before they become injuries',
       'Foam rolling, percussion, and stretch aids on demand',
       'Recovery metrics logged alongside training data',
       'Education snippets teach you why every rep matters',
@@ -87,19 +86,19 @@ const features = [
   },
   {
     heading: 'Accountability That Works',
-    image: upload('2026/05/Formula-Fitness-03.2026-44-scaled.jpg'),
+    image: upload('2025/05/653A5DC6-640B-408B-A904-0D11F2793F79-export-scaled.jpg'),
     reverse: true,
     bullets: [
       'Dedicated success coach, automated app reminders, and weekly scorecards',
       'Goal checkpoints every 4 weeks with clear next steps',
       'Slack & SMS support for real-time answers',
       'Leaderboards and streak badges for extra motivation',
-      'Miss a session? We follow up—no member left behind',
+      'Miss a session? We follow up: no member left behind',
     ],
   },
   {
     heading: 'Five-Star Member Experience',
-    image: upload('2026/05/Formula-Fitness-03.2026-53-scaled.jpg'),
+    image: upload('2025/04/DSCF2629-scaled.jpg'),
     bullets: [
       'Front-desk hospitality and quick-response support (<2 hrs)',
       'We reverse-engineer your ideal gym visit and iterate from feedback',
@@ -121,7 +120,7 @@ export default function SemiPrivate() {
       <PageHero
         eyebrow="Semi-Private Personal Training"
         title="Semi-Private Personal Training"
-        description="Busy professionals, on-the-go parents, and active agers trust our data-driven coaching to shed fat, build strength, and stay injury-free—without the private-session price tag."
+        description="Busy professionals, on-the-go parents, and active agers trust our data-driven coaching to shed fat, build strength, and stay injury-free, without the private-session price tag."
         image={upload('2025/05/DSCF2558-scaled.jpg')}
         showCta
         cta="Get Started"
@@ -203,7 +202,6 @@ export default function SemiPrivate() {
 
       <Results />
 
-      <LocationBlock />
       <FindUs />
       <ConsultCTA />
     </>

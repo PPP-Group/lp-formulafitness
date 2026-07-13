@@ -13,13 +13,13 @@ export default function JobPost() {
   if (!job) return <Navigate to="/join-our-team" replace />
 
   const applyHref = `mailto:${company.email}?subject=${encodeURIComponent(
-    `Application — ${job.title}`
+    `Application: ${job.title}`
   )}`
 
   return (
     <>
       <Seo
-        title={`${job.title} — Careers`}
+        title={`${job.title} - Careers`}
         description={job.summary}
         path={`/join-our-team/${job.slug}`}
       />

@@ -80,7 +80,7 @@ export const reviews = [
   },
   {
     id: 10,
-    name: 'andrew m.',
+    name: 'Andrew M.',
     location: 'Santa Monica, CA',
     stars: 5,
     date: 'May 11, 2026',

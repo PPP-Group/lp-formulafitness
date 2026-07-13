@@ -18,7 +18,7 @@ export default function InBody() {
 
         <div className="inbody__content">
           <span className="eyebrow">the gold standard in accuracy</span>
-          <h2 className="section-title">Meet the InBody 580 — Your Health, Quantified</h2>
+          <h2 className="section-title">Meet the InBody 580: Your Health, Quantified</h2>
           <p className="section-subtitle">
             Clinically validated and trusted by elite gyms, the InBody 580 at Formula Fitness
             delivers a full-body audit in under a minute. Go beyond the scale with precise readings
@@ -36,7 +36,7 @@ export default function InBody() {
 
           <p className="section-subtitle">
             Armed with these insights, our coaches craft a data-driven plan so you can track every
-            gain, make smarter decisions, and transform faster — no guesswork, just measurable
+            gain, make smarter decisions, and transform faster. No guesswork, just measurable
             results.
           </p>
 

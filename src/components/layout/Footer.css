@@ -18,6 +18,12 @@
   padding-top: var(--space-3xl);
 }
 
+/* Espaçamento lateral um pouco mais enxuto que o container padrão do site */
+.footer .container {
+  padding-left: clamp(0.85rem, 3.2vw, 1.6rem);
+  padding-right: clamp(0.85rem, 3.2vw, 1.6rem);
+}
+
 /* --------------------------------------------------------------------------
    Grid principal
    -------------------------------------------------------------------------- */
@@ -178,6 +184,10 @@
   color: var(--color-text-muted);
   white-space: nowrap;
   min-width: 5.5ch;
+}
+
+.footer__time {
+  white-space: nowrap;
 }
 
 /* --------------------------------------------------------------------------

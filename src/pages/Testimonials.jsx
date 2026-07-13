@@ -1,4 +1,3 @@
-import ConsultLink from '@components/ui/ConsultLink'
 import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import SectionTitle from '@components/ui/SectionTitle'
@@ -45,6 +44,20 @@ textCards.forEach((card, i) => {
 })
 while (mi < mediaCards.length) wallItems.push(mediaCards[mi++])
 
+// Ajuste manual de duas posições para equilibrar melhor a altura das colunas do masonry:
+// move o card de resultado da Dykes para perto do início (coluna 1) e o vídeo do
+// Dharshun para uma posição intermediária (coluna 2).
+const dykesIdx = wallItems.findIndex((c) => c.type === 'result' && c.id === 'dykes')
+if (dykesIdx > -1) {
+  const [dykes] = wallItems.splice(dykesIdx, 1)
+  wallItems.splice(2, 0, dykes)
+}
+const dharshunVideoIdx = wallItems.findIndex((c) => c.type === 'video' && c.id === 'dharshun')
+if (dharshunVideoIdx > -1) {
+  const [dharshunVideo] = wallItems.splice(dharshunVideoIdx, 1)
+  wallItems.splice(7, 0, dharshunVideo)
+}
+
 export default function Testimonials() {
   return (
     <>
@@ -68,6 +81,13 @@ export default function Testimonials() {
 
       <WallOfLove items={wallItems} />
 
+      <CtaBanner
+        heading="Fitness is not about being better than someone else, it's about being better than you used to be."
+        subheading="Click the Button Below!"
+        button="Get Started"
+        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
+      />
+
       <section className="section section--alt">
         <div className="container">
           <SectionTitle title="Before & After" align="center" />
@@ -78,30 +98,6 @@ export default function Testimonials() {
                 <figcaption>{name}</figcaption>
               </figure>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <CtaBanner
-        heading="Start Your Transformation!"
-        subheading="Click the Button Below!"
-        button="Get Started"
-        image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
-      />
-
-      <section className="section tm-philosophy">
-        <div className="container">
-          <SectionTitle
-            eyebrow="What Clients Say!"
-            title="Fitness is not about being better than someone else, it's about being better than you used to be."
-            align="center"
-          />
-          <p className="tm-philosophy__body">
-            At Formula Fitness, we believe in unlocking your ultimate potential, turning every
-            challenge into a victory and crafting the best version of you.
-          </p>
-          <div className="tm-philosophy__cta">
-            <ConsultLink className="btn btn-primary">Book A Consultation</ConsultLink>
           </div>
         </div>
       </section>

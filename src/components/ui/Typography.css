@@ -91,6 +91,11 @@
   overflow-x: auto;
   line-height: var(--leading-relaxed);
 }
+.code--block::selection,
+.code--block *::selection {
+  background: #ffffff;
+  color: var(--color-accent-500);
+}
 
 .code--block code {
   background: none;

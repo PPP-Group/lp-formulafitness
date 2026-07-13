@@ -3,7 +3,6 @@ import PageHero from '@components/ui/PageHero'
 import Partners from '@components/sections/Partners'
 import StepsSection from '@components/sections/StepsSection'
 import FeatureRow from '@components/sections/FeatureRow'
-import LocationBlock from '@components/sections/LocationBlock'
 import CtaBanner from '@components/sections/CtaBanner'
 import FindUs from '@components/sections/FindUs'
 import ConsultCTA from '@components/sections/ConsultCTA'
@@ -84,7 +83,6 @@ export default function YouthTraining() {
         reverse
       />
 
-      <LocationBlock />
       <CtaBanner
         heading="Start Your Transformation with Expert Coaching"
         subheading="Experience results-driven training built for you!"

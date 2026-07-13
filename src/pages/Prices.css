@@ -102,6 +102,11 @@
   padding: var(--space-lg);
   color: #ffffff;
 }
+.prices-quote::selection,
+.prices-quote *::selection {
+  background: #ffffff;
+  color: var(--color-brand);
+}
 .prices-quote p {
   line-height: var(--text-body-lh);
   color: rgba(255, 255, 255, 0.92);

@@ -34,7 +34,7 @@ export default function About() {
         <div className="about__content">
           <span className="eyebrow">Personal Training at Formula Fitness Explained</span>
           <h2 className="section-title">
-            Health is Wealth — Upgrade To A Stronger Sustainable Body
+            Health is Wealth: Upgrade To A Stronger Sustainable Body
           </h2>
           <Accordion items={philosophyPillars} defaultOpen={-1} />
           <ConsultLink className="btn btn-primary about__cta">

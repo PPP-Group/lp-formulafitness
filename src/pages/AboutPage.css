@@ -98,6 +98,11 @@
   color: #ffffff;
   box-shadow: var(--shadow-brand);
 }
+.about-value--featured::selection,
+.about-value--featured *::selection {
+  background: #ffffff;
+  color: var(--color-brand);
+}
 .about-value--featured::before {
   display: none;
 }

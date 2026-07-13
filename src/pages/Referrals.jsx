@@ -2,7 +2,7 @@ import Seo from '@components/ui/Seo'
 import PageHero from '@components/ui/PageHero'
 import SectionTitle from '@components/ui/SectionTitle'
 import StepsSection from '@components/sections/StepsSection'
-import ConsultLink from '@components/ui/ConsultLink'
+import FeatureRow from '@components/sections/FeatureRow'
 import ConsultCTA from '@components/sections/ConsultCTA'
 import { upload } from '@utils/constants'
 import './ReferralsPage.css'
@@ -39,15 +39,15 @@ const earn = [
     points: 'Unlimited Referrals',
     title: 'Keep Earning More',
     body: 'There is no limit to how many friends you can refer. Points are credited after your friend completes signup for a training program, so the more people you bring into the Formula Fitness community, the more rewards you can unlock.',
-    icon: <Icon><path d="M7 8.5c-2 0-3.5 1.6-3.5 3.5S5 15.5 7 15.5c2.5 0 3.5-3.5 5-3.5s2.5 3.5 5 3.5c2 0 3.5-1.6 3.5-3.5S22 8.5 20 8.5c-2.5 0-3.5 3.5-5 3.5s-2.5-3.5-5-3.5z" /></Icon>,
+    icon: <Icon><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.235-8-12.331-8-5.096 0-5.096 8 0 8 5.096 0 7.236-8 12.331-8z" /></Icon>,
   },
 ]
 
 const tiers = [
-  { points: 'Tier 1: 5 points', rewards: ['1 Free Semi-Private Session', 'Formula Fitness Cap', 'Formula Fitness T-Shirt'] },
-  { points: 'Tier 2: 10 points', rewards: ['1 Free Personal Training Session', '3 Free Semi-Private Sessions'] },
-  { points: 'Tier 3: 15 points', rewards: ['Formula Fitness Hoody'] },
-  { points: 'Tier 4: 20 points', rewards: ['3 Free Personal Training Sessions', 'Myzone Heart Rate Monitor'], featured: true },
+  { points: '5 points', rewards: ['1 Free Semi-Private Session', 'Formula Fitness Cap', 'Formula Fitness T-Shirt'] },
+  { points: '10 points', rewards: ['1 Free Personal Training Session', '3 Free Semi-Private Sessions'] },
+  { points: '15 points', rewards: ['Formula Fitness Hoody'] },
+  { points: '20 points', rewards: ['3 Free Personal Training Sessions', 'Myzone Heart Rate Monitor'], featured: true },
 ]
 
 export default function Referrals() {
@@ -127,33 +127,17 @@ export default function Referrals() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container ref-form">
-          <div className="ref-form__info">
-            <figure className="ref-form__photo">
-              <img
-                src={upload('2025/05/DSCF1279-scaled.jpg')}
-                alt="Formula Fitness personal training consultation"
-                loading="lazy"
-              />
-            </figure>
-            <h2 className="section-title">Ready to Earn?</h2>
-            <p className="section-subtitle">
-              Fill out the form and we will take care of the rest. Your friend gets a personal
-              invitation from our team, and your points start adding up as soon as they join.
-            </p>
-            <p className="ref-form__fine">
-              Program starts June 1, 2026. Points are credited after the referred member completes
-              signup for a training program. Either the current member or the new member can submit
-              the referral form. Points are not transferable between members. Redemption is available
-              for any reward at or above your available balance.
-            </p>
-            <ConsultLink className="btn btn-primary ref-form__cta" variant="referral">
-              Refer a Friend
-            </ConsultLink>
-          </div>
-        </div>
-      </section>
+      <FeatureRow
+        image={upload('2025/05/DSCF1279-scaled.jpg')}
+        imageAlt="Formula Fitness personal training consultation"
+        heading="Ready to Earn?"
+        paragraphs={[
+          'Fill out the form and we will take care of the rest. Your friend gets a personal invitation from our team, and your points start adding up as soon as they join.',
+          'Program starts June 1, 2026. Points are credited after the referred member completes signup for a training program. Either the current member or the new member can submit the referral form. Points are not transferable between members. Redemption is available for any reward at or above your available balance.',
+        ]}
+        cta="Refer a Friend"
+        ctaVariant="referral"
+      />
 
       <ConsultCTA />
     </>

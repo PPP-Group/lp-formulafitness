@@ -9,7 +9,7 @@ export default function AppSection() {
           <h2 className="section-title">Homework and Accountability From My App</h2>
           <p className="section-subtitle">
             Stay on track between sessions with custom homework workouts, exercise demonstrations,
-            and direct messaging with your coach — all from the Formula Fitness member app.
+            and direct messaging with your coach, all from the Formula Fitness member app.
           </p>
           <div className="app-section__icons">
             <img src={upload('2023/06/image-7.svg')} alt="" aria-hidden="true" />

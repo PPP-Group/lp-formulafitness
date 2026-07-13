@@ -11,7 +11,7 @@ import './TrainingServicesPage.css'
 const steps = [
   {
     title: 'Fitness Assessment',
-    body: 'Everything stems from your movement assessment — it determines what movements you should do more of and which to avoid. Many people should be skipping pushups due to a tight chest from sitting with bad posture.',
+    body: 'Everything stems from your movement assessment. It determines what movements you should do more of and which to avoid. Many people should be skipping pushups due to a tight chest from sitting with bad posture.',
   },
   {
     title: 'Personalized Blueprint',
@@ -28,14 +28,14 @@ export default function TrainingServices() {
     <>
       <Seo
         title="Training Services"
-        description="Explore Formula Fitness's full range of services — private personal training, semi-private coaching, recovery lab, and active aging programs — all tailored to your unique goals."
+        description="Explore Formula Fitness's full range of services: private personal training, semi-private coaching, recovery lab, and active aging programs, all tailored to your unique goals."
         path="/training-services"
       />
 
       <PageHero
         eyebrow="Our Services"
         title="Training Services"
-        description="One gym, every tool you need. From elite 1-on-1 coaching and small-group sessions to cutting-edge recovery and active aging programs — all tailored to you."
+        description="One gym, every tool you need. From elite 1-on-1 coaching and small-group sessions to cutting-edge recovery and active aging programs, all tailored to you."
         image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
         showCta
         cta="Book a Consultation"
@@ -50,8 +50,8 @@ export default function TrainingServices() {
               A Complete Fitness Ecosystem
             </h2>
             <p className="ts-hub__desc">
-              Formula Fitness covers every dimension of your health — strength, recovery,
-              nutrition, and longevity — so you never have to look anywhere else.
+              Formula Fitness covers every dimension of your health: strength, recovery,
+              nutrition, and longevity, so you never have to look anywhere else.
             </p>
           </div>
 
@@ -79,7 +79,7 @@ export default function TrainingServices() {
               </div>
               <div className="ts-hub__card-body">
                 <h3 className="ts-hub__card-title">Semi-Private Training</h3>
-                <p className="ts-hub__card-desc">Small-group energy with a personal roadmap — 4-to-1 ratio keeps quality high and cost manageable.</p>
+                <p className="ts-hub__card-desc">Small-group energy with a personal roadmap: 4-to-1 ratio keeps quality high and cost manageable.</p>
               </div>
               <ArrowRight />
             </a>
@@ -93,7 +93,7 @@ export default function TrainingServices() {
               </div>
               <div className="ts-hub__card-body">
                 <h3 className="ts-hub__card-title">Recovery Lab</h3>
-                <p className="ts-hub__card-desc">Professional-grade recovery tech — vibration, IASTM blades, assisted stretching — to maximize how you feel and move.</p>
+                <p className="ts-hub__card-desc">Professional-grade recovery tech (vibration, IASTM blades, assisted stretching) to maximize how you feel and move.</p>
               </div>
               <ArrowRight />
             </a>
@@ -106,7 +106,7 @@ export default function TrainingServices() {
               </div>
               <div className="ts-hub__card-body">
                 <h3 className="ts-hub__card-title">Active Aging Program</h3>
-                <p className="ts-hub__card-desc">Safe, results-driven programming built for longevity — joint-smart workouts that keep you strong, mobile, and confident.</p>
+                <p className="ts-hub__card-desc">Safe, results-driven programming built for longevity: joint-smart workouts that keep you strong, mobile, and confident.</p>
               </div>
               <ArrowRight />
             </a>
@@ -116,13 +116,14 @@ export default function TrainingServices() {
 
       {/* 1. Private Personal Training */}
       <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-44-scaled.jpg')}
+        image={upload('2023/07/Group-81240.png')}
         imageAlt="Elite certified coach working one-on-one with a client"
+        mediaClassName="ts-feature-media ts-feature-media--cutout"
         eyebrow="1-on-1 Coaching"
         heading="Private Personal Training"
         paragraphs={[
           'We work with a full spectrum of clientele. Our coaches thrive working with people who are new to exercise, the active aging population, those seeking weight loss, and those experiencing pain due to weak and tight muscles.',
-          'Our team focuses on the key factors that make a dramatic impact on your life — sleep, hydration, stress levels, habits, and what food, supplements, or drugs you put into your body.',
+          'Our team focuses on the key factors that make a dramatic impact on your life: sleep, hydration, stress levels, habits, and what food, supplements, or drugs you put into your body.',
         ]}
         bullets={[
           'Strict 1-trainer-to-1-client ratio for total focus',
@@ -137,8 +138,9 @@ export default function TrainingServices() {
 
       {/* 2. Recovery Lab */}
       <FeatureRow
-        image={upload('2023/06/Formula-Fitness-03.2026-142-scaled.jpg')}
+        image={upload('2023/07/Group-81239.png')}
         imageAlt="Recovery lab with professional grade equipment"
+        mediaClassName="ts-feature-media ts-feature-media--cutout"
         eyebrow="Recovery & Wellness"
         heading="Recovery Lab"
         paragraphs={[
@@ -157,10 +159,18 @@ export default function TrainingServices() {
         reverse
       />
 
+      <CtaBanner
+        heading="Ready to Transform Your Body & Life?"
+        subheading="Every journey starts with a single step. Book your free consultation today."
+        button="Book a Consultation"
+        image={upload('2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg')}
+      />
+
       {/* 3. Semi-Private Personal Training */}
       <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-108-scaled.jpg')}
+        image={upload('2023/07/Group-81230.png')}
         imageAlt="Small group semi-private training session"
+        mediaClassName="ts-feature-media ts-feature-media--cutout"
         eyebrow="Small Group Coaching"
         heading="Semi-Private Personal Training"
         paragraphs={[
@@ -180,13 +190,14 @@ export default function TrainingServices() {
 
       {/* 4. Active Aging */}
       <FeatureRow
-        image={upload('2025/02/group-young-sporty-smiling-people-warrior-two-pose-scaled.jpg')}
+        image={upload('2023/11/services-landing.png')}
         imageAlt="Active aging members training with a certified coach"
+        mediaClassName="ts-feature-media ts-feature-media--photo"
         eyebrow="Your Gateway to Active Aging"
         heading="Active Aging Program"
         paragraphs={[
           "Our commitment to exceptional customer service means we're with you every step of the way, making your fitness journey understandable and achievable.",
-          "We're not just a gym — we're a community that stands by your side, delivering safe and effective programming designed specifically for the active aging population.",
+          "We're not just a gym, we're a community that stands by your side, delivering safe and effective programming designed specifically for the active aging population.",
         ]}
         bullets={[
           'Age-appropriate programming with no compromises on results',
@@ -205,13 +216,6 @@ export default function TrainingServices() {
         steps={steps}
         cta="Start My Fitness Journey"
         alt
-      />
-
-      <CtaBanner
-        heading="Ready to Transform Your Body & Life?"
-        subheading="Every journey starts with a single step — book your free consultation today."
-        button="Book a Consultation"
-        image={upload('2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg')}
       />
 
       <FindUs />

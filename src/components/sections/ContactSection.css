@@ -73,6 +73,11 @@
   justify-content: center;
   padding: var(--space-3xl) var(--space-2xl);
 }
+.contact-section__cta-panel::selection,
+.contact-section__cta-panel *::selection {
+  background: #ffffff;
+  color: var(--color-brand);
+}
 
 .contact-section__cta-inner {
   display: flex;

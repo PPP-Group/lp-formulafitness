@@ -14,7 +14,7 @@ export default function BioPage() {
   return (
     <>
       <Seo
-        title={`${member.name} — ${member.role}`}
+        title={`${member.name} - ${member.role}`}
         description={`Meet ${member.name}, ${member.role} at Formula Fitness.`}
         path={`/bio/${member.slug}`}
       />

@@ -176,6 +176,11 @@
     transform 0.25s var(--ease-bounce),
     box-shadow 0.25s var(--ease-standard);
 }
+.aa-focus li::selection,
+.aa-focus li *::selection {
+  background: #ffffff;
+  color: var(--color-brand);
+}
 .aa-focus li::before {
   content: counter(focus-counter, decimal-leading-zero);
   position: absolute;

@@ -252,6 +252,23 @@ h6 {
 }
 
 /* ==========================================================================
+   SELEÇÃO DE TEXTO
+   Padrão: fundo azul da marca + texto branco. Superfícies que já são azuis
+   (CTA panels, cards em destaque, badges, etc.) invertem essas cores em suas
+   próprias folhas de estilo — ver `::selection` local em cada componente.
+   ========================================================================== */
+
+::selection {
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
+}
+
+::-moz-selection {
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
+}
+
+/* ==========================================================================
    ACESSIBILIDADE
    ========================================================================== */
 

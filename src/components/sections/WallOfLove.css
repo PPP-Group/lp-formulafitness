@@ -8,6 +8,7 @@
   margin-top: var(--space-2xl);
   column-count: 1;
   column-gap: var(--space-lg);
+  column-fill: balance;
 }
 
 @media (min-width: 640px) {
@@ -54,6 +55,26 @@
 .wall__card--text.is-in:hover,
 .wall__card--video.is-in:hover {
   border-color: var(--color-brand);
+}
+
+/* Cards de vídeo usam a mesma superfície escura dos cards de texto em destaque. */
+.wall__card--video {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+}
+.wall__card--video::selection,
+.wall__card--video *::selection {
+  background: #ffffff;
+  color: var(--color-brand);
+}
+.wall__card--video.is-in:hover {
+  border-color: var(--color-brand);
+}
+.wall__card--video .video-card__name {
+  color: #ffffff;
+}
+.wall__card--video .video-card__quote {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ── Card de texto ────────────────────────────────────────────────── */
@@ -113,11 +134,9 @@
   color: var(--color-text-primary);
 }
 
-/* ── Card featured (destaque navy) ────────────────────────────────── */
+/* ── Card featured (destaque, sem cor de fundo diferenciada) ───────── */
 .wall__card--featured {
   position: relative;
-  background: var(--color-navy);
-  border-color: var(--color-navy);
   overflow: hidden;
 }
 .wall__card--featured::before {
@@ -128,31 +147,17 @@
   font-family: var(--font-display);
   font-size: 7rem;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(24, 35, 64, 0.05);
   pointer-events: none;
 }
 .wall__card--featured .wall-card__quote {
-  color: rgba(255, 255, 255, 0.92);
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);
   position: relative;
 }
-.wall__card--featured .wall-card__verified {
-  color: var(--color-brand-light);
-}
-.wall__card--featured .wall-card__person {
-  border-top-color: rgba(255, 255, 255, 0.15);
-}
-.wall__card--featured .wall-card__name {
-  color: #ffffff;
-}
 .wall__card--featured .wall-card__avatar {
   width: 52px;
   height: 52px;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-}
-.wall__card--featured.is-in:hover {
-  border-color: var(--color-brand);
 }
 
 /* ── Card de resultado (foto antes/depois com legenda) ────────────── */

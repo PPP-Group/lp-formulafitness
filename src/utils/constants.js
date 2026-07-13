@@ -14,7 +14,7 @@ export const company = {
     { days: 'Saturday – Sunday', time: '6am – 6pm' },
   ],
   mapEmbed:
-    'https://maps.google.com/maps?q=3971%20Ball%20Rd.%20Los%20Alamitos%2C%20CA%2090720%20USA&t=m&z=14&output=embed&iwloc=near',
+    'https://www.google.com/maps?q=3971%20Ball%20Rd.%20Los%20Alamitos%2C%20CA%2090720%20USA&t=m&z=14&output=embed&iwloc=near',
   mapLink:
     'https://www.google.com/maps/place/Formula+Fitness/@33.8179361,-118.0661915,17z',
   social: {

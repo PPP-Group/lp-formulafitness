@@ -6,7 +6,8 @@
 
 .ts-hub__header {
   max-width: 560px;
-  margin-bottom: var(--space-3xl);
+  margin: 0 auto var(--space-3xl);
+  text-align: center;
 }
 
 .ts-hub__title {
@@ -100,4 +101,36 @@
   .ts-hub__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* ── Feature-row images: no shadow, zoom on hover, sized to fit the section ── */
+.ts-feature-media {
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.ts-feature-media img {
+  transition: transform 0.4s var(--ease-standard);
+}
+
+.ts-feature-media:hover img {
+  transform: scale(1.05);
+}
+
+/* Cutout-style illustrations (transparent PNGs) — fit fully inside the section, no cropping */
+.ts-feature-media--cutout {
+  border: none;
+  background: transparent;
+  padding: var(--space-lg);
+}
+
+.ts-feature-media--cutout img {
+  min-height: unset;
+  max-height: 460px;
+  object-fit: contain;
+}
+
+/* Active Aging photo — taller crop than the default feature-row image */
+.ts-feature-media--photo img {
+  min-height: 480px;
 }

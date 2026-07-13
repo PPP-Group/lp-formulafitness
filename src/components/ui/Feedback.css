@@ -34,6 +34,11 @@
   color: var(--color-text-on-brand);
   border: 1px solid var(--color-brand);
 }
+.badge--brand::selection,
+.badge--brand *::selection {
+  background: #ffffff;
+  color: var(--color-brand);
+}
 .badge--success {
   background: var(--color-success-bg);
   color: var(--color-success-green);
@@ -58,6 +63,11 @@
   background: var(--color-accent-500);
   color: var(--color-text-on-brand);
   border: 1px solid var(--color-accent-700);
+}
+.badge--navy::selection,
+.badge--navy *::selection {
+  background: #ffffff;
+  color: var(--color-accent-500);
 }
 
 /* --------------------------------------------------------------------------

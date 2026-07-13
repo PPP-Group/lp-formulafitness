@@ -16,7 +16,7 @@ export default function RecoveryService() {
       <PageHero
         eyebrow="Elevate Your Workout with Built-In Recovery"
         title="Recovery Services"
-        description="Experience a new level of training where recovery isn’t an afterthought—it’s part of every session. Our integrated techniques help reduce injury risk, speed up muscle repair, and keep you feeling fresh and energized. By easing soreness and boosting performance, you’ll bounce back faster and train more effectively."
+        description="Experience a new level of training where recovery isn’t an afterthought. It’s part of every session. Our integrated techniques help reduce injury risk, speed up muscle repair, and keep you feeling fresh and energized. By easing soreness and boosting performance, you’ll bounce back faster and train more effectively."
         image={upload('2023/06/Formula-Fitness-03.2026-142-scaled.jpg')}
         showCta
         cta="Book A Consultation"
@@ -29,11 +29,11 @@ export default function RecoveryService() {
         eyebrow="Recovery"
         heading="Recovery Methods"
         bullets={[
-          'Dual Vibration guns — strong or gentle mechanical massage',
-          'IASTM Blades — improve range of motion with moderate pressure',
-          'Assisted Stretches — let a fitness pro push or pull your body into great posture',
-          'Trigger Pointing with Roller — get firm pressure to your muscles',
-          'Normatec Professional Compression — gentle to firm pressure to enhance your blood circulation',
+          'Dual Vibration guns: strong or gentle mechanical massage',
+          'IASTM Blades: improve range of motion with moderate pressure',
+          'Assisted Stretches: let a fitness pro push or pull your body into great posture',
+          'Trigger Pointing with Roller: get firm pressure to your muscles',
+          'Normatec Professional Compression: gentle to firm pressure to enhance your blood circulation',
         ]}
       />
 

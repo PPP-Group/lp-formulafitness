@@ -4,7 +4,6 @@ import PageHero from '@components/ui/PageHero'
 import SectionTitle from '@components/ui/SectionTitle'
 import StepsSection from '@components/sections/StepsSection'
 import FeatureRow from '@components/sections/FeatureRow'
-import LocationBlock from '@components/sections/LocationBlock'
 import Results from '@components/sections/Results'
 import FindUs from '@components/sections/FindUs'
 import ConsultCTA from '@components/sections/ConsultCTA'
@@ -98,7 +97,7 @@ const features = [
     ],
   },
   {
-    heading: 'Recovery—The Secret Weapon',
+    heading: 'Recovery: The Secret Weapon',
     image: upload('2025/05/DSCF0079-scaled.jpg'),
     bullets: [
       'Mobility flows, static & dynamic stretching in every session',
@@ -122,9 +121,9 @@ const features = [
     heading: 'Rock-Solid Satisfaction Guarantee',
     image: upload('2025/04/DSCF1406-scaled.jpg'),
     bullets: [
-      'Love your results and your experience—or we’ll make it right',
+      'Love your results and your experience, or we’ll make it right',
       'Clear, measurable checkpoints so “success” is never vague',
-      'Open-door feedback policy—text, call, or drop in anytime',
+      'Open-door feedback policy: text, call, or drop in anytime',
       'Visual dashboards so you see progress, not just feel it',
     ],
   },
@@ -135,7 +134,7 @@ export default function PersonalTraining() {
     <>
       <Seo
         title="Private Personal Training"
-        description="One-on-one personal training at Formula Fitness — a data-driven approach with elite certified coaches that delivers strength, confidence, and results."
+        description="One-on-one personal training at Formula Fitness: a data-driven approach with elite certified coaches that delivers strength, confidence, and results."
         path="/personal-training"
       />
       <PageHero
@@ -153,6 +152,41 @@ export default function PersonalTraining() {
           <AutoplayVideo src={upload('2026/05/Chris-Website-1.mp4')} />
         </div>
       </section>
+
+      <FeatureRow
+        image={upload('2026/05/Formula-Fitness-03.2026-53-scaled.jpg')}
+        imageAlt="Coach guiding a personal training session"
+        heading="Why Choose Personal Training?"
+        paragraphs={['Investing in a professional coach is the fastest and safest route to your goal. Here’s why:']}
+        bullets={[
+          'Personalized exercises tailored for your body, lifestyle, and goals',
+          'Expert guidance and education through your workouts',
+          'Individual attention for form correction to keep you injury-free',
+          'Flexible scheduling options',
+          'Custom nutrition plans',
+        ]}
+        cta="Book a consultation"
+        alt
+      />
+
+      <FeatureRow
+        image={upload('2026/05/Formula-Fitness-03.2026-64-3-scaled.jpg')}
+        imageAlt="Results-driven personal training workout"
+        heading="Results-Driven Workouts"
+        paragraphs={[
+          'Activate dormant muscles, mobilize tight areas, and warm up to prevent injuries. Your coach guides you through the main sets, followed by a metabolism-boosting finisher and recovery with stretching and vibration therapy.',
+          '1-on-1 Coaching Includes:',
+        ]}
+        bullets={[
+          'Personalized workouts to meet your goals',
+          'Exercise demonstrations & form correction',
+          'Comprehensive whole-body & lifestyle reassessments',
+          "Undivided coach's attention",
+          'Custom meal plan',
+        ]}
+        cta="Book a consultation"
+        reverse
+      />
 
       <StepsSection
         title="Three Steps to Your Fitness Journey"
@@ -193,16 +227,6 @@ export default function PersonalTraining() {
         </div>
       </section>
 
-      <div className="section section--alt">
-        <div className="container">
-          <SectionTitle
-            title="Here To Exceed Your Expectations"
-            description="A results-driven community where support, recovery, and fun fuel every session."
-            align="center"
-          />
-        </div>
-      </div>
-
       {features.map((f) => (
         <FeatureRow
           key={f.heading}
@@ -214,44 +238,8 @@ export default function PersonalTraining() {
         />
       ))}
 
-      <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-53-scaled.jpg')}
-        imageAlt="Coach guiding a personal training session"
-        heading="Why Choose Personal Training?"
-        paragraphs={['Investing in a professional coach is the fastest and safest route to your goal—here’s why:']}
-        bullets={[
-          'Personalized exercises tailored for your body, lifestyle, and goals',
-          'Expert guidance and education through your workouts',
-          'Individual attention for form correction to keep you injury-free',
-          'Flexible scheduling options',
-          'Custom nutrition plans',
-        ]}
-        cta="Book a consultation"
-        alt
-      />
-
-      <FeatureRow
-        image={upload('2026/05/Formula-Fitness-03.2026-64-3-scaled.jpg')}
-        imageAlt="Results-driven personal training workout"
-        heading="Results-Driven Workouts"
-        paragraphs={[
-          'Activate dormant muscles, mobilize tight areas, and warm up to prevent injuries. Your coach guides you through the main sets, followed by a metabolism-boosting finisher and recovery with stretching and vibration therapy.',
-          '1-on-1 Coaching Includes:',
-        ]}
-        bullets={[
-          'Personalized workouts to meet your goals',
-          'Exercise demonstrations & form correction',
-          'Comprehensive whole-body & lifestyle reassessments',
-          "Undivided coach's attention",
-          'Custom meal plan',
-        ]}
-        cta="Book a consultation"
-        reverse
-      />
-
       <Results />
 
-      <LocationBlock />
       <FindUs />
       <ConsultCTA />
     </>

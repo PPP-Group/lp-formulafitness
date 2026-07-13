@@ -78,7 +78,7 @@ export default function Header() {
           <Link
             to="/"
             className="header__logo"
-            aria-label="Formula Fitness — Home"
+            aria-label="Formula Fitness Home"
             onClick={handleLogoClick}
           >
             {scrolled

@@ -21,10 +21,10 @@ function Icon({ children }) {
 // Trust badges resumidos a partir da FAQ "Pricing, Plans & Guarantee" (verbatim
 // na fonte; aqui só um resumo curto). Nada inventado.
 const trustBadges = [
-  { title: 'From $85 / Session', text: 'Sessions typically start at $85 — you only pay for training.', icon: <Icon><path d="M12 1v22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></Icon> },
+  { title: 'From $85 / Session', text: 'Sessions typically start at $85. You only pay for training.', icon: <Icon><path d="M12 1v22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></Icon> },
   { title: 'No Membership Fees', text: 'No membership fees. Pay only for your training sessions.', icon: <Icon><circle cx="12" cy="12" r="9" /><path d="M5.6 5.6l12.8 12.8" /></Icon> },
   { title: '0% Interest Plans', text: 'Flexible payment plans available with 0% interest.', icon: <Icon><rect x="2" y="5" width="20" height="14" rx="2" /><path d="M2 10h20" /></Icon> },
-  { title: 'Satisfaction Guarantee', text: 'Not happy? We refund your remaining sessions — no questions asked.', icon: <Icon><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" /><path d="M9 12l2 2 4-4" /></Icon> },
+  { title: 'Satisfaction Guarantee', text: 'Not happy? We refund your remaining sessions, no questions asked.', icon: <Icon><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" /><path d="M9 12l2 2 4-4" /></Icon> },
 ]
 
 // FAQ rápida de preço — reaproveita os itens verbatim de faq.js.
@@ -36,7 +36,7 @@ const pricingFaq = pricingCat
   : []
 
 // Depoimento curto real (prova social).
-const proofReview = reviews.find((r) => r.name === 'andrew m.') || reviews[reviews.length - 1]
+const proofReview = reviews.find((r) => r.name === 'Andrew M.') || reviews[reviews.length - 1]
 
 function Stars() {
   return (

@@ -24,8 +24,6 @@ const inclusions = [
   'Recommended Supplements (Natural, Safe, Heart Health, Joints, Energy, Sleep)',
 ]
 
-const focus = ['Injury Prevention', 'Proper Form', 'Progressive Attitude', 'Results Driven', 'Positive Experience Driven']
-
 const programs = [
   { title: 'Posture Perfection', image: upload('2025/02/4-Posture.jpg') },
   { title: 'Muscle Harmony', image: upload('2025/02/5-Muscle-scaled.jpg') },
@@ -146,17 +144,6 @@ export default function ActiveAging() {
                 </li>
               )
             })}
-          </ul>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <SectionTitle eyebrow="what we will focus on" title="Our Focus" align="center" />
-          <ul className="aa-focus">
-            {focus.map((f) => (
-              <li key={f}>{f}</li>
-            ))}
           </ul>
         </div>
       </section>

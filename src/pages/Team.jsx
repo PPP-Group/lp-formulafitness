@@ -12,13 +12,13 @@ export default function Team() {
     <>
       <Seo
         title="Our Team"
-        description="Meet the highly-skilled trainers and team behind Formula Fitness — here to serve you with expertise, commitment, and passion."
+        description="Meet the highly-skilled trainers and team behind Formula Fitness, here to serve you with expertise, commitment, and passion."
         path="/team"
       />
       <PageHero
         eyebrow="Meet the Team"
         title="Here To Serve You"
-        description="Formula Fitness has distinguished itself as a premier health and wellness center, thanks to our innovative, client-first approach and our exceptional, dedicated team. What truly sets us apart are the individuals below—their extensive expertise, unwavering commitment, and passion for transforming the health and well-being of our clients and community."
+        description="Formula Fitness has distinguished itself as a premier health and wellness center, thanks to our innovative, client-first approach and our exceptional, dedicated team. What truly sets us apart are the individuals below: their extensive expertise, unwavering commitment, and passion for transforming the health and well-being of our clients and community."
         image={upload('2026/05/Formula-Fitness-03.2026-152-scaled.jpg')}
       />
       <div className="section">

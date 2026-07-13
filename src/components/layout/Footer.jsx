@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container footer__grid">
         {/* Brand */}
         <div className="footer__brand">
-          <Link to="/" aria-label="Formula Fitness — Home">
+          <Link to="/" aria-label="Formula Fitness Home">
             <img src={assets.logo} alt="Formula Fitness" width="170" height="44" />
           </Link>
           <p className="footer__tagline">
@@ -93,7 +93,7 @@ export default function Footer() {
                 {company.hours.map((h) => (
                   <li key={h.days} className="footer__hours-row">
                     <span className="footer__days">{h.days}:</span>
-                    <span>{h.time}</span>
+                    <span className="footer__time">{h.time}</span>
                   </li>
                 ))}
               </ul>

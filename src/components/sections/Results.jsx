@@ -13,7 +13,7 @@ export default function Results() {
           {transformations.map((item) => (
             <article className="result-card" key={item.id}>
               <div className="result-card__media">
-                <img src={item.image} alt={`${item.name} — ${item.result}`} loading="lazy" />
+                <img src={item.image} alt={`${item.name}: ${item.result}`} loading="lazy" />
               </div>
               <div className="result-card__body">
                 <h3 className="result-card__name">{item.name}</h3>

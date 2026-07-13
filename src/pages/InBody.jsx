@@ -12,7 +12,7 @@ const design = [
   { icon: upload('2025/04/580-design1.png'), text: 'Get access to premium full-body analysis with clinical-grade accuracy' },
   { icon: upload('2025/04/580-design2.png'), text: 'Measure muscle mass, hydration, and cellular health with precision sensors' },
   { icon: upload('2025/04/580-design3.png'), text: 'Track body fat, water balance, and muscle distribution from the ground up' },
-  { icon: upload('2025/04/580-design4.png'), text: 'Smart guidance for accurate results. No guesswork—just clear instructions and real-time feedback' },
+  { icon: upload('2025/04/580-design4.png'), text: 'Smart guidance for accurate results. No guesswork, just clear instructions and real-time feedback' },
 ]
 
 const technology = [
@@ -27,7 +27,7 @@ export default function InBody() {
     <>
       <Seo
         title="InBody Scan"
-        description="The InBody 580 is the next generation of premium body composition analyzer — in-depth health assessments for expert insights in under a minute."
+        description="The InBody 580 is the next generation of premium body composition analyzer: in-depth health assessments for expert insights in under a minute."
         path="/inbody"
       />
       <PageHero

@@ -13,7 +13,7 @@ export default function BMISection() {
           </div>
           <h2 className="bmi-section__title">Calculate Your BMI</h2>
           <p className="bmi-section__text">
-            Body Mass Index is a useful starting point. Use this free calculator to understand where you stand — then book a consultation for a full InBody analysis.
+            Body Mass Index is a useful starting point. Use this free calculator to understand where you stand, then book a consultation for a full InBody analysis.
           </p>
           <ul className="bmi-section__list">
             <li>

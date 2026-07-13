@@ -55,7 +55,7 @@ export default function About() {
     <>
       <Seo
         title="About"
-        description="The story behind Formula Fitness — decades of expertise and passion for transforming lives, led by Fitness Director Tony Tran."
+        description="The story behind Formula Fitness: decades of expertise and passion for transforming lives, led by Fitness Director Tony Tran."
         path="/about"
       />
       <PageHero
@@ -91,7 +91,7 @@ export default function About() {
         eyebrow="Co-Owner & Fitness Director"
         heading="Tony Tran"
         paragraphs={[
-          'With 20+ years of industry experience across Hollywood and Orange County, Tony brings multiple certifications and a licensed EMT-Paramedic background to every program — enriching his expertise in active-aging clients, injury prevention, and safe training techniques.',
+          'With 20+ years of industry experience across Hollywood and Orange County, Tony brings multiple certifications and a licensed EMT-Paramedic background to every program, enriching his expertise in active-aging clients, injury prevention, and safe training techniques.',
         ]}
         alt
       />

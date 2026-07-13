@@ -10,7 +10,7 @@ export default function Refund() {
         {
           heading: 'Satisfaction Guarantee',
           paragraphs: [
-            'We are committed to your progress. If you’re not getting measurable results and aren’t happy with your experience, we’ll refund your remaining sessions — no questions asked.',
+            'We are committed to your progress. If you’re not getting measurable results and aren’t happy with your experience, we’ll refund your remaining sessions, no questions asked.',
           ],
         },
         {
@@ -22,7 +22,7 @@ export default function Refund() {
         {
           heading: 'Pauses & Flexibility',
           paragraphs: [
-            'Sessions have a reasonable expiration window to keep you accountable. If you have a family emergency, illness, or unexpected circumstances, we’ll pause your sessions — just communicate with us.',
+            'Sessions have a reasonable expiration window to keep you accountable. If you have a family emergency, illness, or unexpected circumstances, we’ll pause your sessions, just communicate with us.',
           ],
         },
       ]}

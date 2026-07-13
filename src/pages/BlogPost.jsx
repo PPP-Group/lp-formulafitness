@@ -25,7 +25,7 @@ function RelatedPostCard({ post }) {
 function MiniTestimonialCard({ item }) {
   return (
     <li className="post__mini-testimonial">
-      <p className="post__mini-testimonial-quote">&quot;{item.text}&quot;</p>
+      <p className="post__mini-testimonial-quote">“{item.text}”</p>
       <span className="post__mini-testimonial-name">{item.name}</span>
     </li>
   )

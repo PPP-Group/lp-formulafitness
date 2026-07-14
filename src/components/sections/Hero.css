@@ -66,3 +66,37 @@
   gap: var(--space-md);
   flex-wrap: wrap;
 }
+
+/* Mobile: a foto ocupa a parte de cima (pessoas livres, sem texto por cima);
+   o degrade preto começa perto do pé das pessoas e o texto emenda logo ali,
+   colado na parte já escura — sem vão vazio entre a foto e o texto. Como o
+   fundo/overlay são absolute (saem do fluxo), a altura do .hero passa a ser
+   naturalmente pé-da-foto + conteúdo do texto (sem min-height arbitrário). */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 0;
+    display: block;
+    background-color: #0a0d12;
+  }
+  .hero__bg {
+    height: 62vh;
+    bottom: auto;
+  }
+  .hero__overlay {
+    height: 62vh;
+    bottom: auto;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.45) 55%,
+      rgba(0, 0, 0, 0.9) 80%,
+      #0a0d12 100%
+    );
+  }
+  .hero__inner {
+    padding-top: 59vh;
+  }
+  .hero__title {
+    font-size: clamp(2.1rem, 8vw, 2.75rem);
+  }
+}

@@ -61,16 +61,16 @@
 .ref-redeem__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 .ref-tier-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-xs);
+  gap: var(--space-2xs);
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: var(--space-lg);
+  padding: var(--space-md);
   box-shadow: var(--shadow-card);
   transition: transform 0.25s var(--ease-standard), box-shadow 0.25s var(--ease-standard);
 }
@@ -81,15 +81,16 @@
 .ref-tier-row__points {
   font-family: var(--font-heading);
   font-weight: var(--font-bold);
-  font-size: var(--text-lg);
+  font-size: var(--text-body);
   color: var(--color-brand);
 }
 .ref-tier-row__rewards {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs) var(--space-md);
+  gap: var(--space-2xs) var(--space-sm);
   color: var(--color-text-secondary);
   line-height: var(--text-body-lh);
+  font-size: var(--text-sm);
 }
 .ref-tier-row__reward {
   position: relative;
@@ -205,10 +206,11 @@
     grid-template-columns: 1.15fr 1fr;
     gap: var(--space-3xl);
   }
-  /* Imagem vetorizada maior que sua coluna — "estoura" um pouco para a
-     direita (só existe espaço nesse breakpoint, pois no mobile é 1 coluna). */
+  /* Imagem vetorizada um pouco maior que sua coluna — "estoura" de leve para
+     a direita (só existe espaço nesse breakpoint, pois no mobile é 1 coluna).
+     Mantém folga clara em relação aos cards da lista à esquerda. */
   .ref-redeem__photo--cutout img {
-    width: 125%;
-    max-width: 125%;
+    width: 108%;
+    max-width: 108%;
   }
 }

@@ -113,7 +113,6 @@ export default function ActiveAging() {
         imageAlt="Active aging members training on treadmills"
         eyebrow="about US"
         heading="Fitness After 50 Is About Well-Being, Balance, and Strength"
-        mediaClassName="aa-about-media"
         paragraphs={[
           "At Formula Fitness, we understand that fitness after 50 isn't just about staying active; it's about embracing a lifestyle that prioritizes your well-being, balance, and strength.",
           "Our holistic approach begins with a comprehensive assessment that lays the foundation for a journey tailored to your body's needs.",
@@ -126,6 +125,7 @@ export default function ActiveAging() {
         subheading="Contact us for a personalized consultation and see how we can tailor a program just for you."
         button="Book a consultation"
         image={upload('2026/05/Formula-Fitness-03.2026-145-1-scaled.jpeg')}
+        imagePosition="center 45%"
       />
 
       <section className="section section--alt">

@@ -2,6 +2,15 @@
   align-items: center;
 }
 
+.inbody__media,
+.inbody__content {
+  /* Grid items têm min-width:auto por padrão — sem isso, o botão de texto
+     longo (nowrap) abaixo força a coluna (e a section inteira) a ficar mais
+     larga que o viewport em telas bem estreitas, cortando conteúdo em vez
+     de encolher. */
+  min-width: 0;
+}
+
 .inbody__media {
   display: flex;
   justify-content: center;
@@ -16,6 +25,25 @@
 
 .inbody__media:hover img {
   transform: scale(1.04);
+}
+
+/* Abaixo de 768px o grid-2 empilha em 1 coluna (ver global.css) — a foto do
+   aparelho é bem estreita e alta (450x930), então sem limite de altura ela
+   dominava a tela inteira. Passa a limitar pela altura em vez da largura. */
+@media (max-width: 767px) {
+  .inbody__media img {
+    width: auto;
+    max-width: 100%;
+    max-height: 340px;
+  }
+  /* .btn tem white-space:nowrap por padrão — "Learn More about InBody
+     Analysis" como texto único forçava a coluna (e a section) a ~370px de
+     largura mínima, cortando conteúdo em telas mais estreitas que isso. */
+  .inbody__cta {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 .inbody__content {

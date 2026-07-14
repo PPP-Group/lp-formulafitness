@@ -44,11 +44,24 @@
 }
 
 @media (max-width: 768px) {
+  /* Coluna do badge com largura fixa (em vez de auto) — em telas bem
+     estreitas o grid podia espremer a coluna auto bem abaixo do tamanho
+     da imagem quando disputava espaço com a coluna 1fr do texto. */
   .page-hero--badge .page-hero__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 84px;
+    gap: var(--space-md);
   }
   .page-hero__badge {
-    display: none;
+    min-width: 0;
+  }
+  .page-hero__badge img {
+    width: 84px;
+  }
+  /* A coluna 1fr por padrão não encolhe além do min-content do conteúdo
+     (ex.: o texto do botão sem quebra), o que empurrava a grid pra fora do
+     container. min-width:0 libera o encolhimento correto do grid item. */
+  .page-hero__text {
+    min-width: 0;
   }
 }
 

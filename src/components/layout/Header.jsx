@@ -158,10 +158,19 @@ export default function Header() {
       <div className={`mobile-menu ${menuOpen ? 'is-open' : ''}`} aria-hidden={!menuOpen}>
         <nav className="mobile-menu__nav" aria-label="Mobile">
           <ul>
+            <li className="mobile-menu__item" style={{ '--i': 0 }}>
+              <Link
+                to="/"
+                className={`mobile-menu__link ${pathname === '/' ? 'is-active' : ''}`}
+                onClick={handleLogoClick}
+              >
+                Home
+              </Link>
+            </li>
             {navigation.map((item, i) => {
               const active = isNavItemActive(item, pathname)
               return (
-                <li key={item.label} className="mobile-menu__item" style={{ '--i': i }}>
+                <li key={item.label} className="mobile-menu__item" style={{ '--i': i + 1 }}>
                   {item.children ? (
                     <>
                       <button

@@ -44,18 +44,20 @@
 }
 
 @media (max-width: 768px) {
-  /* Coluna do badge com largura fixa (em vez de auto) — em telas bem
-     estreitas o grid podia espremer a coluna auto bem abaixo do tamanho
-     da imagem quando disputava espaço com a coluna 1fr do texto. */
+  /* No mobile a badge empilha ACIMA do texto (em vez de espremida ao lado),
+     centralizada e num tamanho legível. */
   .page-hero--badge .page-hero__inner {
-    grid-template-columns: 1fr 84px;
-    gap: var(--space-md);
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
   .page-hero__badge {
+    order: -1;
+    display: flex;
+    justify-content: center;
     min-width: 0;
   }
   .page-hero__badge img {
-    width: 84px;
+    width: 150px;
   }
   /* A coluna 1fr por padrão não encolhe além do min-content do conteúdo
      (ex.: o texto do botão sem quebra), o que empurrava a grid pra fora do

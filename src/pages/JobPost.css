@@ -50,15 +50,42 @@
   color: var(--color-text-secondary);
   line-height: var(--text-body-lh);
 }
-/* Só links de texto inline ficam azuis — exclui os botões (.btn), senão o
-   "Apply Now" (btn-primary) herdaria texto azul sobre fundo azul (ilegível). */
-.job-post__card a:not(.btn) {
+.job-post__card a {
   color: var(--color-brand);
 }
-.job-post__apply {
-  width: 100%;
-  margin-top: var(--space-md);
+
+/* E-mail em destaque (padrão de contato do Prices): rótulo pequeno em
+   uppercase acima do endereço em destaque. */
+.job-post__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0 0;
 }
+.job-post__contact li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.job-post__contact span {
+  font-size: var(--text-overline);
+  letter-spacing: var(--text-overline-ls);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+.job-post__contact a {
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--color-brand);
+  word-break: break-word;
+}
+.job-post__contact a:hover {
+  color: var(--color-brand-dark);
+}
+
 .job-post__location {
   font-size: 0.875rem;
   color: var(--color-text-muted);

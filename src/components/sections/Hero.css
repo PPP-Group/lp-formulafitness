@@ -29,7 +29,12 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--gradient-hero);
+  /* Vinheta radial sutil (escurece cantos/bordas da foto) sobre o gradiente
+     linear vertical. Em telas largas a foto estica mais e isto suaviza as
+     bordas. O mobile sobrescreve este background na media query abaixo. */
+  background:
+    radial-gradient(125% 100% at 50% 38%, transparent 58%, rgba(13, 18, 24, 0.5) 100%),
+    var(--gradient-hero);
 }
 
 .hero__inner {

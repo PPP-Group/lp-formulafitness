@@ -12,10 +12,6 @@ export default function JobPost() {
 
   if (!job) return <Navigate to="/join-our-team" replace />
 
-  const applyHref = `mailto:${company.email}?subject=${encodeURIComponent(
-    `Application: ${job.title}`
-  )}`
-
   return (
     <>
       <Seo
@@ -49,12 +45,14 @@ export default function JobPost() {
             <div className="job-post__card">
               <h3>How to Apply</h3>
               <p>
-                Send a detailed cover letter and resume to Tony Tran, Owner, at{' '}
-                <a href={`mailto:${company.email}`}>{company.email}</a>.
+                Send a detailed cover letter and resume to Tony Tran, Owner.
               </p>
-              <a href={applyHref} className="btn btn-primary job-post__apply">
-                Apply Now
-              </a>
+              <ul className="job-post__contact">
+                <li>
+                  <span>Email</span>
+                  <a href={`mailto:${company.email}`}>{company.email}</a>
+                </li>
+              </ul>
               <p className="job-post__location">{company.address}</p>
             </div>
             <Link to="/join-our-team" className="btn-link job-post__back">

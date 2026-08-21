@@ -1,15 +1,16 @@
 .status-page {
-  min-height: 80vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--section-padding-y-small) 0;
+  padding: calc(var(--header-height) + clamp(2.5rem, 6vw, 4.5rem)) 0 clamp(2.5rem, 5vw, 4rem);
   background: var(--color-bg-secondary);
 }
 
 .status-page__container {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .status-card {
@@ -18,21 +19,9 @@
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-lg);
   padding: clamp(2rem, 5vw, 3.5rem);
-  max-width: 580px;
+  max-width: 540px;
   width: 100%;
   text-align: center;
-  animation: statusFadeIn 0.4s ease-out forwards;
-}
-
-@keyframes statusFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .status-card__header {
@@ -87,12 +76,6 @@
   background: var(--color-warning-bg);
   color: var(--color-warning);
   border: 1px solid rgba(245, 158, 11, 0.25);
-}
-
-.status-badge--info {
-  background: var(--color-info-bg);
-  color: var(--color-info);
-  border: 1px solid rgba(59, 130, 246, 0.25);
 }
 
 .status-card__title {

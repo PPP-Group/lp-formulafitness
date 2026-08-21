@@ -5,138 +5,138 @@ import './ObjectionLandingPage.css'
 
 const OBJECTION_DATA = {
   doubt: {
-    title: 'Ainda com dúvidas se a Formula Fitness é para você?',
-    eyebrow: 'Sua Saúde em Primeiras Mãos',
+    title: 'Still wondering if Formula Fitness is right for you?',
+    eyebrow: 'Your Health Journey Starts Here',
     subtitle:
-      'É 100% normal ter receio antes de recomeçar. Aqui você nunca treina sozinho — nosso método conta com Personal Trainer acompanhando cada exercício para garantir resultados com segurança.',
+      'It is completely normal to have questions before getting started. At Formula Fitness, you never train alone. Our expert personal trainers guide you through every exercise to ensure comfort, safety, and real results.',
     path: '/objection-doubt',
     pillars: [
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10" />
             <path d="M12 16v-4" />
             <path d="M12 8h.01" />
           </svg>
         ),
-        title: 'Atendimento 100% Guiado',
-        desc: 'Você não precisa saber montar treino ou usar os aparelhos. Nossos treinadores orientam você em cada repetição.',
+        title: '100% Guided Training',
+        desc: 'No confusion or guesswork. Our professional trainers coach you step-by-step through every single exercise.',
       },
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
             <circle cx="9" cy="7" r="4" />
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M23 21v-2a4 4 0 0 1 0 7.75" />
             <path d="M16 3.13a4 4 0 0 1 0 7.75" />
           </svg>
         ),
-        title: 'Ambiente Acolhedor',
-        desc: 'Sem julgamentos, sem lotação excessiva e sem som estrondoso. Um espaço pensado para pessoas reais buscarem saúde.',
+        title: 'Welcoming Environment',
+        desc: 'No crowded chaos or intimidating gym culture. Just a clean, supportive community focused on your well-being.',
       },
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
           </svg>
         ),
-        title: 'Evolução no Seu Ritmo',
-        desc: 'Respeitamos seu histórico médico, dores e limitações para construir um progresso consistente e sem lesões.',
+        title: 'Progress at Your Pace',
+        desc: 'We adapt workouts around your schedule, health history, and goals for safe, sustainable growth.',
       },
     ],
-    primaryCta: 'Agendar Aula Experimental Sem Compromisso',
-    whatsappMessage: 'Olá! Estava navegando no site e gostaria de tirar algumas dúvidas sobre os treinos da Formula Fitness.',
+    primaryCta: 'Book a Free Consultation',
+    secondaryCtaText: 'Explore Our Training Services',
+    secondaryCtaPath: '/training-services',
   },
   price: {
-    title: 'Atenção de Personal Trainer pelo Melhor Custo-Benefício',
-    eyebrow: 'Investimento Inteligente em Saúde',
+    title: 'Personal training value designed for your budget',
+    eyebrow: 'Smart Investment in Your Health',
     subtitle:
-      'Cansado de pagar mensalidade em academia tradicional e ficar largado no treino? Na Formula Fitness você investe na atenção presencial contínua de um treinador por uma fração do preço de um personal particular.',
+      'Tired of paying gym memberships where no one helps you? At Formula Fitness, you get dedicated personal training attention for a fraction of the cost of a private trainer.',
     path: '/objection-price',
     pillars: [
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <line x1="12" y1="1" x2="12" y2="23" />
             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
           </svg>
         ),
-        title: 'Personal Trainer Incluso',
-        desc: 'Economize centenas de reais por mês mantendo o acompanhamento próximo de um profissional qualificado.',
+        title: 'Personal Trainer Included',
+        desc: 'Save hundreds of dollars every month while enjoying close supervision from a certified professional trainer.',
       },
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
           </svg>
         ),
-        title: 'Transparência e Flexibilidade',
-        desc: 'Sem letras miúdas ou taxas surpresa. Planos claros desenvolvidos para se adequar às suas necessidades reais.',
+        title: 'Zero Hidden Fees',
+        desc: 'Clear and straightforward options without surprise sign-up charges or hidden cancellation fees.',
       },
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
           </svg>
         ),
-        title: 'Condições Especiais',
-        desc: 'Fale com nosso time de consultores para descobrir isenções e pacotes de entrada disponíveis hoje.',
+        title: 'Flexible Plans Available',
+        desc: 'Enter your info to discover customized options and payment arrangements that fit your financial goals.',
       },
     ],
-    primaryCta: 'Consultar Condições e Planos Especiais',
-    whatsappMessage: 'Olá! Gostaria de conhecer os planos e condições especiais de matrícula da Formula Fitness.',
+    primaryCta: 'Get Personalized Pricing',
+    secondaryCtaText: 'View Membership Prices',
+    secondaryCtaPath: '/prices',
   },
   timing: {
-    title: 'Pouco Tempo na Rotina? Treinos Eficientes em 45-50 Minutos',
-    eyebrow: 'Eficiência que Cabe na Sua Agenda',
+    title: 'Short on time? Achieve real results in 45 to 50 minutes',
+    eyebrow: 'Efficient Workouts for Busy Schedules',
     subtitle:
-      'Você não precisa morar na academia para ter resultados. Nossos treinos são projetados para entregar o máximo estímulo de saúde e força em sessões objetivas de 45 a 50 minutos.',
+      'You do not need to spend hours in the gym to see progress. Our structured personal training sessions are optimized for maximum health and strength gains in just 45 to 50 minutes.',
     path: '/objection-timing',
     pillars: [
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10" />
             <polyline points="12 6 12 12 16 14" />
           </svg>
         ),
-        title: 'Sessões Otimizadas',
-        desc: 'Chegue, treine com foco absoluto sob supervisão e retorne à sua rotina revigorado em menos de 1 hora.',
+        title: '45 to 50 Minute Sessions',
+        desc: 'High-impact, focused workouts designed to fit smoothly into your busy workday without wasting time.',
       },
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
             <line x1="16" y1="2" x2="16" y2="6" />
             <line x1="8" y1="2" x2="8" y2="6" />
             <line x1="3" y1="10" x2="21" y2="10" />
           </svg>
         ),
-        title: '2x a 3x por Semana',
-        desc: 'Constância viável. Não exigimos presença diária para que você atinja suas metas de saúde e disposição.',
+        title: '2 to 3 Times per Week',
+        desc: 'Achievable frequency that delivers powerful strength, energy, and body composition improvements.',
       },
       {
         icon: (
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M22 11.08V12a10 10 10 0 1 1-5.93-9.14" />
             <polyline points="22 4 12 14.01 9 11.01" />
           </svg>
         ),
-        title: 'Horários Flexíveis',
-        desc: 'Grade de horários variada desde cedo até à noite para se ajustar perfeitamente ao seu dia a dia.',
+        title: 'Flexible Scheduling',
+        desc: 'Convenient morning, afternoon, and evening session slots so your workout routine always stays on track.',
       },
     ],
-    primaryCta: 'Encontrar o Melhor Horário para Mim',
-    whatsappMessage: 'Olá! Tenho a rotina corrida e gostaria de saber os horários disponíveis para treino na Formula Fitness.',
+    primaryCta: 'Book a Free Consultation',
+    secondaryCtaText: 'View Training Services',
+    secondaryCtaPath: '/training-services',
   },
 }
 
 export default function ObjectionLandingPage({ type = 'doubt' }) {
   const data = OBJECTION_DATA[type] || OBJECTION_DATA['doubt']
-
-  const encodedMessage = encodeURIComponent(data.whatsappMessage)
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=5511999999999&text=${encodedMessage}`
 
   return (
     <>
@@ -156,17 +156,9 @@ export default function ObjectionLandingPage({ type = 'doubt' }) {
             <ConsultLink className="btn btn-primary btn-lg objection-hero__primary-btn">
               {data.primaryCta}
             </ConsultLink>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline btn-lg objection-hero__wa-btn"
-            >
-              <svg className="objection-hero__wa-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-              </svg>
-              Falar no WhatsApp
-            </a>
+            <Link to={data.secondaryCtaPath} className="btn btn-outline btn-lg">
+              {data.secondaryCtaText}
+            </Link>
           </div>
         </div>
       </section>
@@ -189,17 +181,17 @@ export default function ObjectionLandingPage({ type = 'doubt' }) {
         <div className="container">
           <div className="objection-banner__box">
             <div className="objection-banner__content">
-              <h2 className="objection-banner__title">Pronto para dar o primeiro passo pela sua saúde?</h2>
+              <h2 className="objection-banner__title">Ready to take the first step towards your fitness goals?</h2>
               <p className="objection-banner__text">
-                Venha fazer um treino experimental gratuito e sentir na prática a diferença do acompanhamento próximo.
+                Book a consultation with our personal training team and experience dedicated coaching firsthand.
               </p>
             </div>
             <div className="objection-banner__actions">
               <ConsultLink className="btn btn-primary btn-lg">
-                Agendar Minha Experiência
+                Book a Consultation
               </ConsultLink>
               <Link to="/prices" className="btn btn-outline">
-                Ver Opções de Planos
+                See Pricing Options
               </Link>
             </div>
           </div>

@@ -1,46 +1,46 @@
 import { Link } from 'react-router-dom'
 import Seo from '@components/ui/Seo'
-import './AppointmentStatusPage.css' // Reutiliza os estilos refinados do card de status
+import './AppointmentStatusPage.css'
 
 const REASON_CONFIGS = {
   'no-response': {
-    title: 'Perda Registrada: Sem Resposta',
-    badge: 'Perda — Sem Resposta',
+    title: 'Status Updated: Lost (No Response)',
+    badge: 'No Response',
     description:
-      'O status do lead foi atualizado para Perda (Sem Resposta). O sistema programou a régua de reativação periódica automática.',
-    detailValue: 'Automação de reativação agendada',
+      'The lead status has been successfully updated to Lost due to No Response.',
+    statusText: 'Lost (No Response)',
     path: '/lost-no-response',
   },
   fit: {
-    title: 'Perda Registrada: Fora de Perfil',
-    badge: 'Perda — Perfil',
+    title: 'Status Updated: Lost (Not a Fit)',
+    badge: 'Not a Fit',
     description:
-      'O status do lead foi atualizado no CRM como Fora de Perfil / Fit no momento. O registro foi armazenado para controle comercial.',
-    detailValue: 'Motivo arquivado no CRM',
+      'The lead status has been successfully updated to Lost due to Fitness Fit.',
+    statusText: 'Lost (Not a Fit)',
     path: '/lost-fit',
   },
   timing: {
-    title: 'Perda Registrada: Timing / Momento',
-    badge: 'Perda — Timing',
+    title: 'Status Updated: Lost (Timing)',
+    badge: 'Timing',
     description:
-      'O status do lead foi atualizado para Perda por Momento Inadequado. O lead entrará no fluxo de nutrição de longo prazo.',
-    detailValue: 'Adicionado à nutrição de longo prazo',
+      'The lead status has been successfully updated to Lost due to Timing.',
+    statusText: 'Lost (Timing)',
     path: '/lost-timing',
   },
   price: {
-    title: 'Perda Registrada: Objeção de Preço',
-    badge: 'Perda — Preço',
+    title: 'Status Updated: Lost (Price)',
+    badge: 'Price',
     description:
-      'O status do lead foi atualizado para Perda por Preço/Orçamento. O lead receberá avisos sobre futuras condições e oportunidades especiais.',
-    detailValue: 'Incluso em lista de ofertas especiais',
+      'The lead status has been successfully updated to Lost due to Price.',
+    statusText: 'Lost (Price)',
     path: '/lost-price',
   },
   'went-elsewhere': {
-    title: 'Perda Registrada: Escolheu Outra Academia',
-    badge: 'Perda — Outro Local',
+    title: 'Status Updated: Lost (Chose Competitor)',
+    badge: 'Chose Competitor',
     description:
-      'O motivo de perda por preferência por outro estabelecimento foi arquivado com sucesso para estatísticas e melhorias contínuas.',
-    detailValue: 'Dado registrado para análise',
+      'The lead status has been successfully updated to Lost due to Chose Another Gym.',
+    statusText: 'Lost (Chose Competitor)',
     path: '/lost-went-elsewhere',
   },
 }
@@ -56,7 +56,7 @@ export default function LostReasonPage({ reason = 'no-response' }) {
           <div className="status-card">
             <div className="status-card__header">
               <div className="status-card__icon-wrapper">
-                <svg className="status-card__icon status-card__icon--warning" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="status-card__icon status-card__icon--warning" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                   <polyline points="14 2 14 8 20 8" />
                   <line x1="9" y1="15" x2="15" y2="15" />
@@ -70,18 +70,14 @@ export default function LostReasonPage({ reason = 'no-response' }) {
 
             <div className="status-card__meta">
               <div className="status-card__meta-item">
-                <span className="status-card__meta-label">Status no CRM:</span>
-                <span className="status-card__meta-value">Perda Registrada</span>
-              </div>
-              <div className="status-card__meta-item">
-                <span className="status-card__meta-label">Ação de Automação:</span>
-                <span className="status-card__meta-value">{config.detailValue}</span>
+                <span className="status-card__meta-label">CRM Status</span>
+                <span className="status-card__meta-value">{config.statusText}</span>
               </div>
             </div>
 
             <div className="status-card__actions">
               <Link to="/" className="btn btn-primary">
-                Voltar ao Site Principal
+                Return to Main Site
               </Link>
             </div>
           </div>

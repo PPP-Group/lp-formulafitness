@@ -29,6 +29,11 @@ const Terms = lazyWithRetry(() => import('@pages/Terms'))
 const Refund = lazyWithRetry(() => import('@pages/Refund'))
 const NotFound = lazyWithRetry(() => import('@pages/NotFound'))
 
+// Páginas de gatilho de automação e CRM
+const AppointmentStatusPage = lazyWithRetry(() => import('@pages/AppointmentStatusPage'))
+const LostReasonPage = lazyWithRetry(() => import('@pages/LostReasonPage'))
+const ObjectionLandingPage = lazyWithRetry(() => import('@pages/ObjectionLandingPage'))
+
 function App() {
   const location = useLocation()
   return (
@@ -61,6 +66,22 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/terms-of-service" element={<Terms />} />
             <Route path="/refund-policy" element={<Refund />} />
+
+            {/* Trigger links de Automação & CRM */}
+            <Route path="/appt-showed" element={<AppointmentStatusPage type="showed" />} />
+            <Route path="/appt-no-show" element={<AppointmentStatusPage type="no-show" />} />
+
+            <Route path="/lost-no-response" element={<LostReasonPage reason="no-response" />} />
+            <Route path="/lost-fit" element={<LostReasonPage reason="fit" />} />
+            <Route path="/lost-timing" element={<LostReasonPage reason="timing" />} />
+            <Route path="/lost-timig" element={<LostReasonPage reason="timing" />} />
+            <Route path="/lost-price" element={<LostReasonPage reason="price" />} />
+            <Route path="/lost-went-elsewhere" element={<LostReasonPage reason="went-elsewhere" />} />
+
+            <Route path="/objection-doubt" element={<ObjectionLandingPage type="doubt" />} />
+            <Route path="/objection-price" element={<ObjectionLandingPage type="price" />} />
+            <Route path="/objection-timing" element={<ObjectionLandingPage type="timing" />} />
+
             <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

@@ -1,0 +1,223 @@
+/* Hero Section for Prospect Objections */
+.objection-hero {
+  padding: clamp(3.5rem, 7vw, 6rem) 0 clamp(2.5rem, 5vw, 4rem);
+  background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.objection-hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(70, 127, 247, 0.12) 0%, rgba(244, 247, 252, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.objection-hero__container {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.objection-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-50);
+  color: var(--color-brand-dark);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-5);
+  border: 1px solid var(--color-primary-200);
+}
+
+.objection-hero__badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-brand);
+  box-shadow: 0 0 8px var(--color-brand);
+}
+
+.objection-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  color: var(--color-navy);
+  line-height: var(--text-h1-lh);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
+}
+
+.objection-hero__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 720px;
+  margin-bottom: var(--space-8);
+}
+
+.objection-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  align-items: center;
+}
+
+.objection-hero__primary-btn {
+  box-shadow: var(--shadow-brand);
+}
+
+.objection-hero__wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #128c7e;
+  border-color: #25d366;
+}
+
+.objection-hero__wa-btn:hover {
+  background: #25d366;
+  color: #ffffff;
+  border-color: #25d366;
+}
+
+.objection-hero__wa-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Value Props / Pillars Grid */
+.objection-pillars {
+  padding: var(--section-padding-y-small) 0;
+  background: var(--color-bg-primary);
+}
+
+.objection-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+
+.objection-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8) var(--space-6);
+  transition: transform var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard),
+    border-color var(--duration-normal) var(--ease-standard);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.objection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-200);
+}
+
+.objection-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-xl);
+  background: var(--color-primary-50);
+  color: var(--color-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-5);
+}
+
+.objection-card__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.objection-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--color-navy);
+  margin-bottom: var(--space-2);
+}
+
+.objection-card__desc {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* Banner / Closing CTA */
+.objection-banner {
+  padding: var(--section-padding-y-small) 0 clamp(4rem, 8vw, 6rem);
+}
+
+.objection-banner__box {
+  background: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-700) 100%);
+  border-radius: var(--radius-3xl);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (min-width: 992px) {
+  .objection-banner__box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .objection-banner__content {
+    max-width: 55%;
+  }
+}
+
+.objection-banner__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  color: #ffffff;
+  margin-bottom: var(--space-3);
+  line-height: 1.25;
+}
+
+.objection-banner__text {
+  font-size: var(--text-body);
+  color: var(--color-accent-200);
+  line-height: 1.6;
+}
+
+.objection-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.objection-banner__actions .btn-outline {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.objection-banner__actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+}
